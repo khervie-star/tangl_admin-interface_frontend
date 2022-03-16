@@ -12,6 +12,8 @@ export const GlobalStyles = createGlobalStyle`
 
 body{
   margin: 0 !important;
+  color: #ffffff;
+  background: #000000;
 }
 
 #root{
@@ -20,5 +22,5 @@ body{
 `
 
 export const Container = styled.div`
-  margin: 5rem;
+  margin: 5rem 0rem;
 `
