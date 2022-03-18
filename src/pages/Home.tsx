@@ -1,10 +1,11 @@
-
+import Membership from "../components/Home/Membership"
 
 const Home = () => {
     return(
-        <div>Welcome Home</div>
-    );
+        <>
+           <Membership/>
+        </>
+    )
 }
 
-
-export default Home;
+export default Home

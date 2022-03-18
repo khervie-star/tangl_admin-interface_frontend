@@ -7,7 +7,7 @@ import {
     NavButtons, 
     SignInButton, 
     SignUpButton } from './styles'
-import { Logo } from '../Icons/Navicons';
+import { Logo } from './Icons/Navicons';
 
 
 const NavBar = () => {
