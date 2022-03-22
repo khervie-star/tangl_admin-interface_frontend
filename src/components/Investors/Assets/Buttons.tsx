@@ -39,7 +39,7 @@ export const ContinueButton = ({children}: BtnProps) => {
 export const ContBtn = styled.button`
   border: 1px solid #007AFB;
   background: inherit;
-  font-family: Cera Pro;
+  font-family: Outfit;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;

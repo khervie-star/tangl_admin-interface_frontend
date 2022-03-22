@@ -10,6 +10,26 @@ export const TickIcon = () => {
     )
 }
 
+export const LockIcon = () => {
+    return (
+        <svg width="16" height="22" viewBox="0 0 16 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 8H13V6.21C13 3.6 11.09 1.27 8.49 1.02C5.51 0.74 3 3.08 3 6V8H0V22H16V8ZM8 17C6.9 17 6 16.1 6 15C6 13.9 6.9 13 8 13C9.1 13 10 13.9 10 15C10 16.1 9.1 17 8 17ZM5 8V6C5 4.34 6.34 3 8 3C9.66 3 11 4.34 11 6V8H5Z" fill="#A0AABA"/>
+        </svg>
+    )
+}
+
+
+export const DeleteIcon = () => {
+    return (
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 6L6 18" stroke="#A0AABA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M6 6L18 18" stroke="#A0AABA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    )
+}
+
+
+
 export const Ellipse = styled.div`
   height: 16px;
   width: 16px;
@@ -19,3 +39,4 @@ export const Ellipse = styled.div`
   align-items: center;
   justify-content: center
 `
+
