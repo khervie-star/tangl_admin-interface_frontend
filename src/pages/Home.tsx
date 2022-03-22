@@ -10,6 +10,7 @@ import TabNine from "../components/Home/TabNine";
 import TabTen from "../components/Home/TabTen";
 import TabEleven from "../components/Home/TabEleven";
 import Footer from "../components/Home/Footer";
+import TabTwo from "../components/Home/TabTwo";
 
 
 const Home = () => {
@@ -17,6 +18,7 @@ const Home = () => {
     <>
       <NavBar/>
       <Header />
+      <TabTwo/>
       <TabThree/>
       <TabFour/>
       <TabFive/>

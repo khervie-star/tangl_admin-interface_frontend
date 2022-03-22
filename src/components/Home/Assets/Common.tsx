@@ -7,10 +7,11 @@ export type TabProps = {
   flex?: string;
   alignItems?: string;
   textAlign?:string;
+  flexPercentage?:string;
 };
 
 export const FlexWrap = styled.div`
-  flex: 50%;
+  flex: ${({ flexPercentage }: TabProps) => (flexPercentage ? flexPercentage : "50%")};;
   box-sizing: border-box;
   padding: ${({ padding }: TabProps) => (padding ? padding : "0")};
 `;
