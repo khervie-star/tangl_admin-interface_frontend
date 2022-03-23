@@ -1,20 +1,30 @@
 import styled from "styled-components";
+import { device } from "../../../Global";
 
 export type TabProps = {
   height?: string;
   margin?: string;
   padding?: string;
   flex?: string;
+  display?: string;
   alignItems?: string;
   textAlign?: string;
   flexPercentage?: string;
 };
 
 export const FlexWrap = styled.div`
+  display: ${({ display }: TabProps) =>
+    (display === "desktop" || display === "both") ? "block" : "none"};
   flex: ${({ flexPercentage }: TabProps) =>
     flexPercentage ? flexPercentage : "50%"};
   box-sizing: border-box;
   padding: ${({ padding }: TabProps) => (padding ? padding : "0")};
+  @media ${device.mobileL} {
+    flex: 100%;
+    padding:0;
+    display: ${({ display }: TabProps) =>
+      (display === "mobile" || display === "both") ? "block" : "none"};
+  }
 `;
 
 export const Box = styled.div`
@@ -35,7 +45,7 @@ export const TextTitle = styled.h1`
   display: ${({ flex }: TabProps) => (flex ? flex : "")};
   align-items: ${({ alignItems }: TabProps) => (alignItems ? alignItems : "")};
   text-align: ${({ textAlign }: TabProps) => (textAlign ? textAlign : "")};
-  @media (max-width: 450px) {
+  @media ${device.mobileL} {
     font-size: 32px;
     line-height: 40px;
     letter-spacing: -0.4px;
@@ -55,7 +65,7 @@ export const TextBody = styled.p`
   display: ${({ flex }: TabProps) => (flex ? flex : "")};
   align-items: ${({ alignItems }: TabProps) => (alignItems ? alignItems : "")};
   text-align: ${({ textAlign }: TabProps) => (textAlign ? textAlign : "")};
-  @media (max-width: 450px) {
+  @media ${device.mobileL} {
     font-size: 16px;
     line-height: 24px;
   }

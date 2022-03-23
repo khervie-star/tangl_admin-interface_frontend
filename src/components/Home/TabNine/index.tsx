@@ -1,17 +1,17 @@
 import { ApplyButton } from "../Assets/Buttons";
-import { Box, FlexWrap, TextBody, TextTitle } from "../Assets/Common";
-import { TabNineContainer } from "./styles";
+import { Box, FlexWrap} from "../Assets/Common";
+import { TabNineContainer, TextTitleNine, TextBodyNine } from "./styles";
 
 const TabNine = () => {
   return (
     <TabNineContainer>
-      <FlexWrap>
-        <TextTitle margin="0rem 0rem 2.5rem 0rem">What we look for in our startups</TextTitle>
-        <TextBody>
+      <FlexWrap display="both">
+        <TextTitleNine display="both">What we look for in our startups</TextTitleNine>
+        <TextBodyNine display="both">
           We pride ourselves in being sector agnostic, we look to back startups
           disrupting industries.
-        </TextBody>
-        <TextBody>
+        </TextBodyNine>
+        <TextBodyNine display="both">
           <ul>
             <li>Seed, Pre-seed and Series A startups.</li>
             <li>Raising £100K-£5M.</li>
@@ -24,11 +24,14 @@ const TabNine = () => {
               Based in the UK or Europe or looking to penetrate the UK market.
             </li>
           </ul>
-        </TextBody>
+        </TextBodyNine>
         <ApplyButton text={"Fund your startup"} />
       </FlexWrap>
-      <FlexWrap>
-        <Box height="22.25rem" margin="5.56rem 0rem 5.56rem 5rem"></Box>
+      <FlexWrap display="desktop">
+        <Box height="22.25rem" margin="3.44rem 0rem 3.44rem 5rem"></Box>
+      </FlexWrap>
+      <FlexWrap display="mobile">
+        <Box height="18.38rem" margin="1.5rem 0rem 0rem 0rem"></Box>
       </FlexWrap>
     </TabNineContainer>
   );
