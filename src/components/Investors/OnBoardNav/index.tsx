@@ -1,5 +1,5 @@
-import { LogoText, NavContainer, LogoContainer } from './styles';
-import { Logo, Terminate } from './Icons/Navicons';
+import { LogoText, NavContainer, LogoContainer, Terminate } from './styles';
+import { Logo } from './Icons';
 
 
 const NavBar = () => {

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Delete } from './Icons';
 
 export const LogoText = styled.div`
     margin-left: 0.971rem;
@@ -23,3 +24,8 @@ export const LogoContainer = styled.div`
     align-items : center;
     padding-right: 2.5rem;
 `;
+
+export const Terminate = styled(Delete)`
+    cursor: pointer;
+    color: red;
+`
