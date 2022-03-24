@@ -10,7 +10,7 @@ const TabFour = () => {
       </FlexWrap>
 
       {/* Padding on this FlexWrap here is just for desktop */}
-      <FlexWrap display="both" padding="7.31rem 0rem 7.31rem 2.5rem">
+      <FlexWrap display="both" padding="0rem 0rem 0rem 2.5rem">
         <TextTitleFour display="both">We serve investors...</TextTitleFour>
         <TextBodyFour display="desktop">
           <ul>

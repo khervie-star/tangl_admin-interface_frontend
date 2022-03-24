@@ -13,7 +13,7 @@ export const TabEightContainer = styled.div`
   padding: 5rem;
   display: flex;
   flex-wrap: wrap;
-  @media ${device.mobileL} {
+  @media ${device.tablet} {
     padding: 2.5rem 1.5rem;
   }
 `;
@@ -34,7 +34,7 @@ export const TextWrap = styled.div`
 export const TextTitleEight = styled(TextTitle)`
   display: ${({ display }: TabProps) =>
     display === "desktop" || display === "both" ? "flex" : "none"};
-  @media ${device.mobileL} {
+  @media ${device.tablet} {
     margin: 0;
     display: ${({ display }: TabProps) =>
       display === "mobile" || display === "both" ? "block" : "none"};
@@ -43,7 +43,7 @@ export const TextTitleEight = styled(TextTitle)`
 export const TextBodyEight = styled(TextBody)`
   display: ${({ display }: TabProps) =>
     display === "desktop" || display === "both" ? "flex" : "none"};
-  @media ${device.mobileL} {
+  @media ${device.tablet} {
     margin: 1.5rem 0rem;
     display: ${({ display }: TabProps) =>
       display === "mobile" || display === "both" ? "block" : "none"};

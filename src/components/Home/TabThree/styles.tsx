@@ -14,7 +14,7 @@ export const TabThreeContainer = styled.div`
   align-items: center;
   padding: 5rem;
   flex-wrap: wrap;
-  @media ${device.mobileL}{
+  @media ${device.tablet}{
     display: none
   }
 `;
@@ -23,7 +23,7 @@ export const TextTitleThree = styled(TextTitle)`
   margin: 0.67rem 5rem 0.67rem 0rem;
   display: ${({ display }: TabProps) =>
     display === "desktop" ? "flex" : "none"};
-  @media ${device.mobileL} {
+  @media ${device.tablet} {
     margin: 0;
     display: ${({ display }: TabProps) =>
       display === "mobile" ? "flex" : "none"};
@@ -34,7 +34,7 @@ export const TextBodyThree = styled(TextBody)`
   margin: 1rem 5rem 1rem 0rem;
   display: ${({ display }: TabProps) =>
     display === "desktop" ? "flex" : "none"};
-  @media ${device.mobileL} {
+  @media ${device.tablet} {
     margin: 1.5rem 0rem;
     display: ${({ display }: TabProps) =>
       display === "mobile" ? "block" : "none"};
