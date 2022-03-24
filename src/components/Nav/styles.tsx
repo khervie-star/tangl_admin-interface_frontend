@@ -17,7 +17,7 @@ export const NavContainer = styled.div`
   align-items: center;
   margin: 0;
   padding: 2.25rem 5rem;
-  @media ${device.mobileL} {
+  @media ${device.tablet} {
     padding: 1.75rem 1.375rem;
   }
 `;
@@ -48,7 +48,7 @@ export const Navlist = styled.ul`
   li {
     padding: 0rem 2.5rem;
   }
-  @media ${device.mobileL} {
+  @media ${device.tablet} {
     display: none;
   }
 `;
@@ -84,15 +84,19 @@ export const AuthButton = styled.button`
   font-weight: 500;
   line-height: inherit;
   cursor: pointer;
-  @media ${device.mobileL} {
+  @media ${device.tablet} {
     display: ${({ display }: NavProps) =>
     (display === "mobile" ? 'flex' : "none")};
+  }
+  @media ${device.mobileM} {
+    font-size: 12px;
+    line-height: 12px;
   }
 `;
 
 export const DropBar = styled.div`
   display: none;
-  @media ${device.mobileL} {
+  @media ${device.tablet} {
     display: flex;
     margin-right: 0.5rem;
   }

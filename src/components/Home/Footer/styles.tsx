@@ -5,7 +5,7 @@ export const FooterContainer = styled.div`
   margin-top: 5rem;
   padding: 5rem;
   background: #011122;
-  @media ${device.mobileL} {
+  @media ${device.tablet} {
     margin-top: 2.5rem;
     padding: 3.5rem 1.5rem;
   }
@@ -15,7 +15,7 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  @media ${device.mobileL} {
+  @media ${device.tablet} {
     flex-direction: column;
   }
 `;
@@ -45,7 +45,7 @@ export const TanglWrap = styled.h1`
   span {
     margin-left: 12px;
   }
-  @media ${device.mobileL} {
+  @media ${device.tablet} {
     margin-bottom: 2.5rem;
   }
 `;
@@ -102,9 +102,12 @@ export const BaseText = styled.div`
     line-height: 16px;
     margin-right: 3.56rem;
     color: #a0aaba;
-    @media ${device.mobileL} {
+    @media ${device.tablet} {
       margin: 2.5rem 2.5rem 0rem 0rem;
     }
+    @media ${device.mobileM} {
+      margin: 2.5rem 1.5rem 0rem 0rem;
+  }
   }
 `;
 
@@ -122,5 +125,10 @@ export const IconBox = styled.div`
   @media ${device.mobileL} {
     height: 40px;
     width: 40px;
+  }
+
+  @media ${device.mobileM} {
+    height: 34px;
+    width: 34px;
   }
 `;
