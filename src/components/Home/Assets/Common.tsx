@@ -19,7 +19,7 @@ export const FlexWrap = styled.div`
     flexPercentage ? flexPercentage : "50%"};
   box-sizing: border-box;
   padding: ${({ padding }: TabProps) => (padding ? padding : "0")};
-  @media ${device.mobileL} {
+  @media ${device.tablet} {
     flex: 100%;
     padding:0;
     display: ${({ display }: TabProps) =>
@@ -45,7 +45,7 @@ export const TextTitle = styled.h1`
   display: ${({ flex }: TabProps) => (flex ? flex : "")};
   align-items: ${({ alignItems }: TabProps) => (alignItems ? alignItems : "")};
   text-align: ${({ textAlign }: TabProps) => (textAlign ? textAlign : "")};
-  @media ${device.mobileL} {
+  @media ${device.tablet} {
     font-size: 32px;
     line-height: 40px;
     letter-spacing: -0.4px;
@@ -65,7 +65,7 @@ export const TextBody = styled.p`
   display: ${({ flex }: TabProps) => (flex ? flex : "")};
   align-items: ${({ alignItems }: TabProps) => (alignItems ? alignItems : "")};
   text-align: ${({ textAlign }: TabProps) => (textAlign ? textAlign : "")};
-  @media ${device.mobileL} {
+  @media ${device.tablet} {
     font-size: 16px;
     line-height: 24px;
   }
