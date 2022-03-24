@@ -60,6 +60,10 @@ export const NavLink = styled(Link)`
   color: inherit;
   font-size: 1.125rem;
   line-height: 1.75rem;
+  @media ${device.laptop}{
+    font-size:inherit;
+    line-height:inherit;
+  }
 `;
 
 export const NavButtons = styled.div`

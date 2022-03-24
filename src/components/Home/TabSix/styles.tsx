@@ -13,7 +13,7 @@ export const TabSixContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   padding: 5rem;
-  @media ${device.mobileL}{
+  @media ${device.tablet}{
     padding: 2.5rem 1.5rem;
   }
   
@@ -36,7 +36,7 @@ export const BoxText = styled.p`
 export const TextTitleSix  = styled(TextTitle)`
   display: ${({ display }: TabProps) =>
     (display === "desktop" || display === "both") ? "flex" : "none"};
-  @media ${device.mobileL} {
+  @media ${device.tablet} {
     margin: 0;
     display: ${({ display }: TabProps) =>
       (display === "mobile" || display === "both") ? "block" : "none"};
@@ -46,7 +46,7 @@ export const TextBodySix  = styled(TextBody)`
   margin: 2.5rem 0rem 2.5rem 0rem;
   display: ${({ display }: TabProps) =>
     (display === "desktop" || display === "both") ? "flex" : "none"};
-  @media ${device.mobileL} {
+  @media ${device.tablet} {
     margin: 1.5rem 0rem;
     display: ${({ display }: TabProps) =>
       (display === "mobile" || display === "both") ? "block" : "none"};

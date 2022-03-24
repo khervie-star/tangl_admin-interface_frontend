@@ -16,7 +16,7 @@ export const TabSevenContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   background: #011122;
-  @media ${device.mobileL} {
+  @media ${device.tablet} {
     margin: 2.5rem 1.5rem;
     padding: 2.5rem;
   }
@@ -47,7 +47,7 @@ export const TextTitleSeven = styled(TextTitle)`
   display: ${({ display }: TabProps) =>
     display === "desktop" || display === "both" ? "flex" : "none"};
   align-items: center;
-  @media ${device.mobileL} {
+  @media ${device.tablet} {
     margin: 1.5rem 0rem 0rem 0rem;
     display: ${({ display }: TabProps) =>
       display === "mobile" || display === "both" ? "flex" : "none"};
@@ -57,7 +57,7 @@ export const TextBodySeven = styled(TextBody)`
   margin: 0rem 0rem 1.5rem 0rem;
   display: ${({ display }: TabProps) =>
     display === "desktop" || display === "both" ? "flex" : "none"};
-  @media ${device.mobileL} {
+  @media ${device.tablet} {
     margin: 1.5rem 0rem;
     display: ${({ display }: TabProps) =>
       display === "mobile" || display === "both" ? "block" : "none"};

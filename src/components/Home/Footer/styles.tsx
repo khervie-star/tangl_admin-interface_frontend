@@ -30,6 +30,10 @@ export const HeadWrap = styled.div`
     grid-column-gap: 12rem;
     grid-template-columns: repeat(2, 1fr);
   }
+  @media ${device.tablet} {
+    grid-column-gap: 15rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;
 
 export const TanglWrap = styled.h1`
@@ -103,6 +107,9 @@ export const BaseText = styled.div`
     margin-right: 3.56rem;
     color: #a0aaba;
     @media ${device.tablet} {
+      margin: 2.5rem 3.5rem 0rem 0rem;
+    }
+    @media ${device.mobileL} {
       margin: 2.5rem 2.5rem 0rem 0rem;
     }
     @media ${device.mobileM} {
