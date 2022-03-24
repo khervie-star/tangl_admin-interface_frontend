@@ -8,45 +8,47 @@ import {
   IconBox,
   TanglWrap,
   TitleWrap,
-  Flex,
+  Wrapper,
 } from "./styles";
 
 const Footer = () => {
   return (
     <FooterContainer>
-      <HeadWrap>
+      <Wrapper>
         <TanglWrap>
           <CircleIcon />
           <span>Tangl</span>
         </TanglWrap>
-        <TitleWrap>
-          <h3>Title</h3>
-          <p>Something</p>
-          <p>Something</p>
-          <p>Something</p>
-          <p>Something</p>
-          <p>Something</p>
-          <p>Something</p>
-        </TitleWrap>
-        <TitleWrap>
-          <h3>Title</h3>
-          <p>Something</p>
-          <p>Something</p>
-          <p>Something</p>
-          <p>Something</p>
-          <p>Something</p>
-          <p>Something</p>
-        </TitleWrap>
-        <TitleWrap>
-          <h3>Title</h3>
-          <p>Something</p>
-          <p>Something</p>
-          <p>Something</p>
-          <p>Something</p>
-          <p>Something</p>
-          <p>Something</p>
-        </TitleWrap>
-      </HeadWrap>
+        <HeadWrap>
+          <TitleWrap>
+            <h3>Title</h3>
+            <p>Something</p>
+            <p>Something</p>
+            <p>Something</p>
+            <p>Something</p>
+            <p>Something</p>
+            <p>Something</p>
+          </TitleWrap>
+          <TitleWrap>
+            <h3>Title</h3>
+            <p>Something</p>
+            <p>Something</p>
+            <p>Something</p>
+            <p>Something</p>
+            <p>Something</p>
+            <p>Something</p>
+          </TitleWrap>
+          <TitleWrap>
+            <h3>Title</h3>
+            <p>Something</p>
+            <p>Something</p>
+            <p>Something</p>
+            <p>Something</p>
+            <p>Something</p>
+            <p>Something</p>
+          </TitleWrap>
+        </HeadWrap>
+      </Wrapper>
       <BaseContainer>
         <BaseText>
           <p>Copyright</p>
@@ -55,21 +57,15 @@ const Footer = () => {
           <p>Security</p>
         </BaseText>
         <BaseIcons>
-          <Flex>
-            <IconBox></IconBox>
-          </Flex>
-          <Flex>
-            <IconBox></IconBox>
-          </Flex>
-          <Flex>
-            <IconBox></IconBox>
-          </Flex>
-          <Flex>
-            <IconBox></IconBox>
-          </Flex>
-          <Flex>
-            <IconBox></IconBox>
-          </Flex>
+          <IconBox></IconBox>
+
+          <IconBox></IconBox>
+
+          <IconBox></IconBox>
+
+          <IconBox></IconBox>
+
+          <IconBox></IconBox>
         </BaseIcons>
       </BaseContainer>
     </FooterContainer>
