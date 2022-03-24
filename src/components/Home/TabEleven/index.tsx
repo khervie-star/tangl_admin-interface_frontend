@@ -20,7 +20,8 @@ const TabEleven = () => {
           <OtherButton
             background="#011122"
             borderColor="#A0AABA"
-            marginLeft="24px"
+            margin="0rem 0rem 0rem 1.5rem"
+            display="mobile"
           >
             Apply for funding
           </OtherButton>

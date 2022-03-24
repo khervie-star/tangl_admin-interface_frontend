@@ -1,11 +1,10 @@
-import styled from "styled-components";
+import styled from "styled-components"
+import { device } from "../../../Global";
 
 export const HeaderWrapper = styled.div`
-  margin: 5rem 0rem;
-  padding-top: 2.5rem;
-  @media (max-width: 450px) {
-    margin: 3.5rem 2.125rem;
-    padding-top: 0;
+  padding: 7.5rem 0rem 5rem 0rem;
+  @media ${device.mobileL} {
+    padding: 3.5rem 2.125rem 2.5rem 2.125rem;
   }
 `;
 
@@ -17,7 +16,7 @@ export const HeaderTitle = styled.h1`
   font-weight: 700;
   letter-spacing: -2px;
   line-height: 96px;
-  @media (max-width: 450px) {
+  @media ${device.mobileL} {
     font-size: 36px;
     line-height: 48px;
     letter-spacing: -0.6px;
@@ -31,8 +30,9 @@ export const HeaderText = styled.p`
   text-align: center;
   letter-spacing: -0.2px;
   margin: 0rem auto;
+  color:#A0AABA;;
   max-width: 40.375rem;
-  @media (max-width: 450px) {
+  @media ${device.mobileL} {
     font-size: 18px;
     line-height: 28px;
     letter-spacing: -0.1px;

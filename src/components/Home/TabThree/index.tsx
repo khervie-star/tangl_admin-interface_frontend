@@ -1,15 +1,15 @@
-import { TabThreeContainer } from "./styles";
+import { TabThreeContainer, TextBodyThree, TextTitleThree } from "./styles";
 import { Box, FlexWrap, TextBody, TextTitle } from "../Assets/Common";
 import { ApplyButton } from "../Assets/Buttons";
 
 const TabThree = () => {
   return (
     <TabThreeContainer>
-      <FlexWrap>
-        <TextTitle margin="0.67rem 5rem 0.67rem 0rem">
+      <FlexWrap display="desktop">
+        <TextTitleThree display="desktop">
           Supporting Private Market Investors and Emerging Managers
-        </TextTitle>
-        <TextBody margin="1rem 5rem 1rem 0rem">
+        </TextTitleThree>
+        <TextBodyThree display="desktop">
           <ul>
             <li>
               Digital solutions to manage and issue compliant investment
@@ -23,10 +23,10 @@ const TabThree = () => {
             </li>
             <li>Fund allocation distribution and marketing.</li>
           </ul>
-        </TextBody>
+        </TextBodyThree>
         <ApplyButton text={"Become an approved investment vehicle"} />
       </FlexWrap>
-      <FlexWrap>
+      <FlexWrap display="desktop">
         <Box height="22.25rem" margin="5.56rem 0rem 5.56rem 0rem"></Box>
       </FlexWrap>
     </TabThreeContainer>

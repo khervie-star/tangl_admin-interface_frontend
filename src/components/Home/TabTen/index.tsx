@@ -1,20 +1,20 @@
 import { ApplyButton } from "../Assets/Buttons";
 import { Box, FlexWrap, TextBody, TextTitle } from "../Assets/Common";
-import { TabTenContainer } from "./styles";
+import { TabTenContainer, TextBodyTen, TextTitleTen } from "./styles";
 
 const TabTen = () => {
   return (
     <TabTenContainer>
-      <FlexWrap>
+      <FlexWrap display="desktop">
         <Box height="22.25rem" margin="5.56rem 5rem 5.56rem 0rem"></Box>
       </FlexWrap>
-      <FlexWrap>
-        <TextTitle margin="0rem 0rem 2.5rem 0rem">What we look for in our Real Estate Investments</TextTitle>
-        <TextBody>
+      <FlexWrap display="both">
+        <TextTitleTen display="both" >What we look for in our Real Estate Investments</TextTitleTen>
+        <TextBodyTen display="both">
           Our Transactions and Development team looks to partake in the
           following:
-        </TextBody>
-        <TextBody>
+        </TextBodyTen>
+        <TextBodyTen display="both">
           <ul>
             <li>
               Purchasing & Disposition of assets which have suffered from poor
@@ -29,8 +29,11 @@ const TabTen = () => {
               returns on our invested capital.
             </li>
           </ul>
-        </TextBody>
+        </TextBodyTen>
         <ApplyButton text={"Get Funded"} />
+      </FlexWrap>
+      <FlexWrap display="mobile">
+        <Box height="18.38rem" margin="1.5rem 0rem 0rem 0rem"></Box>
       </FlexWrap>
     </TabTenContainer>
   );

@@ -1,15 +1,35 @@
 import styled from "styled-components";
+import { device } from "../../../Global";
 
 export const FooterContainer = styled.div`
   margin-top: 5rem;
   padding: 5rem;
   background: #011122;
+  @media ${device.mobileL} {
+    margin-top: 2.5rem;
+    padding: 3.5rem 1.5rem;
+  }
 `;
 
-export const HeadWrap = styled.div`
+export const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  @media ${device.mobileL} {
+    flex-direction: column;
+  }
+`;
+
+export const HeadWrap = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 18rem;
+  grid-row-gap: 2.5rem;
+  align-items: stretch;
+  @media ${device.mobileL} {
+    grid-column-gap: 12rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
 `;
 
 export const TanglWrap = styled.h1`
@@ -24,6 +44,9 @@ export const TanglWrap = styled.h1`
   color: #ffffff;
   span {
     margin-left: 12px;
+  }
+  @media ${device.mobileL} {
+    margin-bottom: 2.5rem;
   }
 `;
 
@@ -56,6 +79,7 @@ export const TitleWrap = styled.div`
 
 export const BaseContainer = styled.div`
   display: flex;
+  flex-wrap: wrap-reverse;
   justify-content: space-between;
   align-items: center;
   margin-top: 40px;
@@ -65,30 +89,38 @@ export const BaseContainer = styled.div`
 export const BaseText = styled.div`
   display: flex;
   align-items: center;
+  > * {
+      &:last-child {
+        margin-right: 0;
+      }
+    }
   p {
     font-family: "Outfit";
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
     line-height: 16px;
-    margin-right: 57px;
+    margin-right: 3.56rem;
     color: #a0aaba;
+    @media ${device.mobileL} {
+      margin: 2.5rem 2.5rem 0rem 0rem;
+    }
   }
 `;
 
 export const BaseIcons = styled.div`
-  display: flex;
-  align-items: center;
-`;
-
-export const Flex = styled.div`
-  flex: 20%;
+  display: inline-grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 35px;
 `;
 
 export const IconBox = styled.div`
   height: 48px;
   width: 48px;
-  margin-left: 35px;
   box-sizing: border-box;
   background: #a0aaba;
+  @media ${device.mobileL} {
+    height: 40px;
+    width: 40px;
+  }
 `;

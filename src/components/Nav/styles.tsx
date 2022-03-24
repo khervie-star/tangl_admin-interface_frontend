@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { device } from "../../Global";
 
 export type NavProps = {
   background?: string;
@@ -16,7 +17,7 @@ export const NavContainer = styled.div`
   align-items: center;
   margin: 0;
   padding: 2.25rem 5rem;
-  @media (max-width: 450px) {
+  @media ${device.mobileL} {
     padding: 1.75rem 1.375rem;
   }
 `;
@@ -47,7 +48,7 @@ export const Navlist = styled.ul`
   li {
     padding: 0rem 2.5rem;
   }
-  @media (max-width: 450px) {
+  @media ${device.mobileL} {
     display: none;
   }
 `;
@@ -83,7 +84,7 @@ export const AuthButton = styled.button`
   font-weight: 500;
   line-height: inherit;
   cursor: pointer;
-  @media (max-width: 450px) {
+  @media ${device.mobileL} {
     display: ${({ display }: NavProps) =>
     (display === "mobile" ? 'flex' : "none")};
   }
@@ -91,7 +92,7 @@ export const AuthButton = styled.button`
 
 export const DropBar = styled.div`
   display: none;
-  @media (max-width: 450px) {
+  @media ${device.mobileL} {
     display: flex;
     margin-right: 0.5rem;
   }
