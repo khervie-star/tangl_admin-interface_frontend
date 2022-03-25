@@ -26,12 +26,19 @@ export const HeadWrap = styled.div`
   grid-column-gap: 18rem;
   grid-row-gap: 2.5rem;
   align-items: stretch;
-  @media ${device.mobileL} {
-    grid-column-gap: 12rem;
-    grid-template-columns: repeat(2, 1fr);
-  }
+
   @media ${device.tablet} {
     grid-column-gap: 15rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media ${device.mobileL} {
+    grid-column-gap: 14rem;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media ${device.mobileM} {
+    grid-column-gap: 12rem;
     grid-template-columns: repeat(2, 1fr);
   }
 `;
