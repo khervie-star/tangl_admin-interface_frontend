@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { device, pulse } from "../../../Global";
+import { device} from "../../../Global";
 
 export const HeaderWrapper = styled.div`
   padding: 7.5rem 0rem 5rem 0rem;

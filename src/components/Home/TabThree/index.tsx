@@ -1,5 +1,5 @@
 import { TabThreeContainer, TextBodyThree, TextTitleThree } from "./styles";
-import { Box, FlexWrap, TextBody, TextTitle } from "../Assets/Common";
+import { Box, FlexWrap} from "../Assets/Common";
 import { ApplyButton } from "../Assets/Buttons";
 
 const TabThree = () => {
