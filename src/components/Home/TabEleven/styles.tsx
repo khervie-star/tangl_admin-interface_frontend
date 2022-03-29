@@ -51,6 +51,10 @@ export const OtherButton = styled.button`
   padding: 12px 20px;
   margin: ${({ margin }) => (margin ? margin : "0")};
   cursor: pointer;
+  &:hover{
+    filter: grayscale(50%) blur(0.1px);
+    transition: .1s ease-in-out;
+  }
   @media ${device.mobileL} {
     margin: ${({ display }) =>
       display === "mobile" ? "1.5rem 0rem 0rem 0rem" : "0"};

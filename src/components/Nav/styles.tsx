@@ -87,6 +87,10 @@ export const AuthButton = styled.button`
   font-size: inherit;
   font-weight: 500;
   line-height: inherit;
+  &:hover{
+    filter: grayscale(50%) blur(0.1px);
+    transition: .1s ease-in-out;
+  }
   cursor: pointer;
   @media ${device.tablet} {
     display: ${({ display }: NavProps) =>

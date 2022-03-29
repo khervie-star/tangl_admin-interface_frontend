@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { device } from "../../../Global";
+import { device, pulse } from "../../../Global";
 
 export const HeaderWrapper = styled.div`
   padding: 7.5rem 0rem 5rem 0rem;
@@ -58,4 +58,8 @@ export const HeaderButton = styled.button`
   padding: 0.75rem 1.25rem;
   border: 0;
   cursor: pointer;
+  &:hover{
+    filter: grayscale(50%) blur(0.1px);
+    transition: .1s ease-in-out;
+  }
 `;

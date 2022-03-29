@@ -1,17 +1,23 @@
-import { LogoText, NavContainer, LogoContainer, Terminate } from './styles';
-import { Logo } from './Icons';
+import { LogoText, NavContainer, LogoContainer, Terminate } from "./styles";
+import { Logo, DeleteIcon } from "./Icons";
+import { useNavigate } from "react-router-dom";
 
+const OnBoardNavBar = () => {
+    const navigate = useNavigate();
+    const handleClick = () => {
+        navigate("/", { replace: true })
+    }
+  return (
+    <NavContainer>
+      <LogoContainer>
+        <Logo />
+        <LogoText>Tangl</LogoText>
+      </LogoContainer>
+      <Terminate onClick={handleClick}>
+        <DeleteIcon />
+      </Terminate>
+    </NavContainer>
+  );
+};
 
-const NavBar = () => {
-    return(
-            <NavContainer>
-                <LogoContainer>
-                    <Logo/>
-                    <LogoText>Tangl</LogoText>
-                </LogoContainer>
-                <Terminate/>
-            </NavContainer>
-    )
-}
-
-export default NavBar;
+export default OnBoardNavBar;

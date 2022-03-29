@@ -1,4 +1,4 @@
-import styled,{ createGlobalStyle } from "styled-components";
+import styled,{keyframes, createGlobalStyle } from "styled-components";
 
 
 const size = {
@@ -24,8 +24,7 @@ export const device = {
 
 export const GlobalStyles = createGlobalStyle`
 
-body{
-  margin: 0 !important;
+#root{
   color: #ffffff;
   background: #000000;
   font-family: 'Outfit';
@@ -34,7 +33,7 @@ body{
   line-height: 16px;
 }
 
-#root{
+body{
   margin: 0;
 }
 `
@@ -42,3 +41,11 @@ body{
 export const Container = styled.div`
   padding: 5rem;
 `
+export const pulse = keyframes`
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+`;

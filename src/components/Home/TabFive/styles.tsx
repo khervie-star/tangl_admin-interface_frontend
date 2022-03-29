@@ -46,7 +46,7 @@ export const TextTitleFive = styled(TextTitle)`
   }
 `;
 export const TextBodyFive = styled(TextBody)`
-  margin: 0rem 0rem 0rem 2.5rem;
+  margin: 0rem 0rem 2.5rem 0rem;
   display: ${({ display }: TabProps) =>
     (display === "desktop" || display === "both") ? "flex" : "none"};
   @media ${device.tablet} {

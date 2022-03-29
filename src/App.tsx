@@ -1,6 +1,7 @@
 import { GlobalStyles } from "./Global";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
+import Investors from "./pages/investors";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/investors" element={<Investors/>} />
         </Routes>
       </Router>
     </>

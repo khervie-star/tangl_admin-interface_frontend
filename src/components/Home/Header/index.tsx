@@ -14,7 +14,7 @@ const Header = () => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate("/investors", { replace: true });
+    navigate("/investors");
   };
   return (
     <HeaderWrapper>
