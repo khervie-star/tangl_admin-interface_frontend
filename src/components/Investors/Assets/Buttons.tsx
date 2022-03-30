@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export type BtnProps = {
     children?: string;
+    onClick?:any;
 }
     
 
@@ -29,9 +30,9 @@ export const ButtonWrapper = styled.div`
 ` 
 
 
-export const ContinueButton = ({children}: BtnProps) => {
+export const ContinueButton = ({children, onClick}: BtnProps) => {
     return(
-        <ContBtn>{children}</ContBtn>
+        <ContBtn onClick={onClick}>{children}</ContBtn>
     )
 }
 
