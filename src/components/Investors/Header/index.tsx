@@ -5,10 +5,15 @@ import { PageBarTypes } from "../types";
 import { ButtonWrap, HeaderWrapper, Pad } from "./styles";
 
 const Header = ({ page, setPage }: PageBarTypes) => {
+  const handleClick = () => {
+    if (page && setPage) {
+      setPage(page-1);
+    }
+  };
   return (
     <HeaderWrapper>
       <ButtonWrap>
-        <BackButton />
+        <BackButton onClick={handleClick} />
       </ButtonWrap>
       <Pad>
         <PageBar page={page} />
