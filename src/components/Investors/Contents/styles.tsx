@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { device } from "../../../Global";
 
-export const HeaderWrapper = styled.div`
+export const ContentWrapper = styled.div`
   display: flex;
   margin: 4.7rem 5rem 8.2rem 5rem;
   @media ${device.tablet} {

@@ -54,14 +54,21 @@ export const ContBtn = styled.button`
   cursor: pointer;
 `
 
-export const DarkContinueButton = ({children}: BtnProps) => {
+export const DarkContinueButton = ({children, onClick}: BtnProps) => {
     return(
-        <DarkContBtn>{children}</DarkContBtn>
+        <DarkContBtn onClick={onClick}>{children}</DarkContBtn>
     )
 }
 
 
 export const DarkContBtn = styled.button`
+  font-family: Outfit;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  text-align: center;
+  letter-spacing: -0.1px;
   background: #007AFB;
   border: 1px solid #007AFB;
   box-sizing: border-box;

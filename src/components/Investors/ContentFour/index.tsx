@@ -1,8 +1,8 @@
-import { ContinueButton } from "../Assets/Buttons";
+import { DarkContinueButton } from "../Assets/Buttons";
 import { TextTitle, TextBody } from "./styles";
 import { PageBarTypes } from "../types";
 
-const ContentTwo = ({ page, setPage }: PageBarTypes) => {
+const ContentFour = ({ page, setPage }: PageBarTypes) => {
   const handleClick = () => {
     if (page && setPage) {
       setPage(++page);
@@ -11,14 +11,14 @@ const ContentTwo = ({ page, setPage }: PageBarTypes) => {
 
   return (
     <>
-      <TextTitle>Individual Investors’ Registration</TextTitle>
+      <TextTitle>2-Factor Authentication</TextTitle>
       <TextBody>
         Fill in the registration data. It will take a couple of minutes. You
         only need your phone number and e-mail.
       </TextBody>
-      <ContinueButton onClick={handleClick}>Send Code</ContinueButton>
+      <DarkContinueButton onClick={handleClick}>Continue</DarkContinueButton>
     </>
   );
 };
 
-export default ContentTwo;
+export default ContentFour;

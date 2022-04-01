@@ -2,7 +2,7 @@ import { ContinueButton } from "../Assets/Buttons";
 import { TextTitle, TextBody } from "./styles";
 import { PageBarTypes } from "../types";
 
-const ContentTwo = ({ page, setPage }: PageBarTypes) => {
+const ContentThree = ({ page, setPage }: PageBarTypes) => {
   const handleClick = () => {
     if (page && setPage) {
       setPage(++page);
@@ -11,14 +11,14 @@ const ContentTwo = ({ page, setPage }: PageBarTypes) => {
 
   return (
     <>
-      <TextTitle>Individual Investors’ Registration</TextTitle>
+      <TextTitle>Confirm Phone Number</TextTitle>
       <TextBody>
         Fill in the registration data. It will take a couple of minutes. You
         only need your phone number and e-mail.
       </TextBody>
-      <ContinueButton onClick={handleClick}>Send Code</ContinueButton>
+      <ContinueButton onClick={handleClick}>Confirm</ContinueButton>
     </>
   );
 };
 
-export default ContentTwo;
+export default ContentThree;

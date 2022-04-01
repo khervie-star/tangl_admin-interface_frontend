@@ -14,10 +14,10 @@ export const FlowCircle = styled.div`
   ${({ page, active }: FlowTypes) =>
     page === 5 || !active
       ? css`
-          filter: grayscale(65%);
+          opacity: 0.5;
         `
       : css`
-          filter: grayscale(0%);
+          opacity: 1;
         `};
   ${({ page }: FlowTypes) =>
     page === 6
@@ -37,10 +37,10 @@ export const FlowBar = styled.p`
   ${({ page, active }: FlowTypes) =>
     page === 5 || !active
       ? css`
-          filter: grayscale(65%);
+          opacity: 0.5;
         `
       : css`
-          filter: grayscale(0%);
+          opacity: 1;
         `};
   margin: 0px 8px;
 `;

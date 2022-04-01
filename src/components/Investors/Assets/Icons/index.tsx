@@ -1,12 +1,13 @@
 import styled, { css } from "styled-components";
 
 export type IconProps = {
+  display?: boolean;
   active?: boolean;
 };
 
-export const TickIcon = ({ active }: IconProps) => {
+export const TickIcon = ({ display, active }: IconProps) => {
   return (
-    <Ellipse active={active}>
+    <Ellipse active={active} display={display}>
       <svg
         width="10"
         height="7"
@@ -70,17 +71,24 @@ export const DeleteIcon = () => {
 export const Ellipse = styled.div`
   height: 16px;
   width: 16px;
-  background: #324a64;
+  ${({ active }: IconProps) =>
+    active
+      ? css`
+          background: #007afb;
+        `
+      : css`
+          background: #324a64;
+        `};
   border-radius: 50%;
-  display: flex;
   align-items: center;
   justify-content: center;
-    ${({ active }: IconProps) =>
-      !active
-        ? css`
-            display: none;
-          `
-        : css`
-            display: flex;
-          `};
+  opacity: 0.5;
+  ${({ display }: IconProps) =>
+    !display
+      ? css`
+          display: none;
+        `
+      : css`
+          display: flex;
+        `};
 `;
