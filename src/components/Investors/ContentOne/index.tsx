@@ -8,6 +8,7 @@ const ContentOne = ({ page, setPage }: PageBarTypes) => {
       setPage(++page);
     }
   };
+
   return (
     <>
       <TextTitle>Welcome to the registration platform</TextTitle>

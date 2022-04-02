@@ -1,5 +1,5 @@
 import { useState } from "react"
-import Header from "../../components/Investors/Header"
+import Content from "../../components/Investors/Contents"
 import OnBoardNavBar from "../../components/Investors/OnBoardNav"
 import { InvestorWrapper } from "./styles"
 
@@ -8,7 +8,7 @@ const Investors = () => {
     return(
         <InvestorWrapper>
            <OnBoardNavBar/>
-           <Header page={page} setPage={setPage}/>
+           <Content page={page} setPage={setPage}/>
         </InvestorWrapper>
     )
 }
