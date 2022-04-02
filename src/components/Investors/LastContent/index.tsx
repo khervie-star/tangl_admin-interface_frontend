@@ -1,8 +1,7 @@
 import { useNavigate } from "react-router-dom";
-import { PageBarTypes } from "../types";
 import { TextTitle, TextBody, HomeButton } from "./styles";
 
-const LastContent = ({ page, setPage }: PageBarTypes) => {
+const LastContent = () => {
     const navigate = useNavigate();
     
     const handleClick = () => {

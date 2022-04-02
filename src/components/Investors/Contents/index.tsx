@@ -46,7 +46,7 @@ const Content = ({ page, setPage }: PageBarTypes) => {
         {page === 12 && <ContentTwelve page={page} setPage={setPage} />}
         
       </Pad>
-      {page === 13 && <div><LastContent page={page} setPage={setPage} /></div>}
+      {page === 13 && <div><LastContent /></div>}
       {page && (page > 1 && page !== 13) && (
         <div>
           <FunctionCard page={page} />

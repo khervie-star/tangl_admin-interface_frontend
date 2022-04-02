@@ -1,5 +1,5 @@
 import { ContinueButton } from "../Assets/Buttons";
-import { TextTitle, TextBody, SecureAlert, InputContainer } from "./styles";
+import { TextTitle, TextBody, SecureAlert, InputContainer, Select, InputWrapper, InputText } from "./styles";
 import { PageBarTypes } from "../types";
 import { DeleteIcon, LockIcon } from "../Assets/Icons";
 
@@ -25,7 +25,18 @@ const ContentTwo = ({ page, setPage }: PageBarTypes) => {
         </span>
         <DeleteIcon />
       </SecureAlert>
-      <InputContainer></InputContainer>
+      <InputContainer>
+        <InputText>
+          <p>Enter your phone number</p>
+        </InputText>
+        <InputWrapper>
+        <Select>
+          <option>+234</option>
+          <option>+1</option>
+        </Select>
+        <input type="text" placeholder="815 768 2447"/>
+        </InputWrapper>
+      </InputContainer>
       <ContinueButton onClick={handleClick}>Send Code</ContinueButton>
     </>
   );
