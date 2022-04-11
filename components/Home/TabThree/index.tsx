@@ -1,16 +1,15 @@
 import { ApplyButton } from "../Assets/Buttons";
 import { FlexWrap, Image, List, ListText, TextTitle } from "../Assets/Common";
 import { ListTag } from "../Assets/Icons";
-import { BaseWrap, HeadWrap, TabTwoContainer } from "./styles";
-import Image1 from "../Assets/Images/image1.png"
-import Image2 from "../Assets/Images/image2.png"
+import { TabThreeContainer } from "./styles";
+import Image3 from "../Assets/Images/image3.png";
 
-const TabTwo = () => {
+const TabThree = () => {
   return (
-    <TabTwoContainer>
-      <HeadWrap>
+    <TabThreeContainer>
+      <FlexWrap flexPercentage="55%">
         <TextTitle>
-          We are building the Digital Home for Global Private Placements.
+          Supporting Private Market Investors and Emerging Managers{" "}
         </TextTitle>
         <List>
           <div>
@@ -29,7 +28,7 @@ const TabTwo = () => {
           <ListText>
             TANGL's digital platform puts alternative investments and private
             market strategies in the hands of high-net-worth investors and
-            independent advisors.
+            independent advisors.{" "}
           </ListText>
         </List>
         <List>
@@ -42,18 +41,13 @@ const TabTwo = () => {
             investment operations.
           </ListText>
         </List>
-        <ApplyButton text="Become an investor"></ApplyButton>
-      </HeadWrap>
-      <BaseWrap>
-        <FlexWrap flexPercentage="25%">
-          <Image  src={Image1.src} />
-        </FlexWrap>
-        <FlexWrap flexPercentage="75%">
-          <Image src={Image2.src} />
-        </FlexWrap>
-      </BaseWrap>
-    </TabTwoContainer>
+        <ApplyButton text="Create Admin account" />
+      </FlexWrap>
+      <FlexWrap flexPercentage="40%">
+        <Image src={Image3.src} />
+      </FlexWrap>
+    </TabThreeContainer>
   );
 };
 
-export default TabTwo;
+export default TabThree;

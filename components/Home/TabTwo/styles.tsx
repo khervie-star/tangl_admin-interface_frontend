@@ -7,3 +7,8 @@ export const TabTwoContainer = styled.div`
 export const HeadWrap = styled.div`
   margin-right: 19.875rem;
 `;
+
+export const BaseWrap = styled.div`
+  display: flex;
+  align-items: baseline;
+`
