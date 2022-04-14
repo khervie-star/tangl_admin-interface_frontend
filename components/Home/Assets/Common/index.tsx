@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { TabProps } from "./types";
 
 export const List = styled.div`
   display: flex;
@@ -24,4 +25,16 @@ export const TextTitle = styled.h1`
   font-size: 40px;
   line-height: 50px;
   color: #ffffff;
+`;
+
+export const FlexWrap = styled.div`
+  flex: ${({ flexPercentage }: TabProps) =>
+    flexPercentage ? flexPercentage : "50%"};
+  box-sizing: border-box;
+  padding: ${({ padding }: TabProps) => (padding ? padding : "0")};
+`;
+
+export const Image = styled.img`
+  object-fit: contain;
+  max-width: 100%;
 `;
