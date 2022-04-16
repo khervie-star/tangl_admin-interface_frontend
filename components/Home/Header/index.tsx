@@ -10,7 +10,7 @@ import {
 const Header = () => {
 
   const handleClick = () => {
-    Router.push("/investors");
+    Router.push("/Investor");
   };
   return (
     <HeaderWrapper>

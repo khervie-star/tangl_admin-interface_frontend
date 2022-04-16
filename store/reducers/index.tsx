@@ -1,9 +1,12 @@
 import { combineReducers } from "redux";
-import { individual, organization } from "./page";
+import { Individual, Organization } from "./page";
+import { InvestorType, OrganizationType } from "./session";
 
 const rootReducer = combineReducers({
-  individual,
-  organization,
+  Individual,
+  Organization,
+  InvestorType,
+  OrganizationType
 });
 
 export type RootState = ReturnType<typeof rootReducer>;

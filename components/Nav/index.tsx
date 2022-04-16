@@ -11,12 +11,11 @@ import {
 } from "./styles";
 import Link from "next/link";
 import { Logo, BarIcon } from "./Icons";
-import { useRouter } from "next/router";
+import Router from "next/router";
 
 const NavBar = () => {
-  const navigate = useRouter();
   const handleClick = () => {
-    navigate.push("/investors");
+    Router.push("/Investor");
   };
   return (
     <NavContainer>

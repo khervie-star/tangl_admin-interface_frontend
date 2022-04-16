@@ -8,7 +8,7 @@ type TextProp = {
 
 export const ApplyButton = ({ text }: TextProp) => {
   const handleClick = () => {
-    Router.push("/investors");
+    Router.push("/Investor");
   };
   return (
     <ApplyBtn onClick={handleClick}>

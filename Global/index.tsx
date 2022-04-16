@@ -1,15 +1,14 @@
-import styled,{keyframes, createGlobalStyle } from "styled-components";
-
+import styled, { keyframes, createGlobalStyle } from "styled-components";
 
 const size = {
-  mobileS: '320px',
-  mobileM: '375px',
-  mobileL: '425px',
-  tablet: '820px',
-  laptop: '1024px',
-  laptopL: '1440px',
-  desktop: '2560px'
-}
+  mobileS: "320px",
+  mobileM: "375px",
+  mobileL: "425px",
+  tablet: "820px",
+  laptop: "1024px",
+  laptopL: "1440px",
+  desktop: "2560px",
+};
 
 export const device = {
   mobileS: `(max-width: ${size.mobileS})`,
@@ -19,13 +18,12 @@ export const device = {
   laptop: `(max-width: ${size.laptop})`,
   laptopL: `(max-width: ${size.laptopL})`,
   desktop: `(max-width: ${size.desktop})`,
-  desktopL: `(max-width: ${size.desktop})`
+  desktopL: `(max-width: ${size.desktop})`,
 };
 
 export const GlobalStyles = createGlobalStyle`
+
 html{
-  color: #ffffff;
-  background: #000000;
   font-family: 'Outfit';
   font-weight: 400;
   font-size: 16px;
@@ -35,11 +33,12 @@ html{
 body{
   margin: 0;
 }
-`
+`;
 
 export const Container = styled.div`
-  padding: 5rem;
-`
+  color: #ffffff;
+  background: #000000;
+`;
 export const pulse = keyframes`
   0% {
     opacity: 0.5;
