@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { setOrganization } from "../../../../store/actions/session";
 import { RootState } from "../../../../store/reducers";
-import { ContinueButton } from "../../Assets/Buttons.tsx";
+import { ContinueButton } from "../../Assets/Buttons";
 import { Card, Grid, TextBody, TextTitle } from "../../Assets/common";
 import { PageBarTypes } from "../../types";
 

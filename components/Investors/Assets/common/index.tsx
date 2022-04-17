@@ -70,7 +70,7 @@ export const Grid = styled.div`
 
 export const Display = styled.div`
   display: flex;
-  margin: 4.7rem 15.5rem 8.2rem 5rem;
+  margin: 4.7rem 5rem 8.2rem 5rem;
   @media ${device.tablet} {
     margin: 4.7rem 3rem 8.2rem 3rem;
   }
@@ -86,4 +86,50 @@ export const Pad = styled.div`
   @media ${device.mobileL} {
     margin-left: 0rem;
   }
+`;
+
+export const FormContainer = styled.div`
+  border: 1px solid #e1e8f4;
+  box-sizing: border-box;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  padding: 2rem 2rem 0rem 2rem;
+`;
+export const Input = styled.input`
+  background: #ffffff;
+  border: 0;
+  border-bottom: 1px solid #a0aaba;
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: -0.1px;
+  font-feature-settings: "liga" off;
+  color: #324a64;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 2rem;
+  &:focus {
+    border: 0;
+    outline: none;
+    border-bottom: 1px solid #a0aaba;
+  }
+  &:hover {
+    border: 0;
+    border-bottom: 1px solid #a0aaba;
+  }
+`;
+
+export const Label = styled.label`
+  margin:2rem 0rem;
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: -0.1px;
+  font-feature-settings: "liga" off;
+  color: #324a64;
 `;

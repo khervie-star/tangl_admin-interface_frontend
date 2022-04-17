@@ -33,3 +33,25 @@ export const individualBackwardRoute = (IndPage: number) => {
         }
     }
 }
+
+export const organizationFowardRoute = (OrgPage: number) => {
+    return async (dispatch: Dispatch) => {
+        try{
+            dispatch(setOrganizationPage(++OrgPage))
+        }catch(err: any){
+            console.log(err)
+           
+        }
+    }
+}
+
+export const organizationBackwardRoute = (OrgPage: number) => {
+    return async (dispatch: Dispatch) => {
+        try{
+            dispatch(setOrganizationPage(OrgPage-1))
+        }catch(err: any){
+            console.log(err)
+           
+        }
+    }
+}

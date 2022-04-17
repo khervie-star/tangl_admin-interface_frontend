@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { FormContainer } from "../../Assets/common";
 
 export const SecureAlert = styled.div`
   background: #fafafa;
@@ -18,12 +19,8 @@ export const SecureAlert = styled.div`
   }
 `;
 
-export const InputContainer = styled.div`
-  border: 1px solid #e1e8f4;
-  box-sizing: border-box;
-  border-radius: 8px;
+export const InputContainer = styled(FormContainer)`
   margin-bottom: 6.375rem;
-  padding: 32px;
 `;
 
 export const InputText = styled.div`

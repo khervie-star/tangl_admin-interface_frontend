@@ -34,8 +34,12 @@ export const ButtonWrapper = styled.button`
   box-sizing: border-box;
 `;
 
-export const ContinueButton = ({ children, onClick }: BtnProps) => {
-  return <ContBtn onClick={onClick}>{children}</ContBtn>;
+export const ContinueButton = ({ children, onClick, disabled }: BtnProps) => {
+  return (
+    <ContBtn disabled={disabled} onClick={onClick}>
+      {children}
+    </ContBtn>
+  );
 };
 
 export const ContBtn = styled.button`
@@ -49,14 +53,22 @@ export const ContBtn = styled.button`
   text-align: center;
   letter-spacing: -0.1px;
   box-sizing: border-box;
-  border-radius: 32px;
+  border-radius: 4px;
   padding: 1rem 1.5rem;
   color: #007afb;
   cursor: pointer;
 `;
 
-export const DarkContinueButton = ({ children, onClick }: BtnProps) => {
-  return <DarkContBtn onClick={onClick}>{children}</DarkContBtn>;
+export const DarkContinueButton = ({
+  children,
+  onClick,
+  disabled,
+}: BtnProps) => {
+  return (
+    <DarkContBtn disabled={disabled} onClick={onClick}>
+      {children}
+    </DarkContBtn>
+  );
 };
 
 export const DarkContBtn = styled.button`
@@ -70,7 +82,7 @@ export const DarkContBtn = styled.button`
   background: #007afb;
   border: 1px solid #007afb;
   box-sizing: border-box;
-  border-radius: 32px;
+  border-radius: 4px;
   padding: 1rem 1.5rem;
   color: #fff;
   cursor: pointer;

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Grid } from "../../components/Investors/Assets/common";
+import { Display, Grid } from "../../components/Investors/Assets/common";
 import { device } from "../../Global";
 
 export const InvestorContainer = styled.div`
@@ -7,25 +7,9 @@ export const InvestorContainer = styled.div`
   ${Grid} {
     grid-template-columns: repeat(1, 1fr);
   }
-`;
 
-export const Display = styled.div`
-  display: flex;
-  margin: 4.7rem 15.5rem 8.2rem 5rem;
-  @media ${device.tablet} {
-    margin: 4.7rem 3rem 8.2rem 3rem;
-  }
-`;
-
-export const Pad = styled.div`
-  width: 100%;
-  margin-left: 8rem;
-  @media ${device.tablet} {
-    margin-left: 5rem;
-  }
-
-  @media ${device.mobileL} {
-    margin-left: 0rem;
+  ${Display} {
+    margin: 4.7rem 15.5rem 8.2rem 5rem !important;
   }
 `;
 

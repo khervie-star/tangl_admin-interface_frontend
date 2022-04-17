@@ -1,4 +1,4 @@
-import { ContinueButton } from "./Assets/Buttons.tsx";
+import { ContinueButton } from "./Assets/Buttons";
 import { Card, Grid, TextBody, TextTitle } from "./Assets/common";
 import { useDispatch, useSelector } from "react-redux";
 import { setInvestor } from "../../store/actions/session";
@@ -53,7 +53,9 @@ const InvestorSelect = () => {
           );
         })}
       </Grid>
-      <ContinueButton onClick={handleClick}>Continue</ContinueButton>
+      <ContinueButton onClick={handleClick} disabled={!InvType && true}>
+        Continue
+      </ContinueButton>
     </>
   );
 };
