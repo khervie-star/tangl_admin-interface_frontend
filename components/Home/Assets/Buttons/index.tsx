@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { MdOutlineArrowForward } from "react-icons/md";
 import Router from "next/router";
+import { device } from "../../../../Global";
 
 type TextProp = {
   text?: string;
@@ -39,5 +40,9 @@ const ApplyBtn = styled.button`
   }
   span {
     margin-right: 0.75rem;
+  }
+  @media ${device.mobileL} {
+    font-size: 14px;
+    line-height: 16px;
   }
 `;

@@ -7,7 +7,7 @@ import Image3 from "../Assets/Images/image3.png";
 const TabThree = () => {
   return (
     <TabThreeContainer>
-      <FlexWrap flexPercentage="55%">
+      <FlexWrap display="both" flexPercentage="55%">
         <TextTitle>
           Supporting Private Market Investors and Emerging Managers{" "}
         </TextTitle>
@@ -43,7 +43,7 @@ const TabThree = () => {
         </List>
         <ApplyButton text="Create Admin account" />
       </FlexWrap>
-      <FlexWrap flexPercentage="40%">
+      <FlexWrap display="both" flexPercentage="40%">
         <Image src={Image3.src} />
       </FlexWrap>
     </TabThreeContainer>

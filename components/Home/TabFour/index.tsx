@@ -7,10 +7,10 @@ import Image4 from "../Assets/Images/image4.png";
 const TabFour = () => {
   return (
     <TabFourContainer>
-      <FlexWrap flexPercentage="50%">
+      <FlexWrap display="both" flexPercentage="50%">
         <Image src={Image4.src} />
       </FlexWrap>
-      <FlexWrap flexPercentage="50%" padding="0rem 0rem 0rem 5rem">
+      <FlexWrap display="both" flexPercentage="50%" padding="0rem 0rem 0rem 5rem">
         <TextTitle>We serve investors...</TextTitle>
         <List>
           <div>

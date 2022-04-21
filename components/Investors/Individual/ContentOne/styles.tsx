@@ -21,6 +21,7 @@ export const SecureAlert = styled.div`
 
 export const InputContainer = styled(FormContainer)`
   margin-bottom: 6.375rem;
+  padding: 2rem 2rem 2rem 2rem;
 `;
 
 export const InputText = styled.div`

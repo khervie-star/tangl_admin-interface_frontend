@@ -16,8 +16,8 @@ import ContentSeven from "./ContentSeven";
 import ContentEight from "./ContentEight";
 import ContentNine from "./ContentNine";
 import ContentTen from "./ContentTen";
-import ContentEleven from "./ContentEleven";
 import FinalContent from "./FinalContent";
+import ContentEleven from "./ContentEleven";
 
 const IndividualContent = () => {
   const { IndPage } = useSelector((store: RootState) => ({

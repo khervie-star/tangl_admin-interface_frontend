@@ -62,4 +62,8 @@ export const HeaderButton = styled.button`
     filter: grayscale(50%) blur(0.1px);
     transition: .1s ease-in-out;
   }
+  @media ${device.mobileL} {
+    font-size: 16px;
+    line-height: 20px;
+  }
 `;

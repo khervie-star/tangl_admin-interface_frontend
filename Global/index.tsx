@@ -36,6 +36,8 @@ body{
 `;
 
 export const Container = styled.div`
+  margin: 0;
+  box-sizing: border-box;
   color: #ffffff;
   background: #000000;
 `;

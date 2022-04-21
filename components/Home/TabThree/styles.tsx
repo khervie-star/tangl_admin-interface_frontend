@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { device } from "../../../Global";
-import { Image, TextTitle } from "../Assets/Common";
+import { FlexWrap, Image, TextTitle } from "../Assets/Common";
 
 export const TabThreeContainer = styled.div`
   display: flex;
@@ -15,5 +15,12 @@ export const TabThreeContainer = styled.div`
   }
   @media ${device.tablet} {
     padding: 2.5rem 1.5rem;
+    ${FlexWrap}{
+      flex: 100%;
+    }
+    ${Image} {
+    margin-left: 0;
+    margin-top: 2.5rem;
+  }
   }
 `;

@@ -45,10 +45,10 @@ const TabTwo = () => {
         <ApplyButton text="Become an investor"></ApplyButton>
       </HeadWrap>
       <BaseWrap>
-        <FlexWrap flexPercentage="25%">
+        <FlexWrap display="both" flexPercentage="25%">
           <Image  src={Image1.src} />
         </FlexWrap>
-        <FlexWrap flexPercentage="75%">
+        <FlexWrap display="both" flexPercentage="75%">
           <Image src={Image2.src} />
         </FlexWrap>
       </BaseWrap>

@@ -1,13 +1,18 @@
 import Router from "next/router";
+import { useDispatch } from "react-redux";
+import { setIndividualPage } from "../../../../store/actions";
+import { setInvestorType } from "../../../../store/actions/session";
 import { DarkContinueButton } from "../../Assets/Buttons";
 import { TextBody, TextTitle } from "../../Assets/common";
 import { FinalWrapper } from "./styles";
 
 const FinalContent = () => {
+  const dispatch = useDispatch()
   const handleClick = () => {
     Router.replace("/");
-  };
-
+    dispatch(setInvestorType(""))
+    dispatch(setIndividualPage(1))
+  }
   return (
     <FinalWrapper>
       <TextTitle>Submitted!</TextTitle>

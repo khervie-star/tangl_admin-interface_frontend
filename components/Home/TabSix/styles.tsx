@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { device } from "../../../Global";
 import { FlexWrap, Image, TextTitle } from "../Assets/Common";
 
-export const TabFourContainer = styled.div`
+export const TabSixContainer = styled.div`
   display: flex;
   align-items: center;
   padding: 5rem;

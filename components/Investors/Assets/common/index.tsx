@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { device } from "../../../../Global";
+import { EditIcon } from "../Icons";
 import { CommonTypes } from "./types";
 
 export const TextTitle = styled.h1`
@@ -107,7 +108,7 @@ export const Input = styled.input`
   letter-spacing: -0.1px;
   font-feature-settings: "liga" off;
   color: #324a64;
-  padding: 0.5rem 1rem;
+  padding: ${({ padding }: CommonTypes) => (padding ? padding : "0.5rem 1rem")};
   width: 100%;
   box-sizing: border-box;
   margin-bottom: 2rem;
@@ -122,8 +123,10 @@ export const Input = styled.input`
   }
 `;
 
-export const Label = styled.label`
-  margin:2rem 0rem;
+export const Select = styled.select`
+  background: #ffffff;
+  border: 0;
+  border-bottom: 1px solid #a0aaba;
   font-family: "Outfit";
   font-style: normal;
   font-weight: 500;
@@ -132,4 +135,108 @@ export const Label = styled.label`
   letter-spacing: -0.1px;
   font-feature-settings: "liga" off;
   color: #324a64;
+  box-sizing: border-box;
+  padding: 0.65rem 1rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  option {
+    background: #ffffff;
+    border: 0;
+    border-bottom: 1px solid #a0aaba;
+    font-family: "Outfit";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: -0.1px;
+    font-feature-settings: "liga" off;
+    color: #324a64;
+    padding: 0.7rem 1rem;
+  }
+  &:focus {
+    border: 0;
+    outline: none;
+    border-bottom: 1px solid #a0aaba;
+  }
+  &:hover {
+    border: 0;
+    border-bottom: 1px solid #a0aaba;
+  }
+`;
+
+export const Label = styled.label`
+  margin: 2rem 0rem;
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: -0.1px;
+  font-feature-settings: "liga" off;
+  color: #324a64;
+`;
+
+export const Row = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+export const LabelComment = styled.span`
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.1px;
+  color: #a0aaba;
+`;
+
+export const LabelFlex = styled.div`
+  flex: 50%;
+  box-sizing: border-box;
+  padding: ${({ padding }: CommonTypes) => (padding ? padding : "0")};
+`;
+
+export const ProofContainer = styled.div`
+  border-bottom: 1px solid #a0aaba;
+  padding: 0.5rem 0rem;
+  margin: 0;
+  margin-bottom: 2rem;
+  h1 {
+    margin: 0;
+    font-family: "Outfit";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: -0.1px;
+    font-feature-settings: "liga" off;
+    color: #324a64;
+  }
+`;
+
+export const ActionWrap = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem 1rem;
+  span {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: -0.1px;
+    color: #a0aaba;
+  }
+`;
+
+export const ActionIconWrap = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  > * {
+    &:last-child {
+      margin-left: 2rem;
+    }
+  }
 `;
