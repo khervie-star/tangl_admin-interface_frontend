@@ -22,7 +22,7 @@ const NavBar = () => {
       <Wrapper>
         <LogoContainer>
           <Logo />
-          <LogoTitle>Tangl</LogoTitle>
+          <LogoTitle>Tanglet</LogoTitle>
         </LogoContainer>
         <Navlist>
           <li>
