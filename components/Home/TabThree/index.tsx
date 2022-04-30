@@ -9,7 +9,7 @@ const TabThree = () => {
     <TabThreeContainer>
       <FlexWrap display="both" flexPercentage="55%">
         <TextTitle>
-          Supporting Private Market Investors and Emerging Managers{" "}
+          Supporting Private Market Investors and Emerging Managers
         </TextTitle>
         <List>
           <div>
@@ -18,7 +18,7 @@ const TabThree = () => {
           <ListText>
             TANGL Capital Partners is a group of forward thinking entrepreneurs,
             finance professionals and legal advisors, With experience across the
-            Venture Capital, Private Equity and Real Estate ecosystems.{" "}
+            Venture Capital, Private Equity and Real Estate ecosystems.
           </ListText>
         </List>
         <List>
@@ -26,9 +26,9 @@ const TabThree = () => {
             <ListTag />
           </div>
           <ListText>
-            TANGL's digital platform puts alternative investments and private
+            TANGL&apos;s digital platform puts alternative investments and private
             market strategies in the hands of high-net-worth investors and
-            independent advisors.{" "}
+            independent advisors.
           </ListText>
         </List>
         <List>

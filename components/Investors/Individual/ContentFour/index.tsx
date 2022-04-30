@@ -32,7 +32,7 @@ const ContentFour = ({ page }: PageBarTypes) => {
         </span>
       </MailContainer>
       <ResendLink>
-        <h1>Didn't receive a link? </h1>
+        <h1>Didn&apos;t receive a link?</h1>
         <span>
           <ReloadIcon />
           <p>Send again</p>

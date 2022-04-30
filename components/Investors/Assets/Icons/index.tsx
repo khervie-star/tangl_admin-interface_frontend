@@ -49,16 +49,16 @@ export const DeleteIcon = () => {
       <path
         d="M18 6L6 18"
         stroke="#A0AABA"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M6 6L18 18"
         stroke="#A0AABA"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
@@ -93,20 +93,20 @@ export const VerifiedIcon = () => {
       <path
         d="M8 2C7.59401 1.99947 7.19452 2.10193 6.83891 2.29781C6.4833 2.49369 6.18319 2.77657 5.96667 3.12C5.77027 3.07261 5.56868 3.05021 5.36667 3.05333C4.75877 3.07591 4.18212 3.32849 3.75333 3.76C3.4719 4.04695 3.26704 4.39998 3.15755 4.7867C3.04806 5.17342 3.03744 5.58144 3.12667 5.97333C2.78296 6.18846 2.49936 6.48717 2.30234 6.84157C2.10532 7.19597 2.0013 7.59452 2 8C2.00017 8.40661 2.10365 8.80651 2.30072 9.16218C2.4978 9.51784 2.782 9.8176 3.12667 10.0333C3.03828 10.4258 3.04996 10.8341 3.16063 11.2209C3.27129 11.6076 3.4774 11.9604 3.76 12.2467C4.04764 12.5337 4.40344 12.743 4.79407 12.8549C5.18469 12.9668 5.59733 12.9778 5.99333 12.8867C6.20823 13.2251 6.50445 13.5042 6.85498 13.6987C7.2055 13.8932 7.59915 13.9968 8 14C8.40424 14.0001 8.80196 13.8981 9.15626 13.7035C9.51055 13.5089 9.80995 13.2279 10.0267 12.8867C10.4213 12.9751 10.832 12.9623 11.2204 12.8496C11.6088 12.7369 11.9625 12.5278 12.2485 12.2418C12.5345 11.9558 12.7435 11.6022 12.8563 11.2137C12.969 10.8253 12.9818 10.4147 12.8933 10.02C13.2324 9.8031 13.5114 9.50442 13.7048 9.15143C13.8982 8.79844 13.9997 8.40249 14 8C14.0001 7.59576 13.8981 7.19804 13.7035 6.84374C13.5089 6.48945 13.2279 6.19005 12.8867 5.97333V5.97333C12.9751 5.57866 12.9623 5.16804 12.8496 4.77961C12.7369 4.39118 12.5278 4.03754 12.2418 3.75154C11.9558 3.46555 11.6022 3.25647 11.2137 3.14373C10.8253 3.03098 10.4147 3.01824 10.02 3.10667C9.8031 2.76762 9.50442 2.48856 9.15143 2.29518C8.79844 2.10179 8.40249 2.00029 8 2V2Z"
         stroke="#5AC179"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M10.0002 6.66667L7.3335 9.33333"
         stroke="#5AC179"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M6 8L7.33333 9.33333"
         stroke="#5AC179"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
@@ -141,23 +141,23 @@ export const CloudIcon = () => {
       <path
         d="M19.9996 16.2C20.7841 15.6572 21.3757 14.8791 21.6891 13.9781C22.0026 13.0771 22.0216 12.0998 21.7434 11.1873C21.4652 10.2748 20.9042 9.47429 20.1414 8.9014C19.3786 8.32851 18.4535 8.01285 17.4996 7.99999H15.6996C15.3973 6.98027 14.8667 6.04283 14.1479 5.25888C13.4291 4.47493 12.5412 3.86507 11.5514 3.47562C10.5617 3.08617 9.49627 2.92738 8.436 3.01129C7.37573 3.09521 6.34852 3.41963 5.43239 3.95991C4.51625 4.5002 3.73528 5.24214 3.14878 6.1294C2.56227 7.01666 2.18567 8.0259 2.04755 9.08048C1.90944 10.1351 2.01345 11.2072 2.35169 12.2156C2.68993 13.224 3.25351 14.142 3.99961 14.9"
         stroke="#A0AABA"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M12 12V21"
         stroke="#A0AABA"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M16 16L12 12L8 16"
         stroke="#A0AABA"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
@@ -175,9 +175,9 @@ export const RemoveIcon = () => {
       <path
         d="M4 5V3C4 2.46957 4.21071 1.96086 4.58579 1.58579C4.96086 1.21071 5.46957 1 6 1H10C10.5304 1 11.0391 1.21071 11.4142 1.58579C11.7893 1.96086 12 2.46957 12 3V5M15 5V19C15 19.5304 14.7893 20.0391 14.4142 20.4142C14.0391 20.7893 13.5304 21 13 21H3C2.46957 21 1.96086 20.7893 1.58579 20.4142C1.21071 20.0391 1 19.5304 1 19V5H15Z"
         stroke="#C99595"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
