@@ -4,6 +4,7 @@ import { ContinueButton } from "../../Assets/Buttons";
 import {
   ActionIconWrap,
   ActionWrap,
+  Date,
   FormContainer,
   Input,
   Label,
@@ -36,13 +37,13 @@ const ContentSeven = ({ page }: PageBarTypes) => {
           </ActionWrap>
         </ProofContainer>
         <Row>
-          <LabelFlex padding="0rem 1rem 0rem 0rem">
+          <LabelFlex flexPercentage="50%" padding="0rem 1rem 0rem 0rem">
             <Label>ID Card number</Label>
             <Input type={"text"} padding="0.555rem 1rem" />
           </LabelFlex>
-          <LabelFlex padding="0rem 0rem 0rem 1rem">
+          <LabelFlex flexPercentage="50%" padding="0rem 0rem 0rem 1rem">
             <Label>Expiry</Label>
-            <Input type={"date"} />
+            <Date padding=".5rem 1rem" type="date"/>
           </LabelFlex>
         </Row>
       </FormContainer>

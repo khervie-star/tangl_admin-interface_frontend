@@ -19,7 +19,7 @@ export const CardWrap = styled.div`
       margin-bottom: 0;
     }
   }
-  @media ${device.mobileL} {
+  @media ${device.tablet} {
     display: none;
   }
 `;

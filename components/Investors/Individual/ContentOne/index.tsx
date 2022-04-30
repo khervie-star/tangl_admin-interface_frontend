@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
 import { individualFowardRoute } from "../../../../store/actions";
 import { ContinueButton } from "../../Assets/Buttons";
-import { TextBody, TextTitle } from "../../Assets/common";
+import { LabelFlex, TextBody, TextTitle } from "../../Assets/common";
 import { DeleteIcon, LockIcon } from "../../Assets/Icons";
 import { PageBarTypes } from "../../types";
 import {
@@ -38,11 +38,15 @@ const ContentOne = ({ page }: PageBarTypes) => {
           <p>Enter your phone number</p>
         </InputText>
         <InputWrapper>
-          <Select>
-            <option>+234</option>
-            <option>+1</option>
-          </Select>
-          <input type="text"  />
+          <LabelFlex flexPercentage="30%" padding= "0rem .5rem 0rem 0rem">
+            <Select>
+              <option>+234</option>
+              <option>+1</option>
+            </Select>
+          </LabelFlex>
+          <LabelFlex flexPercentage="70%" padding ="0rem 0rem 0rem .5rem">
+            <input type="text" />
+          </LabelFlex>
         </InputWrapper>
       </InputContainer>
       <ContinueButton>Send Code</ContinueButton>

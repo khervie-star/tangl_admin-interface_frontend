@@ -6,7 +6,7 @@ export const FinalWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  margin-left: -8rem;
+  
   ${TextTitle}{
     margin-bottom: 7.75rem;
   }

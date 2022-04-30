@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
 import { individualFowardRoute } from "../../../../store/actions";
 import { ContinueButton } from "../../Assets/Buttons";
-import { FormContainer, Input, Label, LabelComment, LabelFlex, Row, Select, TextBody, TextTitle } from "../../Assets/common";
+import { Date, FormContainer, Input, Label, LabelComment, LabelFlex, Row, Select, TextBody, TextTitle } from "../../Assets/common";
 import { PageBarTypes } from "../../types";
 
 const ContentFive = ({ page }: PageBarTypes) => {
@@ -30,11 +30,11 @@ const ContentFive = ({ page }: PageBarTypes) => {
         </Label>
         <Input type="text"/>
         <Row>
-          <LabelFlex padding="0rem 1rem 0rem 0rem">
+          <LabelFlex flexPercentage="50%" padding="0rem 1rem 0rem 0rem">
             <Label>Date of Birth</Label>
-            <Input type="Date"/>
+            <Date padding=".5rem 1rem" type="date"/>
           </LabelFlex>
-          <LabelFlex padding="0rem 0rem 0rem 1rem">
+          <LabelFlex flexPercentage="50%" padding="0rem 0rem 0rem 1rem">
             <Label>Nationality</Label>
             <Select>
               <option>United Kingdom</option>

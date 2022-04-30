@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../../../../Global";
 
 export const TelContainer = styled.div`
   border: 1px solid #e1e8f4;
@@ -80,6 +81,9 @@ export const CodeContainer = styled.div`
 
 export const InputContainer = styled.div`
   width: 70%;
+  @media ${device.mobileL} {
+    width: 60%;
+  }
 `
 
 export const Resend = styled.div`

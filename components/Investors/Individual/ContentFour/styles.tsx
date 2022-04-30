@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../../../../Global";
 
 export const MailContainer = styled.div`
   border: 1px solid #e1e8f4;
@@ -38,7 +39,6 @@ export const ResendLink = styled.div`
   box-sizing: border-box;
   border-radius: 8px;
   padding: 1rem;
-  margin-bottom: 14rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -73,5 +73,12 @@ export const ButtonWrap = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 14rem;
+  @media ${device.tablet} {
+    margin-top: 4rem;
+  }
+  @media ${device.mobileL} {
+    margin-top: 2rem;
+  }
 `
 

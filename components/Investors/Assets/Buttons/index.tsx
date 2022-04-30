@@ -33,7 +33,7 @@ export const ButtonWrapper = styled.button`
   border: 1px solid #a0aaba;
   cursor: pointer;
   box-sizing: border-box;
-  @media ${device.mobileL} {
+  @media ${device.tablet} {
     margin-bottom: 2rem;
   }
 `;

@@ -34,10 +34,12 @@ const IndividualContent = () => {
   return (
     <>
       <Display>
-        <div>
-        {IndPage !== 13 && <BackButton onClick={handleBack} />}
-        </div>
-        <Pad>
+        {IndPage !== 13 && (
+          <div>
+            <BackButton onClick={handleBack} />
+          </div>
+        )}
+        <Pad page = {IndPage} >
           {IndPage !== 13 && <PageBar page={IndPage} />}
           {IndPage === 2 && <ContentOne page={IndPage} />}
           {IndPage === 3 && <ContentTwo page={IndPage} />}
@@ -50,7 +52,7 @@ const IndividualContent = () => {
           {IndPage === 10 && <ContentNine page={IndPage} />}
           {IndPage === 11 && <ContentTen page={IndPage} />}
           {IndPage === 12 && <ContentEleven page={IndPage} />}
-          {IndPage === 13 && <FinalContent  />}
+          {IndPage === 13 && <FinalContent />}
         </Pad>
         {IndPage && IndPage > 1 && IndPage !== 13 && (
           <div>

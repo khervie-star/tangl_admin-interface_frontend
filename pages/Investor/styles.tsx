@@ -11,6 +11,9 @@ export const InvestorContainer = styled.div`
 
   ${Display} {
     margin: 4.7rem 15.5rem 8.2rem 5rem !important;
+    @media ${device.tablet} {
+      margin: 4.7rem 2.5rem 8.2rem 2.5rem !important;
+    }
     @media ${device.mobileL} {
       margin: 4.7rem 1.5rem 8.2rem 1.5rem !important;
     }

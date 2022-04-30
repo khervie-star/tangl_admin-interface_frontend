@@ -54,11 +54,8 @@ export const InputWrapper = styled.div`
     font-feature-settings: "liga" off;
     color: #324a64;
     padding: 0.5rem 1rem;
-    margin-left: 0.5rem;
     box-sizing: border-box;
-    @media ${device.tablet} {
-      max-width: 70%;
-    }
+    width: 100%;
     &:focus {
       border: 0;
       outline: none;
@@ -91,7 +88,8 @@ export const Select = styled.select`
   background-position-x: 60px;
   background-position-y: 15px;
   border-radius: 2px;
-
+  box-sizing: border-box;
+  width: 100%;
   option {
     background: #ffffff;
     border: 0;

@@ -72,21 +72,21 @@ export const Grid = styled.div`
 
 export const Display = styled.div`
   display: flex;
-  flex-wrap: wrap;
   margin: 4.7rem 5rem 8.2rem 5rem;
   @media ${device.tablet} {
+    flex-wrap: wrap;
+    margin: 4.7rem 2.5rem 8.2rem 2.5rem;
+  }
+  @media ${device.mobileL} {
+    flex-wrap: wrap;
     margin: 4.7rem 1.5rem 8.2rem 1.5rem;
   }
 `;
 
 export const Pad = styled.div`
   width: 100%;
-  margin-left: 8rem;
+  margin-left: ${({ page }: CommonTypes) => (page === 13 ? "0rem" : "8rem")};
   @media ${device.tablet} {
-    margin-left: 5rem;
-  }
-
-  @media ${device.mobileL} {
     margin-left: 0rem;
   }
 `;
@@ -122,6 +122,49 @@ export const Input = styled.input`
   &:hover {
     border: 0;
     border-bottom: 1px solid #a0aaba;
+  }
+  @media ${device.mobileL} {
+    font-size: 14px;
+    line-height: 20px;
+  }
+`;
+
+export const Date = styled.input.attrs({
+  type: "date",
+})`
+  &::-webkit-inner-spin-button,
+  &::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+  }
+  background: #ffffff;
+  border: 0;
+  border-bottom: 1px solid #a0aaba;
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: -0.1px;
+  text-transform: uppercase;
+  font-feature-settings: "liga" off;
+  color: #324a64;
+  padding: ${({ padding }: CommonTypes) => (padding ? padding : "0.5rem 1rem")};
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 2rem;
+  &:focus {
+    border: 0;
+    outline: none;
+    border-bottom: 1px solid #a0aaba;
+  }
+  &:hover {
+    border: 0;
+    border-bottom: 1px solid #a0aaba;
+  }
+  @media ${device.mobileL} {
+    font-size: 14px;
+    line-height: 20px;
   }
 `;
 
@@ -164,6 +207,10 @@ export const Select = styled.select`
     border: 0;
     border-bottom: 1px solid #a0aaba;
   }
+  @media ${device.mobileL} {
+    font-size: 14px;
+    line-height: 20px;
+  }
 `;
 
 export const Label = styled.label`
@@ -176,6 +223,10 @@ export const Label = styled.label`
   letter-spacing: -0.1px;
   font-feature-settings: "liga" off;
   color: #324a64;
+  @media ${device.mobileL} {
+    font-size: 14px;
+    line-height: 20px;
+  }
 `;
 
 export const Row = styled.div`
@@ -194,7 +245,8 @@ export const LabelComment = styled.span`
 `;
 
 export const LabelFlex = styled.div`
-  flex: 50%;
+  flex: ${({ flexPercentage }: CommonTypes) =>
+    flexPercentage ? flexPercentage : "50%"};
   box-sizing: border-box;
   padding: ${({ padding }: CommonTypes) => (padding ? padding : "0")};
 `;
