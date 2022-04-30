@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../../../../Global";
 import { FormContainer } from "../../Assets/common";
 
 export const SecureAlert = styled.div`
@@ -39,6 +40,7 @@ export const InputText = styled.div`
 export const InputWrapper = styled.div`
   display: flex;
   align-items: center;
+  box-sizing: border-box;
   input {
     background: #ffffff;
     border: 0;
@@ -53,6 +55,10 @@ export const InputWrapper = styled.div`
     color: #324a64;
     padding: 0.5rem 1rem;
     margin-left: 0.5rem;
+    box-sizing: border-box;
+    @media ${device.tablet} {
+      max-width: 70%;
+    }
     &:focus {
       border: 0;
       outline: none;

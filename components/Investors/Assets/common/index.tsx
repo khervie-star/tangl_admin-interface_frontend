@@ -1,5 +1,6 @@
 import styled, { css } from "styled-components";
 import { device } from "../../../../Global";
+import { BackButton } from "../Buttons";
 import { EditIcon } from "../Icons";
 import { CommonTypes } from "./types";
 
@@ -71,9 +72,10 @@ export const Grid = styled.div`
 
 export const Display = styled.div`
   display: flex;
+  flex-wrap: wrap;
   margin: 4.7rem 5rem 8.2rem 5rem;
   @media ${device.tablet} {
-    margin: 4.7rem 3rem 8.2rem 3rem;
+    margin: 4.7rem 1.5rem 8.2rem 1.5rem;
   }
 `;
 

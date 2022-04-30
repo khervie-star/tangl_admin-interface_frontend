@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../../../../Global";
 import { BtnProps } from "./types";
 
 export const BackButton = ({ onClick }: BtnProps) => {
@@ -15,7 +16,7 @@ export const BackButton = ({ onClick }: BtnProps) => {
           fill-rule="evenodd"
           clip-rule="evenodd"
           d="M7.08946 0.410765C7.4149 0.736202 7.4149 1.26384 7.08946 1.58928L2.67871 6.00002L7.08946 10.4108C7.4149 10.7362 7.4149 11.2638 7.08946 11.5893C6.76402 11.9147 6.23638 11.9147 5.91095 11.5893L0.910948 6.58928C0.585511 6.26384 0.585511 5.7362 0.910948 5.41076L5.91095 0.410765C6.23638 0.0853278 6.76402 0.0853278 7.08946 0.410765Z"
-          fill="#007AFB"
+          fill="#A0AABA"
         />
       </svg>
     </ButtonWrapper>
@@ -29,9 +30,12 @@ export const ButtonWrapper = styled.button`
   justify-content: center;
   border-radius: 4px;
   padding: 0.886rem 1.042rem;
-  border: 1px solid #007afb;
+  border: 1px solid #a0aaba;
   cursor: pointer;
   box-sizing: border-box;
+  @media ${device.mobileL} {
+    margin-bottom: 2rem;
+  }
 `;
 
 export const ContinueButton = ({ children, onClick, disabled }: BtnProps) => {

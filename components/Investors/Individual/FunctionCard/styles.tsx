@@ -1,4 +1,5 @@
 import styled, { css } from "styled-components";
+import { device } from "../../../../Global";
 
 export type CardProps = {
   active?: boolean;
@@ -17,6 +18,9 @@ export const CardWrap = styled.div`
     &:last-child {
       margin-bottom: 0;
     }
+  }
+  @media ${device.mobileL} {
+    display: none;
   }
 `;
 
