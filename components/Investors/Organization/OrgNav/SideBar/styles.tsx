@@ -4,12 +4,12 @@ export const SideBarContainer = styled.div`
   background: #011122;
   max-width: 17.5rem;
   height: 100%;
-  position: fixed;
   top: 0;
   left: 0;
   z-index: 1;
   padding: 2.5rem 3.75rem 0rem 2.5rem;
   overflow-x: hidden;
+  margin-right: 0;
 `;
 
 export const Logo = styled.div`

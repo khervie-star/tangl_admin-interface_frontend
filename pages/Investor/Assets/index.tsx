@@ -1,11 +1,11 @@
-import SideBar from "../../../components/Investors/Organization/SideBar"
+import OrgNav from "../../../components/Investors/Organization/OrgNav";
 
 const Asset = () => {
-    return (
-        <>
-        <SideBar/>
-        </>
-    )
-}
+  return (
+    <>
+    <OrgNav/>
+    </>
+  );
+};
 
-export default Asset
+export default Asset;

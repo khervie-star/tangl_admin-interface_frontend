@@ -7,7 +7,7 @@ import {
   SettingIcon,
   TanglIcon,
   WindowsIcon,
-} from "../Icons";
+} from "../../Icons";
 import { Control, Logo, NavLink, SideBarContainer, SideRoutes } from "./styles";
 
 const SideBar = () => {
