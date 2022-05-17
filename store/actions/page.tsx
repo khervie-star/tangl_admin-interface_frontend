@@ -7,10 +7,12 @@ export const setIndividualPage = (individualPage: any) => ({
     individualPage
 })
 
-export const setOrganizationPage = (OrganizationPage: any) => ({
+export const setOrganizationPage = (organizationPage: any) => ({
     type: SET_ORGANIZATION_PAGE,
-    OrganizationPage
+    organizationPage
 })
+
+
 
 export const individualFowardRoute = (IndPage: number) => {
     return async (dispatch: Dispatch) => {

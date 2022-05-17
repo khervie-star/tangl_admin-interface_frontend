@@ -1,23 +1,23 @@
 import { BackButton } from "../Assets/Buttons";
 import { Display, Pad } from "../Assets/common";
 import PageBar from "../PageBar";
-import ContentOne from "./ContentOne";
+import ContentOne from "./Onboarding/ContentOne";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../../store/reducers";
-import FunctionCard from "./FunctionCard";
+import FunctionCard from "./Onboarding/FunctionCard";
 import Router from "next/router";
-import ContentTwo from "./ContentTwo";
+import ContentTwo from "./Onboarding/ContentTwo";
 import { individualBackwardRoute } from "../../../store/actions";
-import ContentThree from "./ContentThree";
-import ContentFour from "./ContentFour";
-import ContentFive from "./ContentFive";
-import ContentSix from "./ContentSix";
-import ContentSeven from "./ContentSeven";
-import ContentEight from "./ContentEight";
-import ContentNine from "./ContentNine";
-import ContentTen from "./ContentTen";
-import FinalContent from "./FinalContent";
-import ContentEleven from "./ContentEleven";
+import ContentThree from "./Onboarding/ContentThree";
+import ContentFour from "./Onboarding/ContentFour";
+import ContentFive from "./Onboarding/ContentFive";
+import ContentSix from "./Onboarding/ContentSix";
+import ContentSeven from "./Onboarding/ContentSeven";
+import ContentEight from "./Onboarding/ContentEight";
+import ContentNine from "./Onboarding/ContentNine";
+import ContentTen from "./Onboarding/ContentTen";
+import FinalContent from "./Onboarding/FinalContent";
+import ContentEleven from "./Onboarding/ContentEleven";
 
 const IndividualContent = () => {
   const { IndPage } = useSelector((store: RootState) => ({

@@ -13,7 +13,7 @@ const selectCards = [
   },
   {
     key: 2,
-    content: "Special Purpose Investment vehicle",
+    content: "Create Admin Account",
     cardType: "ORG",
   },
 ];
