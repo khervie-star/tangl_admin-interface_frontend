@@ -11,7 +11,7 @@ import Router from "next/router";
 const TabEleven = () => {
   
   const handleClick = () => {
-    Router.push("/investors");
+    Router.push("/Investors/Onboarding");
   };
   return (
     <TabElevenContainer>

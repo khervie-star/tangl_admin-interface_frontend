@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { device } from "../../../../../Global";
+import { device } from "../../../../../../Global";
 
 export type CardProps = {
   active?: boolean;
@@ -11,9 +11,8 @@ export const CardWrap = styled.div`
   border: 1px solid #e0e0e0;
   box-sizing: border-box;
   border-radius: 12px;
-  width: 19.375rem;
+  width: 17.375;
   padding: 40px;
-  margin-left: 16.625rem;
   > * {
     &:last-child {
       margin-bottom: 0;
@@ -26,17 +25,6 @@ export const CardWrap = styled.div`
 
 export const Function = styled.div`
   margin-bottom: 32px;
-`;
-
-export const DropList = styled.div`
-  ${({ active }: CardProps) =>
-    active
-      ? css`
-          display: block;
-        `
-      : css`
-          display: none;
-        `}
 `;
 
 export const Text = styled.p`

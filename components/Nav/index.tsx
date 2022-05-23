@@ -15,7 +15,7 @@ import Router from "next/router";
 
 const NavBar = () => {
   const handleClick = () => {
-    Router.push("/Investor");
+    Router.push("/Investor/Onboarding");
   };
   return (
     <NavContainer>

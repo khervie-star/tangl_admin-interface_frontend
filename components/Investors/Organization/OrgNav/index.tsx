@@ -1,8 +1,13 @@
+import { Children } from "react";
 import styled from "styled-components";
 import SideBar from "./SideBar";
 import TopBar from "./TopBar";
 
-const OrgNav = () => {
+export type ChildType = {
+  children: any;
+}
+
+const OrgNav = ({children}: ChildType) => {
     return (
       <NavContainer>
         <div>
@@ -10,6 +15,7 @@ const OrgNav = () => {
         </div>
         <Div>
           <TopBar />
+          {children}
         </Div>
       </NavContainer>
     );

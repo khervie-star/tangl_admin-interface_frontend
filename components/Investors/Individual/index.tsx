@@ -27,7 +27,7 @@ const IndividualContent = () => {
   const dispatch = useDispatch();
 
   const handleBack = () => {
-    if (IndPage === 2) Router.push("/Investor");
+    if (IndPage === 2) Router.push("/Investor/Onboarding");
     else dispatch(individualBackwardRoute(IndPage));
   };
 

@@ -1,12 +1,12 @@
-import InvestorSelect from "../../../../components/Investors";
-import { BackButton } from "../../../../components/Investors/Assets/Buttons";
-import OnBoardNavBar from "../../../../components/Investors/OnboardNav";
-import PageBar from "../../../../components/Investors/PageBar";
-import { Display, Pad, Grid } from "../../../../components/Investors/Assets/common";
+import InvestorSelect from "../../components/Investors";
+import { BackButton } from "../../components/Investors/Assets/Buttons";
+import OnBoardNavBar from "../../components/Investors/OnboardNav";
+import PageBar from "../../components/Investors/PageBar";
+import { Display, Pad, Grid } from "../../components/Investors/Assets/common";
 import Router from "next/router";
 import Link from "next/link";
 import styled from "styled-components";
-import { device } from "../../../../Global";
+import { device } from "../../Global";
 
 const Investors = () => {
   const handleBack = () => {

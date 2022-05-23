@@ -1,4 +1,8 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+
+export type SideNavType = {
+  active?: boolean;
+};
 
 export const SideBarContainer = styled.div`
   background: #011122;
@@ -27,10 +31,12 @@ export const Logo = styled.div`
   }
 `;
 
-export const NavLink = styled.a`
+export const NavLink = styled.button`
   display: flex;
   align-items: center;
   text-decoration: none;
+  background: #011122;
+  border: 0;
   font-family: "Outfit";
   font-style: normal;
   font-weight: 500;
@@ -39,11 +45,18 @@ export const NavLink = styled.a`
   letter-spacing: -0.1px;
   font-feature-settings: "liga" off;
   color: #ffffff;
-  padding: 0.75rem 4rem 0.75rem 1rem;
+  padding: 0.75rem 1.625rem 0.75rem 1rem;
   margin-top: 2.5rem;
+  cursor: pointer;
   span {
     margin-left: 1.125rem;
   }
+  ${({ active }: SideNavType) =>
+    active &&
+    css`
+      background: rgba(255, 255, 255, 0.15);
+      border-radius: 16px;
+    `}
   &:hover {
     background: rgba(255, 255, 255, 0.15);
     border-radius: 16px;

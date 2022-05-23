@@ -30,8 +30,8 @@ const InvestorSelect = () => {
 
   const handleClick = () => {
     InvType && InvType === "IND"
-      ? Router.push("/Investor/Individual")
-      : Router.push("/Investor/Organization");
+      ? Router.push("/Investor/Individual/Onboarding")
+      : Router.push("/Investor/Organization/Onboarding");
   };
 
   return (

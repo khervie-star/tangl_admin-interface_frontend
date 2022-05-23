@@ -1,4 +1,4 @@
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "../../../store/reducers";
 import { BackButton } from "../Assets/Buttons";
 import { Display, Pad } from "../Assets/common";
@@ -16,14 +16,16 @@ import ContentNine from "./Onboarding/ContentNine";
 import ContentTen from "./Onboarding/ContentTen";
 import FunctionCard from "./Onboarding/FunctionCard";
 import ContentEleven from "./Onboarding/ContentEleven";
+import { organizationBackwardRoute } from "../../../store/actions";
 
 const OrganizationContent = () => {
   const { OrgPage } = useSelector((store: RootState) => ({
     OrgPage: store.Organization.page,
   }));
-
+  const dispatch = useDispatch()
   const handleBack = () => {
-    Router.push("/Investor");
+    if (OrgPage === 1) Router.push("/Investor/Onboarding");
+    else dispatch(organizationBackwardRoute(OrgPage));
   };
 
   return (

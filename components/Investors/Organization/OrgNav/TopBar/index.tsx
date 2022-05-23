@@ -7,7 +7,7 @@ const TopBar = () => {
     <TopBarContainer>
       <div>
       <SearchContainer>
-        <input type="search" placeholder="Search" />
+        <input type="text" placeholder="Search" />
         <SearchIcon />
       </SearchContainer>
       </div>
