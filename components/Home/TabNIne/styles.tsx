@@ -1,22 +1,37 @@
 import styled from "styled-components";
 import { device } from "../../../Global";
-import { FlexWrap, Image, TextTitle } from "../Assets/Common";
-
 export const TabNineContainer = styled.div`
   display: flex;
   align-items: center;
-  padding: 5rem;
-  flex-wrap: wrap;
-  ${TextTitle} {
-    margin-top: 0;
-  }
+  justify-content: space-between;
+  padding: 5rem 5rem;
   @media ${device.tablet} {
-    padding: 2.5rem 1.5rem;
-    ${FlexWrap} {
-      flex: 100%;
-    }
-    ${Image} {
-      margin-top: 2.5rem;
-    }
+    display: none;
   }
+`;
+
+export const LogCard = styled.div`
+  background: #011122;
+  border-radius: 4px;
+  padding: 2.5rem;
+`;
+
+export const LogText = styled.h1`
+  margin: 0;
+  margin-top: 1.5rem;
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: -0.4px;
+  color: #ffffff;
+  max-width: 16rem;
+`;
+
+export const LogBox = styled.div`
+  display: flex;
+  height: 18.5rem;
+  max-width: 16rem;
+  background: #a0aaba;
 `;

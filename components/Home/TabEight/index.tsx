@@ -1,57 +1,39 @@
-import { ApplyButton } from "../Assets/Buttons";
-import { Box, FlexWrap, Image, List, ListText, TextTitle } from "../Assets/Common";
-import { ListTag } from "../Assets/Icons";
-import { TabEightContainer } from "./styles";
-import Image9 from "../Assets/Images/image9.png";
+import { TextBody, TextTitle } from "../Assets/Common";
+import {
+  BarWrapper,
+  ButtonFlex,
+  OtherButton,
+  TabEightContainer,
+} from "./styles";
+import Router from "next/router";
 
 
 const TabEight = () => {
+  
+  const handleClick = () => {
+    Router.push("/Investors/Onboarding");
+  };
   return (
     <TabEightContainer>
-      <FlexWrap display="desktop" flexPercentage="50%">
-        <Box height="22.25rem" margin="8.56rem 5rem 8.56rem 0rem"></Box>
-      </FlexWrap>
-      <FlexWrap
-        display="both"
-        flexPercentage="50%"
-      >
-        <TextTitle>How We Do It</TextTitle>
-        <List>
-          <div>
-            <ListTag />
-          </div>
-          <ListText>
-            Our Experience and professional network within the Private Equity,
-            Venture Capital and Real estate industries allows us to partake in
-            conversations with industry professionals and start up founders at
-            various stages of their business Lifecyle.
-          </ListText>
-        </List>
-        <List>
-          <div>
-            <ListTag />
-          </div>
-          <ListText>
-            Our team liaises with all industry participants to create a
-            selection of prospectus companies, we partner with Top-Tier
-            investment firms and support founders with access to funding and
-            ancillary services.
-          </ListText>
-        </List>
-        <List>
-          <div>
-            <ListTag />
-          </div>
-          <ListText>
-            Our strategic relationships with financial institutions allows us to
-            merge capital with effective expertise.
-          </ListText>
-        </List>
-        <ApplyButton text="Join the team" />
-      </FlexWrap>
-      <FlexWrap flexPercentage="100%" display="mobile">
-        <Image src={Image9.src}/>
-      </FlexWrap>
+      <BarWrapper>
+        <TextTitle >Ready to get started?</TextTitle>
+        <TextBody>
+          Smart connections between Startups, Venture Capital and Real Estate
+          Asset classes
+        </TextBody>
+        <ButtonFlex>
+          <OtherButton background="#007AFB" onClick={handleClick}>Become a partner</OtherButton>
+          <OtherButton
+            background="#011122"
+            borderColor="#A0AABA"
+            margin="0rem 0rem 0rem 1.5rem"
+            display="mobile"
+            onClick={handleClick}
+          >
+            Apply for funding
+          </OtherButton>
+        </ButtonFlex>
+      </BarWrapper>
     </TabEightContainer>
   );
 };

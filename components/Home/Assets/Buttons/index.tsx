@@ -5,6 +5,7 @@ import { device } from "../../../../Global";
 
 type TextProp = {
   text?: string;
+  color?: string;
 };
 
 export const ApplyButton = ({ text }: TextProp) => {
@@ -26,7 +27,7 @@ const ApplyBtn = styled.button`
   border: 1px solid #a0aaba;
   box-sizing: border-box;
   border-radius: 4px;
-  color: inherit;
+  color: #ffffff;
   padding: 0.75rem 1rem;
   font-family: inherit;
   font-size: inherit;

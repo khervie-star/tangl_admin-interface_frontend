@@ -1,10 +1,5 @@
 import { ApplyButton } from "../Assets/Buttons";
-import {
-  FlexWrap,
-  Image,
-  TextBody,
-  TextTitle,
-} from "../Assets/Common";
+import { FlexWrap, Image, TextBody, TextTitle } from "../Assets/Common";
 import { TabSixContainer } from "./styles";
 import Image5 from "../Assets/Images/image5.png";
 
@@ -19,10 +14,13 @@ const TabSix = () => {
         flexPercentage="50%"
         padding="0rem 0rem 0rem 5rem"
       >
-        <TextTitle>Start investing securely</TextTitle>
+        <TextTitle>
+          Take control of how you manage and interact with your assets
+        </TextTitle>
         <TextBody>
-          Our diverse group of placement agents source deals and carry out due
-          diligence on all prospective investments.
+          View approved funds, access Due diligence documents and Request
+          allocation to investment fund. View your portfolio’s composition and
+          performance.
         </TextBody>
         <ApplyButton text="Become an investor" />
       </FlexWrap>

@@ -127,8 +127,8 @@ export const BaseText = styled.div`
 
 export const BaseIcons = styled.div`
   display: inline-grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-gap: 35px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap:3.75rem;
 `;
 
 export const IconBox = styled.div`

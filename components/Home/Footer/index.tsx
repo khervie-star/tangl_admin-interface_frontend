@@ -1,4 +1,5 @@
 import { CircleIcon } from "../Assets/Icons";
+import { FacebookIcon, InstagramIcon, LinkedInIcon, TwitterIcon } from "../Assets/Icons/SocialIcons";
 import {
   BaseContainer,
   BaseIcons,
@@ -21,19 +22,13 @@ const Footer = () => {
         </TanglWrap>
         <HeadWrap>
           <TitleWrap>
-            <h3>Title</h3>
-            <p>Something</p>
-            <p>Something</p>
+            <h3>About</h3>
           </TitleWrap>
           <TitleWrap>
-            <h3>Title</h3>
-            <p>Something</p>
-            <p>Something</p>
+            <h3>Pricing</h3>
           </TitleWrap>
           <TitleWrap>
-            <h3>Title</h3>
-            <p>Something</p>
-            <p>Something</p>
+            <h3>Contact</h3>
           </TitleWrap>
         </HeadWrap>
       </Wrapper>
@@ -45,15 +40,13 @@ const Footer = () => {
           <p>Security</p>
         </BaseText>
         <BaseIcons>
-          <IconBox></IconBox>
+          <FacebookIcon/>
 
-          <IconBox></IconBox>
+          <TwitterIcon/>
 
-          <IconBox></IconBox>
+          <InstagramIcon/>
 
-          <IconBox></IconBox>
-
-          <IconBox></IconBox>
+          <LinkedInIcon/>
         </BaseIcons>
       </BaseContainer>
     </FooterContainer>

@@ -9,122 +9,55 @@ import {
 } from "../Assets/Common";
 import { ListTag } from "../Assets/Icons";
 import { BoxWrap, TabFiveContainer, TextContainer, TextWrap } from "./styles";
+import Image10 from "../Assets/Images/image10.png";
 
 const TabFive = () => {
   return (
     <TabFiveContainer>
       <TextContainer>
-        <TextTitle>... and startups too</TextTitle>
-        <TextWrap>
-          <FlexWrap
-            display="desktop"
-            flexPercentage="50%"
-            padding="0rem 2.5rem 0rem 0rem"
-          >
-            <List>
-              <div>
-                <ListTag />
-              </div>
-              <ListText>Digitised Cap table management</ListText>
-            </List>
-            <List>
-              <div>
-                <ListTag />
-              </div>
-              <ListText>
-                Self-custody of equity stake for team members in secure digital
-                wallet.
-              </ListText>
-            </List>
-            <List>
-              <div>
-                <ListTag />
-              </div>
-              <ListText>Digital solutions to manage funding rounds</ListText>
-            </List>
-          </FlexWrap>
-          <FlexWrap display="desktop" flexPercentage="50%">
-            <List>
-              <div>
-                <ListTag />
-              </div>
-              <ListText>Fund raising support</ListText>
-            </List>
-            <List>
-              <div>
-                <ListTag />
-              </div>
-              <ListText>Funding round data management via data rooms</ListText>
-            </List>
-            <List>
-              <div>
-                <ListTag />
-              </div>
-              <ListText>
-                Funding round marketing to global investor community
-              </ListText>
-            </List>
-          </FlexWrap>
-          <FlexWrap display="mobile" flexPercentage="50%">
-            <List>
-              <div>
-                <ListTag />
-              </div>
-              <ListText>Digitised Cap table management</ListText>
-            </List>
-            <List>
-              <div>
-                <ListTag />
-              </div>
-              <ListText>
-                Self-custody of equity stake for team members in secure digital
-                wallet.
-              </ListText>
-            </List>
-            <List>
-              <div>
-                <ListTag />
-              </div>
-              <ListText>Digital solutions to manage funding rounds</ListText>
-            </List>
-            <List>
-              <div>
-                <ListTag />
-              </div>
-              <ListText>Fund raising support</ListText>
-            </List>
-            <List>
-              <div>
-                <ListTag />
-              </div>
-              <ListText>Funding round data management via data rooms</ListText>
-            </List>
-            <List>
-              <div>
-                <ListTag />
-              </div>
-              <ListText>
-                Funding round marketing to global investor community
-              </ListText>
-            </List>
-          </FlexWrap>
-        </TextWrap>
-        <ApplyButton text="Become an investor" />
+        <FlexWrap display="both" flexPercentage="50%">
+          <TextTitle>... and startups too</TextTitle>
+          <List>
+            <div>
+              <ListTag />
+            </div>
+            <ListText>
+              Digitised cap table management for staff and external investors
+            </ListText>
+          </List>
+          <List>
+            <div>
+              <ListTag />
+            </div>
+            <ListText>
+              Self-custody of equity stake for team members in secure digital
+              wallet.
+            </ListText>
+          </List>
+          <List>
+            <div>
+              <ListTag />
+            </div>
+            <ListText>Digital solutions to manage funding rounds.</ListText>
+          </List>
+          <List>
+            <div>
+              <ListTag />
+            </div>
+            <ListText>
+              Funding round data management via our purpose built data rooms.
+            </ListText>
+          </List>
+        </FlexWrap>
+        <FlexWrap
+          display="both"
+          flexPercentage="50%"
+          padding="0rem 0rem 0rem 3.125rem"
+        >
+          <Image src={Image10.src} />
+        </FlexWrap>
+        <ApplyButton text="Apply for funding" />
       </TextContainer>
-      <BoxWrap>
-        <FlexWrap display="desktop">
-          <Box height="28.94rem" margin="9.25rem 1.6rem 0rem 0rem"></Box>
-        </FlexWrap>
-        <FlexWrap display="desktop">
-          <Box height="32.38rem" margin="0rem 0rem 0rem 1.6rem"></Box>
-        </FlexWrap>
-      </BoxWrap>
-      <FlexWrap display="mobile">
-        <Box height="13.375rem" margin="0rem 2.125rem 2.25rem 0rem"></Box>
-      </FlexWrap>
-      <FlexWrap display="mobile">
-        <Box height="15rem" margin="0rem 0rem 0rem 2.125rem"></Box>
-      </FlexWrap>
     </TabFiveContainer>
   );
 };

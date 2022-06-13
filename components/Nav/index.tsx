@@ -8,31 +8,98 @@ import {
   NavButtons,
   AuthButton,
   DropBar,
+  Ul,
+  Drawerbase,
+  Drawer,
+  DrawerIcons,
+  DrawerLogo,
 } from "./styles";
 import Link from "next/link";
-import { Logo, BarIcon } from "./Icons";
+import { Logo, BarIcon, DeleteIcon, DrawerLogoIcon } from "./Icons";
 import Router from "next/router";
+import { useState } from "react";
+import {
+  FacebookIcon,
+  InstagramIcon,
+  LinkedInIcon,
+  TwitterIcon,
+} from "../Home/Assets/Icons/SocialIcons";
 
 const NavBar = () => {
   const handleClick = () => {
     Router.push("/Investor/Onboarding");
   };
+
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => {
+    setOpen(true);
+  };
+  const handleClose = () => {
+    setOpen(false);
+  };
   return (
     <NavContainer>
-      <Wrapper>
+      <Drawer open={open}>
+        <span>
+          <DeleteIcon onClick={handleClose} />
+        </span>
+        <Ul>
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li>
+            <a href="#">About</a>
+          </li>
+          <li>
+            <a href="#">Pricing</a>
+          </li>
+          <li>
+            <a href="#">News & Analysis</a>
+          </li>
+          <li>
+            <a href="#">Contact us</a>
+          </li>
+          <li>
+            <DrawerIcons>
+              <FacebookIcon />
+              <TwitterIcon />
+              <InstagramIcon />
+              <LinkedInIcon />
+            </DrawerIcons>
+          </li>
+          <li>
+            <Drawerbase>
+              <div>Copyrigth</div>
+              <div>Terms</div>
+              <div>Privacy</div>
+              <div>Security</div>
+            </Drawerbase>
+          </li>
+        </Ul>
+        <DrawerLogo>
+          <DrawerLogoIcon />
+          <span>Tangl</span>
+        </DrawerLogo>
+      </Drawer>
+      <Wrapper onClick={handleClose}>
         <LogoContainer>
           <Logo />
           <LogoTitle>Tangl</LogoTitle>
         </LogoContainer>
         <Navlist>
           <li>
-            <Link href={"/"}>
-              <NavLink>For Investors</NavLink>
+            <Link href={"/About"}>
+              <NavLink>About</NavLink>
             </Link>
           </li>
           <li>
-            <Link href={"/about"}>
-              <NavLink>For Startups</NavLink>
+            <Link href={"/Pricing"}>
+              <NavLink>Pricing</NavLink>
+            </Link>
+          </li>
+          <li>
+            <Link href={"/News"}>
+              <NavLink>News & Analysis</NavLink>
             </Link>
           </li>
           <li>
@@ -68,7 +135,7 @@ const NavBar = () => {
           Get funded
         </AuthButton>
         <DropBar>
-          <BarIcon />
+          <BarIcon onClick={handleOpen} />
         </DropBar>
       </NavButtons>
     </NavContainer>

@@ -48,7 +48,7 @@ const TabTwo = () => {
         <FlexWrap display="both" flexPercentage="25%">
           <Image  src={Image1.src} />
         </FlexWrap>
-        <FlexWrap display="both" flexPercentage="75%">
+        <FlexWrap display="desktop" flexPercentage="75%">
           <Image src={Image2.src} />
         </FlexWrap>
       </BaseWrap>

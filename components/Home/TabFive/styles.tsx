@@ -4,14 +4,17 @@ import { FlexWrap } from "../Assets/Common";
 
 export const TabFiveContainer = styled.div`
   padding: 5rem 0rem;
+  @media ${device.tablet} {
+    padding: 2.5rem 0rem;
+    ${FlexWrap}{
+      flex: 100%;
+    }
+  }
 `;
 export const TextWrap = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  ${FlexWrap} {
-    flex: 100%;
-  }
 `;
 
 export const TextContainer = styled.div`
