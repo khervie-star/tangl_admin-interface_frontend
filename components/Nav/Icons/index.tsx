@@ -100,9 +100,9 @@ export const DrawerLogoIcon = () => {
       <path
         d="M15.0003 28.3337C22.3641 28.3337 28.3337 22.3641 28.3337 15.0003C28.3337 7.63653 22.3641 1.66699 15.0003 1.66699C7.63653 1.66699 1.66699 7.63653 1.66699 15.0003C1.66699 22.3641 7.63653 28.3337 15.0003 28.3337Z"
         stroke="#007AFB"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

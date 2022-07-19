@@ -60,11 +60,11 @@ const PricingContent = () => {
       <PricingHeading>Features and Pricing</PricingHeading>
       <TabWrap>
         <TabContainer>
-          {tabs.map((tab) => (
+          {tabs.map((tab, index) => (
             <Tabs
               onClick={() => handleTab(tab.type)}
               active={invType === tab.type && true}
-              key={tab.type}
+              key={index}
             >
               {tab.name}
             </Tabs>
@@ -72,8 +72,8 @@ const PricingContent = () => {
         </TabContainer>
       </TabWrap>
       <PricingGrid>
-        {cards.map((card) => (
-          <PricingCards key={card.plan}>
+        {cards.map((card, index) => (
+          <PricingCards key={index}>
             <PricePlan>{card.plan}</PricePlan>
             <p>{card.description}</p>
             <span>Starts at</span>
