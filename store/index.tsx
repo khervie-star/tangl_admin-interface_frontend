@@ -5,6 +5,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import { loadState } from "../app/browser-storage";
 
 export const makeStore = () => {
+  const type = "get"
   const store = configureStore({
     devTools: true,
     reducer: rootReducer,
