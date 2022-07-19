@@ -84,8 +84,8 @@ const PricingContent = () => {
             <PricingButton>Start</PricingButton>
             {card.includes && <Includes>{card.includes}</Includes>}
             <Features>
-              {card.features.map((feature) => (
-                <li>
+              {card.features.map((feature, index) => (
+                <li key={index}>
                   <CheckBoxIcon />
                   <span>{feature}</span>
                 </li>
