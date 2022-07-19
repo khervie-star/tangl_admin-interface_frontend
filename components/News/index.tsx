@@ -1,6 +1,8 @@
 const NewsContent = () => {
     return(
-        <></>
+        <>
+        <div>Hello</div>
+        </>
     )
 }
 
