@@ -4,7 +4,7 @@ import Header from '../components/Home/Header'
 import TabEight from '../components/Home/TabEight'
 import TabFive from '../components/Home/TabFive'
 import TabFour from '../components/Home/TabFour'
-import TabNine from '../components/Home/TabNine'
+// import TabNine from '../components/Home/TabNine'
 import TabSeven from '../components/Home/TabSeven'
 import TabSix from '../components/Home/TabSix'
 import TabThree from '../components/Home/TabThree'
@@ -22,7 +22,7 @@ const Home: NextPage = () => {
       <TabThree/>
       <TabFour/>
       <TabFive/>
-      <TabNine/>
+      {/* <TabNine/> */}
       <TabSix/>
       <TabSeven/>
       <TabEight/>
