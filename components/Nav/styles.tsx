@@ -142,7 +142,7 @@ export const Drawer = styled.div`
   right: 0;
   box-sizing: border-box;
   transform: ${({ open }: NavProps) =>
-    open ? "translateX(0)" : "translateX(100%)"};
+    open ? "translateY(0)" : "translateY(-100%)"};
   color: black;
   width: 100%;
   background: #ffffff;
