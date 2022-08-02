@@ -1,5 +1,5 @@
-import AboutContent from "../../components/About"
-import Footer from "../../components/Home/Footer"
+import AboutContent from "../../components/LandingPages/About"
+import Footer from "../../components/LandingPages/Home/Footer"
 import NavBarTwo from "../../components/NavTwo"
 
 const About = () => {

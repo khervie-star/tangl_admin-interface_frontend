@@ -1,3 +1,4 @@
+import Link from "next/link";
 import styled, { css } from "styled-components";
 import { device } from "../../Global";
 
@@ -7,6 +8,7 @@ export type NavProps = {
   display?: string;
   borderColor?: string;
   open?: boolean;
+  active?: boolean;
 };
 
 export const NavContainer = styled.div`
@@ -16,9 +18,9 @@ export const NavContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   margin: 0;
-  padding: 2.25rem 5rem;
+  padding: 2rem 5rem;
   @media ${device.laptopL} {
-    padding: 2.25rem 3.5rem;
+    padding: 2rem 3.5rem;
   }
   @media ${device.tablet} {
     padding: 1.75rem 1.375rem;
@@ -38,9 +40,18 @@ export const LogoContainer = styled.div`
 
 export const LogoTitle = styled.div`
   margin-left: 0.971rem;
-  font-weight: 400;
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  display: flex;
+  letter-spacing: -0.2px;
+  color: #ffffff;
+  a {
+    text-decoration: none;
+    color: #ffffff;
+  }
 `;
 
 export const Navlist = styled.ul`
@@ -54,10 +65,19 @@ export const Navlist = styled.ul`
       padding: 0rem 1.75rem;
     }
   }
-
   @media ${device.tablet} {
     display: none;
   }
+`;
+
+export const ListContent = styled.li`
+  ${({ active }: NavProps) =>
+    active &&
+    css`
+      a {
+        color: #007afb;
+      }
+    `}
 `;
 
 export const NavLink = styled.a`
@@ -68,8 +88,8 @@ export const NavLink = styled.a`
   font-size: 18px;
   line-height: 28px;
   cursor: pointer;
-  &:hover{
-    color: #007AFB;
+  &:hover {
+    color: #007afb;
   }
   @media ${device.laptopE} {
     font-size: 16px;
@@ -168,7 +188,7 @@ export const Drawer = styled.div`
 
 export const Ul = styled.ul`
   list-style: none;
-  padding:0rem 1.375rem 0rem 1.375rem;
+  padding: 0rem 1.375rem 0rem 1.375rem;
   li {
     a {
       text-decoration: none;
@@ -180,6 +200,15 @@ export const Ul = styled.ul`
       letter-spacing: -0.1px;
       font-feature-settings: "liga" off;
       color: #43566a;
+      cursor: pointer;
+      &:hover {
+        color: #007afb;
+      }
+      ${({ active }: NavProps) =>
+        active &&
+        css`
+          color: #007afb;
+        `}
     }
     margin-bottom: 3rem;
   }

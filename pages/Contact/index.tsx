@@ -1,15 +1,15 @@
+import ContactContent from "../../components/LandingPages/Contact";
 import Footer from "../../components/LandingPages/Home/Footer";
 import NavBarTwo from "../../components/NavTwo";
-import PricingContent from "../../components/LandingPages/Pricing";
 
-const Pricing = () => {
+const Contact = () => {
   return (
     <>
       <NavBarTwo />
-      <PricingContent/>
+      <ContactContent />
       <Footer />
     </>
   );
 };
 
-export default Pricing;
+export default Contact;

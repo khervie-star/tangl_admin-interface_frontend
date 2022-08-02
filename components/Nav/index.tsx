@@ -13,19 +13,40 @@ import {
   Drawer,
   DrawerIcons,
   DrawerLogo,
+  ListContent,
 } from "./styles";
 import Link from "next/link";
 import { Logo, BarIcon, DeleteIcon, DrawerLogoIcon } from "./Icons";
-import Router from "next/router";
 import { useState } from "react";
 import {
   FacebookIcon,
   InstagramIcon,
   LinkedInIcon,
   TwitterIcon,
-} from "../Home/Assets/Icons/SocialIcons";
+} from "../LandingPages/Home/Assets/Icons/SocialIcons";
+import { useRouter } from "next/router";
+
+const links = [
+  {
+    href: "/About",
+    name: "About",
+  },
+  {
+    href: "/Pricing",
+    name: "Pricing",
+  },
+  {
+    href: "/News",
+    name: "News",
+  },
+  {
+    href: "/Contact",
+    name: "Contact us",
+  },
+];
 
 const NavBar = () => {
+  const Router = useRouter()
   const handleClick = () => {
     Router.push("/Investor/Onboarding");
   };
@@ -44,21 +65,19 @@ const NavBar = () => {
           <DeleteIcon onClick={handleClose} />
         </span>
         <Ul>
-          <li>
-            <a href="#">Home</a>
-          </li>
-          <li>
-            <a href="#">About</a>
-          </li>
-          <li>
-            <a href="#">Pricing</a>
-          </li>
-          <li>
-            <a href="#">News & Analysis</a>
-          </li>
-          <li>
-            <a href="#">Contact us</a>
-          </li>
+          <ListContent active={Router.pathname == "/"}>
+            <a href="/">Home</a>
+          </ListContent>
+          {links &&
+            links.map((link: any, index: any) => (
+              <ListContent active={Router.pathname == link.href} key={index}>
+                <Link href={link.href} >
+                <a>
+                  {link.name}
+                </a>
+                </Link>
+              </ListContent>
+            ))}
           <li>
             <DrawerIcons>
               <FacebookIcon />
@@ -84,29 +103,20 @@ const NavBar = () => {
       <Wrapper onClick={handleClose}>
         <LogoContainer>
           <Logo />
-          <LogoTitle>Tangl</LogoTitle>
+          <LogoTitle>
+            <Link href={"/"}>
+              <a>Tangl</a>
+            </Link>
+          </LogoTitle>
         </LogoContainer>
         <Navlist>
-          <li>
-            <Link href={"/About"}>
-              <NavLink>About</NavLink>
-            </Link>
-          </li>
-          <li>
-            <Link href={"/Pricing"}>
-              <NavLink>Pricing</NavLink>
-            </Link>
-          </li>
-          <li>
-            <Link href={"/News"}>
-              <NavLink>News & Analysis</NavLink>
-            </Link>
-          </li>
-          <li>
-            <Link href={"/contact"}>
-              <NavLink>Contact us</NavLink>
-            </Link>
-          </li>
+          {links && links.map((link: any, index: any) => (
+            <ListContent active={Router.pathname == link.href} key={index}>
+              <Link href={link.href}>
+                <NavLink>{link.name}</NavLink>
+              </Link>
+            </ListContent>
+          ))}
         </Navlist>
       </Wrapper>
       <NavButtons>

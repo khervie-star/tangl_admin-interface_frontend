@@ -7,6 +7,7 @@ export type NavProps = {
   display?: string;
   borderColor?: string;
   open?: boolean;
+  active?: boolean
 };
 
 export const NavTwoContainer = styled.div`
@@ -79,6 +80,16 @@ export const Ul = styled.ul`
   }
 `;
 
+export const ListContent = styled.li`
+  ${({ active }: NavProps) =>
+    active &&
+    css`
+      a {
+        color: #007afb;
+      }
+    `}
+`;
+
 export const Drawerbase = styled.div`
   display: inline-grid;
   grid-template-columns: repeat(4, 1fr);
@@ -140,9 +151,18 @@ export const LogoContainer = styled.div`
 
 export const LogoTitle = styled.div`
   margin-left: 0.971rem;
-  font-weight: 400;
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  display: flex;
+  letter-spacing: -0.2px;
+  color: #011122;
+  a {
+    text-decoration: none;
+    color: #011122;
+  }
 `;
 
 export const Navlist = styled.ul`
@@ -150,6 +170,11 @@ export const Navlist = styled.ul`
   display: flex;
   margin: 0;
   padding: 0;
+  ${({ active } : NavProps) =>
+    active &&
+    css`
+      color: #007afb;
+    `}
   li {
     padding: 0rem 2.5rem;
     @media ${device.laptopL} {

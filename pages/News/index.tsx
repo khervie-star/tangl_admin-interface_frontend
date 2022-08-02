@@ -1,11 +1,13 @@
-import NavBar from "../../components/Nav";
-import NewsContent from "../../components/News";
+import NewsContent from "../../components/LandingPages/News";
+import Footer from "../../components/LandingPages/Home/Footer";
+import NavBarTwo from "../../components/NavTwo";
 
 const News = () => {
   return (
     <>
-      <NavBar />
+      <NavBarTwo />
       <NewsContent></NewsContent>
+      <Footer/>
     </>
   );
 };

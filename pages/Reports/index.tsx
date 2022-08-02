@@ -1,15 +1,15 @@
 import Footer from "../../components/LandingPages/Home/Footer";
+import ReportsContent from "../../components/LandingPages/Reports";
 import NavBarTwo from "../../components/NavTwo";
-import PricingContent from "../../components/LandingPages/Pricing";
 
-const Pricing = () => {
+const Reports = () => {
   return (
     <>
       <NavBarTwo />
-      <PricingContent/>
+      <ReportsContent />
       <Footer />
     </>
   );
 };
 
-export default Pricing;
+export default Reports;
