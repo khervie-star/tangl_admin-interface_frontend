@@ -66,8 +66,8 @@ const ReportsContent = () => {
       <ReportsGrid>
         {reports &&
           reports.map((result:any, index: any) => (
-            <ReportsCard>
-              <ReportsImage key={index} src={result.image.src} />
+            <ReportsCard key={index}>
+              <ReportsImage src={result.image.src} />
               <div>
                 <ReportFloat>Report</ReportFloat>
                 <ReportsText>{result.text}</ReportsText>
