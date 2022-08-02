@@ -46,7 +46,7 @@ const links = [
 ];
 
 const NavBar = () => {
-  const Router = useRouter()
+  const Router = useRouter();
   const handleClick = () => {
     Router.push("/Investor/Onboarding");
   };
@@ -66,15 +66,15 @@ const NavBar = () => {
         </span>
         <Ul>
           <ListContent active={Router.pathname == "/"}>
-            <a href="/">Home</a>
+            <Link href="/">
+              <a>Home</a>
+            </Link>
           </ListContent>
           {links &&
             links.map((link: any, index: any) => (
               <ListContent active={Router.pathname == link.href} key={index}>
-                <Link href={link.href} >
-                <a>
-                  {link.name}
-                </a>
+                <Link href={link.href}>
+                  <a>{link.name}</a>
                 </Link>
               </ListContent>
             ))}
@@ -110,13 +110,14 @@ const NavBar = () => {
           </LogoTitle>
         </LogoContainer>
         <Navlist>
-          {links && links.map((link: any, index: any) => (
-            <ListContent active={Router.pathname == link.href} key={index}>
-              <Link href={link.href}>
-                <NavLink>{link.name}</NavLink>
-              </Link>
-            </ListContent>
-          ))}
+          {links &&
+            links.map((link: any, index: any) => (
+              <ListContent active={Router.pathname == link.href} key={index}>
+                <Link href={link.href}>
+                  <NavLink>{link.name}</NavLink>
+                </Link>
+              </ListContent>
+            ))}
         </Navlist>
       </Wrapper>
       <NavButtons>

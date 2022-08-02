@@ -65,9 +65,9 @@ const ReportsContent = () => {
       </ReportsHeader>
       <ReportsGrid>
         {reports &&
-          reports.map((result) => (
+          reports.map((result:any, index: any) => (
             <ReportsCard>
-              <ReportsImage src={result.image.src} />
+              <ReportsImage key{index} src={result.image.src} />
               <div>
                 <ReportFloat>Report</ReportFloat>
                 <ReportsText>{result.text}</ReportsText>

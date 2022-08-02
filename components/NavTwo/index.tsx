@@ -67,7 +67,9 @@ const NavBarTwo = () => {
         </span>
         <Ul>
           <ListContent active={Router.pathname == "/"}>
-            <a href="/">Home</a>
+            <Link href="/">
+              <a>Home</a>
+            </Link>
           </ListContent>
           {links &&
             links.map((link: any, index: any) => (
