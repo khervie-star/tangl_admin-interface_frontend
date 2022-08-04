@@ -22,43 +22,45 @@ const TabFive = () => {
           {inView && (
             <>
               <FlexWrap display="both" flexPercentage="50%">
-                <TextTitle>... and startups too</TextTitle>
-                <List>
-                  <div>
-                    <ListTag />
-                  </div>
-                  <ListText>
-                    Digitised cap table management for staff and external
-                    investors
-                  </ListText>
-                </List>
-                <List>
-                  <div>
-                    <ListTag />
-                  </div>
-                  <ListText>
-                    Self-custody of equity stake for team members in secure
-                    digital wallet.
-                  </ListText>
-                </List>
-                <List>
-                  <div>
-                    <ListTag />
-                  </div>
-                  <ListText>
-                    Digital solutions to manage funding rounds.
-                  </ListText>
-                </List>
-                <List>
-                  <div>
-                    <ListTag />
-                  </div>
-                  <ListText>
-                    Funding round data management via our purpose built data
-                    rooms.
-                  </ListText>
-                </List>
-                <ApplyButton text="Apply for funding" />
+                <TextContainer>
+                  <TextTitle>... and startups too</TextTitle>
+                  <List>
+                    <div>
+                      <ListTag />
+                    </div>
+                    <ListText>
+                      Digitised cap table management for staff and external
+                      investors
+                    </ListText>
+                  </List>
+                  <List>
+                    <div>
+                      <ListTag />
+                    </div>
+                    <ListText>
+                      Self-custody of equity stake for team members in secure
+                      digital wallet.
+                    </ListText>
+                  </List>
+                  <List>
+                    <div>
+                      <ListTag />
+                    </div>
+                    <ListText>
+                      Digital solutions to manage funding rounds.
+                    </ListText>
+                  </List>
+                  <List>
+                    <div>
+                      <ListTag />
+                    </div>
+                    <ListText>
+                      Funding round data management via our purpose built data
+                      rooms.
+                    </ListText>
+                  </List>
+                  <ApplyButton text="Apply for funding" />
+                </TextContainer>
               </FlexWrap>
 
               <FlexWrap

@@ -8,7 +8,7 @@ export const TabFiveContainer = styled.div`
   padding: 5rem;
   flex-wrap: wrap;
   @media ${device.tablet} {
-    padding: 2.5rem 0rem;
+    padding: 2.5rem 1.5rem;
     ${FlexWrap} {
       flex: 100%;
     }
@@ -21,9 +21,8 @@ export const TextWrap = styled.div`
 `;
 
 export const TextContainer = styled.div`
-  margin: 0rem 5rem 2.5rem 5rem;
   @media ${device.tablet} {
-    margin: 0rem 1.5rem 2.5rem 1.5rem;
+    margin: 0rem 0rem 1.5rem 0rem;
   }
 `;
 
