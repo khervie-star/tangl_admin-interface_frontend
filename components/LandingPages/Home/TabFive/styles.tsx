@@ -3,10 +3,13 @@ import { device } from "../../../../Global";
 import { FlexWrap } from "../Assets/Common";
 
 export const TabFiveContainer = styled.div`
-  padding: 5rem 0rem;
+  display: flex;
+  align-items: center;
+  padding: 5rem;
+  flex-wrap: wrap;
   @media ${device.tablet} {
     padding: 2.5rem 0rem;
-    ${FlexWrap}{
+    ${FlexWrap} {
       flex: 100%;
     }
   }
