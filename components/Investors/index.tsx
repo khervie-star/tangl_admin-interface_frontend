@@ -2,8 +2,8 @@ import { ContinueButton } from "./Assets/Buttons";
 import { Card, Grid, TextBody, TextTitle } from "./Assets/common";
 import { useDispatch, useSelector } from "react-redux";
 import { setInvestor } from "../../store/actions/session";
-import { RootState } from "../../store/reducers";
 import Router from "next/router";
+import { RootState } from "../../store/reducers";
 
 const selectCards = [
   {
