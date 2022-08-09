@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { device } from "../../../../Global";
 import { BtnProps } from "./types";
 
@@ -61,6 +61,16 @@ export const ContBtn = styled.button`
   padding: 1rem 1.5rem;
   color: #007afb;
   cursor: pointer;
+  ${({ disabled }: BtnProps) =>
+    disabled
+      ? css`
+          color: #a0aaba;
+          border-color: #a0aaba;
+        `
+      : css`
+          color: #007afb;
+          border-color: #007afb;
+        `}
 `;
 
 export const DarkContinueButton = ({

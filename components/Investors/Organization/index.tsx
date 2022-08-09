@@ -17,12 +17,16 @@ import ContentTen from "./Onboarding/ContentTen";
 import FunctionCard from "./Onboarding/FunctionCard";
 import ContentEleven from "./Onboarding/ContentEleven";
 import { organizationBackwardRoute } from "../../../store/actions";
+import ContentTwelve from "./Onboarding/ContentTwelve";
+import ContentFourteen from "./Onboarding/ContentFourteen";
+import ContentFifteen from "./Onboarding/ContentFifteen";
+import ContentThirteen from "./Onboarding/ContentThirteen";
 
 const OrganizationContent = () => {
   const { OrgPage } = useSelector((store: RootState) => ({
     OrgPage: store.Organization.page,
   }));
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
   const handleBack = () => {
     if (OrgPage === 1) Router.push("/Investor/Onboarding");
     else dispatch(organizationBackwardRoute(OrgPage));
@@ -32,7 +36,7 @@ const OrganizationContent = () => {
     <>
       <Display>
         <div>
-          <BackButton onClick={handleBack}/>
+          <BackButton onClick={handleBack} />
         </div>
         <Pad>
           {OrgPage !== 13 && <PageBar page={OrgPage} />}
@@ -42,13 +46,17 @@ const OrganizationContent = () => {
           {OrgPage === 4 && <ContentFour page={OrgPage} />}
           {OrgPage === 5 && <ContentFive page={OrgPage} />}
           {OrgPage === 6 && <ContentSix page={OrgPage} />}
-          {OrgPage === 7 && <ContentSeven page={OrgPage} />}
-          {OrgPage === 8 && <ContentEight page={OrgPage} />}
-          {OrgPage === 9 && <ContentNine page={OrgPage} />}
-          {OrgPage === 10 && <ContentTen page={OrgPage} />}
-          {OrgPage === 11 && <ContentEleven page={OrgPage} />}
+          {/* {OrgPage === 7 && <ContentSeven page={OrgPage} />} */}
+          {/* {OrgPage === 8 && <ContentEight page={OrgPage} />} */}
+          {/* {OrgPage === 7 && <ContentNine page={OrgPage} />} */}
+          {/* {OrgPage === 7 && <ContentTen page={OrgPage} />} */}
+          {/* {OrgPage === 7 && <ContentEleven page={OrgPage} />} */}
+          {OrgPage === 7 && <ContentTwelve page={OrgPage} />}
+          {OrgPage === 8 && <ContentThirteen page={OrgPage} />}
+          {OrgPage === 9 && <ContentFourteen page={OrgPage} />}
+          {OrgPage === 10 && <ContentFifteen page={OrgPage} />}
         </Pad>
-        {OrgPage && OrgPage > 1 && OrgPage < 11 && (
+        {OrgPage && OrgPage >= 1 && OrgPage < 12 && (
           <div>
             <FunctionCard page={OrgPage} />
           </div>
