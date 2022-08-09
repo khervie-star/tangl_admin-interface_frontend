@@ -51,7 +51,7 @@ const FunctionCard = ({ page }: PageBarTypes) => {
           </Text>
         </DropList>
       </Function>
-      <Function>
+      {/* <Function>
         <HeadWrap active={page && page > 11 ? true : false}>
           <span>Security</span>
           <Current active={page && page > 10 && page < 12 ? true : false}>
@@ -67,7 +67,7 @@ const FunctionCard = ({ page }: PageBarTypes) => {
             3rd party authentication
           </Text>
         </DropList>
-      </Function>
+      </Function> */}
     </CardWrap>
   );
 };
