@@ -2,13 +2,14 @@ import { ContinueButton } from "./Assets/Buttons";
 import { Card, Grid, TextBody, TextTitle } from "./Assets/common";
 import { useDispatch, useSelector } from "react-redux";
 import { setInvestor } from "../../store/actions/session";
-import Router from "next/router";
 import { RootState } from "../../store/reducers";
+import Router from "next/router";
+import { TickIcon } from "./Assets/Icons";
 
 const selectCards = [
   {
     key: 1,
-    content: "Investor (High-net-worth)",
+    content: "Create Investor (High-net-worth) Account",
     cardType: "IND",
   },
   {
@@ -49,6 +50,10 @@ const InvestorSelect = () => {
               onClick={() => handleSelect(card.cardType)}
             >
               <p>{card.content}</p>
+              <TickIcon
+                display={InvType === card.cardType && true}
+                active={InvType === card.cardType && true}
+              />
             </Card>
           );
         })}

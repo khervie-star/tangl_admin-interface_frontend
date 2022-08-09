@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { MdSentimentDissatisfied } from "react-icons/md";
 import { useDispatch } from "react-redux";
 import { organizationFowardRoute } from "../../../../../store/actions";
 import { ContinueButton } from "../../../Assets/Buttons";
@@ -13,7 +15,18 @@ import {
 } from "./styles";
 
 const ContentTwo = ({ page }: PageBarTypes) => {
+  const [countryDialCode, setCountryDialCode] = useState("+1");
   const dispatch = useDispatch();
+
+  const handlePhoneNumberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    console.log(countryDialCode + " " + e.target.value);
+  };
+
+  const handleDialCodeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    console.log(e.target.value);
+    setCountryDialCode(e.target.value);
+  };
+
   const handleSubmit = () => {
     if (page) dispatch(organizationFowardRoute(page));
   };
@@ -38,14 +51,14 @@ const ContentTwo = ({ page }: PageBarTypes) => {
           <p>Enter your phone number</p>
         </InputText>
         <InputWrapper>
-          <LabelFlex flexPercentage="30%" padding= "0rem .5rem 0rem 0rem">
-            <Select>
-              <option>+234</option>
-              <option>+1</option>
+          <LabelFlex flexPercentage="30%" padding="0rem .5rem 0rem 0rem">
+            <Select value={countryDialCode} onChange={handleDialCodeChange}>
+              <option value="+234">+234</option>
+              <option value="+1">+1</option>
             </Select>
           </LabelFlex>
-          <LabelFlex flexPercentage="70%" padding ="0rem 0rem 0rem .5rem">
-            <input type="text" />
+          <LabelFlex flexPercentage="70%" padding="0rem 0rem 0rem .5rem">
+            <input type="number" onChange={handlePhoneNumberChange} />
           </LabelFlex>
         </InputWrapper>
       </InputContainer>

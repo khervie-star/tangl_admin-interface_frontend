@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const SelectAdmin = styled.div`
+export const SelectInvestmentNature = styled.div`
   border: 1px solid #e1e8f4;
   box-sizing: border-box;
   border-radius: 8px;
@@ -17,3 +17,4 @@ export const CardLabel = styled.p`
   color: #43566a;
   // margin-top: 1rem;
 `;
+

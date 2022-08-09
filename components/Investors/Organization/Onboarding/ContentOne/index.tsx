@@ -1,12 +1,17 @@
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { individualFowardRoute, organizationBackwardRoute, organizationFowardRoute } from "../../../../../store/actions";
+import {
+  individualFowardRoute,
+  organizationBackwardRoute,
+  organizationFowardRoute,
+} from "../../../../../store/actions";
 import { setOrganization } from "../../../../../store/actions/session";
 import { RootState } from "../../../../../store/reducers";
 import { ContinueButton } from "../../../Assets/Buttons";
-import {RadioContainer, TextBody, TextTitle } from "../../../Assets/common";
+import { RadioContainer, TextBody, TextTitle } from "../../../Assets/common";
 
 import { PageBarTypes } from "../../../types";
-import { SelectAdmin } from "./styles";
+import { CardLabel, SelectAdmin } from "./styles";
 
 const selectCards = [
   {
@@ -34,14 +39,22 @@ const selectCards = [
     content: "Special Purpose Investment Vehicle",
     cardType: "SPECINV",
   },
-  
 ];
 
 const ContentOne = ({ page }: PageBarTypes) => {
   const dispatch = useDispatch();
+  const [disabled, setDisabled] = useState(true);
+
   const handleSelect = (cardType: string) => {
-    dispatch(setOrganization(cardType));
+    // dispatch(setOrganization(cardType));
   };
+
+  const handleClick = (e: React.ChangeEvent<HTMLInputElement>) => {
+    console.log(e.target.value);
+    dispatch(setOrganization(e.target.value));
+    setDisabled(false);
+  };
+
   const handleSubmit = () => {
     if (page) dispatch(organizationFowardRoute(page));
   };
@@ -52,16 +65,19 @@ const ContentOne = ({ page }: PageBarTypes) => {
         To begin with, kindly choose how you want to register.
       </TextBody>
       <SelectAdmin>
-        {selectCards.map((card) => {
-          return (
-            <RadioContainer key={card.key}>
-              <input type="radio" name= "select" value={card.cardType} />
-              <label>{card.content}</label>
-            </RadioContainer>
-          );
-        })}
+        <CardLabel>Admin Type</CardLabel>
+        <div onChange={handleClick}>
+          {selectCards.map((card) => {
+            return (
+              <RadioContainer key={card.key}>
+                <input type="radio" name="select" value={card.cardType} />
+                <label>{card.content}</label>
+              </RadioContainer>
+            );
+          })}
+        </div>
       </SelectAdmin>
-      <ContinueButton>Continue</ContinueButton>
+      <ContinueButton disabled={disabled && true}>Continue</ContinueButton>
     </form>
   );
 };
