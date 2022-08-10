@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Footer from '../components/LandingPages/Home/Footer'
 import Header from '../components/LandingPages/Home/Header'
+import SliderComponent from '../components/LandingPages/Home/SliderComponent'
 import TabEight from '../components/LandingPages/Home/TabEight'
 import TabFive from '../components/LandingPages/Home/TabFive'
 import TabFour from '../components/LandingPages/Home/TabFour'
@@ -18,6 +19,7 @@ const Home: NextPage = () => {
     <Container>
       <NavBar/>
       <Header/>
+      <SliderComponent/>
       <TabTwo/>
       <TabThree/>
       <TabFour/>
