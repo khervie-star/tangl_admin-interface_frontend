@@ -5,6 +5,7 @@ import { Provider } from "react-redux";
 import { makeStore } from "../store";
 import { saveState } from "../app/browser-storage";
 import { debounce } from "debounce";
+import "../styles/styles.css"
 
 const store = makeStore();
 

@@ -2,7 +2,7 @@ import styled from "styled-components"
 import { device} from "../../../../Global";
 
 export const HeaderWrapper = styled.div`
-  padding: 7.5rem 0rem 5rem 0rem;
+  padding: 5rem 0rem 5rem 0rem;
   @media ${device.mobileL} {
     padding: 3.5rem 2.125rem 2.5rem 2.125rem;
   }
