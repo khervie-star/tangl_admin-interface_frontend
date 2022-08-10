@@ -35,7 +35,7 @@ const SliderComponent = () => {
         centeredSlides={true}
         slidesPerView={3}
         coverflowEffect={{
-          rotate: -1,
+          rotate: 0,
           stretch: 0,
           depth: 100,
           modifier: 8,
