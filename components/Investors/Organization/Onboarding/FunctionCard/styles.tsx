@@ -4,6 +4,7 @@ import { device } from "../../../../../Global";
 export type CardProps = {
   active?: boolean;
   checked?: boolean;
+  completed?: boolean;
 };
 
 export const CardWrap = styled.div`
@@ -67,23 +68,35 @@ export const HeadWrap = styled.div`
   span {
     font-family: "Outfit";
     font-style: normal;
-    font-weight: 400;
+    font-weight: 500;
     font-size: 18px;
     line-height: 28px;
     letter-spacing: -0.1px;
     font-feature-settings: "liga" off;
     color: #324a64;
     margin-right: 2.375rem;
-    ${({ active }: CardProps) =>
-      active
-        ? css`
-            color: #007afb;
-            opacity: 0.5;
-          `
-        : css`
-            color: #324a64;
-          `};
   }
+  ${({ active, completed }: CardProps) =>
+    active
+      ? css`
+          span {
+            color: #011122;
+            opacity: 1;
+          }
+        `
+      : completed
+      ? css`
+          span {
+            color: #007afb;
+            opacity: 1;
+          }
+        `
+      : css`
+          span {
+            color: #324a64;
+            opacity: 0.5;
+          }
+        `}
 `;
 
 export const Current = styled.div`

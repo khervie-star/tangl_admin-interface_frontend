@@ -1,5 +1,6 @@
+import { useState } from "react";
 import { useDispatch } from "react-redux";
-import {organizationFowardRoute } from "../../../../../store/actions";
+import { organizationFowardRoute } from "../../../../../store/actions";
 import { ContinueButton } from "../../../Assets/Buttons";
 import { TextBody, TextTitle } from "../../../Assets/common";
 import { EditIcon, ReloadIcon } from "../../../Assets/Icons";
@@ -14,9 +15,14 @@ import {
 } from "./styles";
 
 const ContentThree = ({ page }: PageBarTypes) => {
+  const [disabled, setDisabled] = useState(true);
   const dispatch = useDispatch();
   const handleSubmit = () => {
     if (page) dispatch(organizationFowardRoute(page));
+  };
+
+  const handleConfirmCodeChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setDisabled(e.target.value.length < 4);
   };
 
   return (
@@ -37,7 +43,12 @@ const ContentThree = ({ page }: PageBarTypes) => {
         <Title>Confirmation Code</Title>
         <CodeContainer>
           <InputContainer>
-            <input type="text" placeholder="- - - -" />
+            <input
+              type="number"
+              placeholder="- - - -"
+              maxLength={4}
+              onChange={handleConfirmCodeChange}
+            />
             <p>Confirm phone number with code from sms message</p>
           </InputContainer>
           <Resend>
@@ -46,7 +57,7 @@ const ContentThree = ({ page }: PageBarTypes) => {
           </Resend>
         </CodeContainer>
       </Confirmation>
-      <ContinueButton>Confirm</ContinueButton>
+      <ContinueButton disabled={disabled}>Confirm</ContinueButton>
     </form>
   );
 };

@@ -16,10 +16,12 @@ import {
 
 const ContentTwo = ({ page }: PageBarTypes) => {
   const [countryDialCode, setCountryDialCode] = useState("+1");
+  const [disabled, setDisabled] = useState(true);
   const dispatch = useDispatch();
 
   const handlePhoneNumberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     console.log(countryDialCode + " " + e.target.value);
+    setDisabled(!e.target.value.length);
   };
 
   const handleDialCodeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
@@ -62,7 +64,7 @@ const ContentTwo = ({ page }: PageBarTypes) => {
           </LabelFlex>
         </InputWrapper>
       </InputContainer>
-      <ContinueButton>Send Code</ContinueButton>
+      <ContinueButton disabled={true && disabled}>Send Code</ContinueButton>
     </form>
   );
 };
