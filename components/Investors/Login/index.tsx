@@ -1,4 +1,6 @@
+import { useState } from "react";
 import {
+  CheckedIcon,
   CreateAnAcount,
   ForgotPassword,
   LoginButton,
@@ -13,6 +15,10 @@ import {
 } from "./styles";
 
 const LoginContent = () => {
+  const [checked, setChecked] = useState(false);
+  const handleCheck = () => {
+    !checked ? setChecked(true) : setChecked(false);
+  };
   return (
     <LoginContainer>
       <LoginFormContainer>
@@ -30,8 +36,12 @@ const LoginContent = () => {
           <input type="text" placeholder="••••••" />
         </div>
         <LoginFormFooter>
-          <RememberMe>
-            <UnCheckedIcon />
+          <RememberMe checked={checked}>
+            {checked ? (
+              <CheckedIcon onClick={handleCheck} />
+            ) : (
+              <UnCheckedIcon onClick={handleCheck} />
+            )}
             <span>Remember me?</span>
           </RememberMe>
           <ForgotPassword>Forgot Password?</ForgotPassword>

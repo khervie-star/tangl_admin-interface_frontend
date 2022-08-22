@@ -93,16 +93,19 @@ export const ForgotPassword = styled.p`
   line-height: 20px;
   letter-spacing: -0.1px;
   color: #c16565;
+  cursor: pointer;
 `;
 
 export const UnCheckedIcon = styled(MdOutlineRadioButtonUnchecked)`
   color: #43566a;
   font-size: 16px;
+  cursor: pointer;
 `;
 
 export const CheckedIcon = styled(MdCheckCircle)`
   color: #007afb;
   font-size: 16px;
+  cursor: pointer;
 `;
 
 export const LoginButton = styled.div`
@@ -151,7 +154,6 @@ export const LoginFooterWrapper = styled.div`
     letter-spacing: -0.1px;
     font-feature-settings: "liga" off;
     color: #324a64;
-
   }
 `;
 
@@ -160,6 +162,7 @@ export const CreateAnAcount = styled.p`
   margin-left: 3.5rem;
   display: flex;
   align-items: center;
+  cursor: pointer;
   span {
     font-family: "Outfit";
     font-style: normal;
