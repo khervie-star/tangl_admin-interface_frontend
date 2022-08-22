@@ -52,6 +52,10 @@ const NavBarTwo = () => {
     Router.push("/Investor/Onboarding");
   };
 
+  const handleLogin = () => {
+    Router.push("/Investor/Login");
+  };
+
   const [open, setOpen] = useState(false);
   const handleOpen = () => {
     setOpen(true);
@@ -127,6 +131,7 @@ const NavBarTwo = () => {
           borderColor="#a0aaba"
           margin="0rem 1.25rem 0rem 0rem"
           display="desktop"
+          onClick={handleLogin}
         >
           Sign in
         </AuthButton>

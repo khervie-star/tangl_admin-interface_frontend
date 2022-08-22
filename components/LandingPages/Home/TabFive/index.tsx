@@ -16,7 +16,7 @@ import { useState } from "react";
 const TabFive = () => {
   const [view, setView] = useState(false);
   return (
-    <InView triggerOnce={true} delay={1000} threshold={0} onChange={setView}>
+    <InView delay={2000} triggerOnce={true} trackVisibility={true}  threshold={0} onChange={setView}>
       {({ ref, inView }) => (
         <TabFiveContainer ref={ref}>
           {inView && (

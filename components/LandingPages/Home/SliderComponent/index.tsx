@@ -42,7 +42,7 @@ const SliderComponent = () => {
           slideShadows: true,
         }}
         autoplay={{
-          delay: 2500,
+          delay: 5000,
           disableOnInteraction: false,
         }}
         pagination={{
@@ -52,7 +52,7 @@ const SliderComponent = () => {
         // className="mySwiper"
       >
         <SwiperSlide>
-          <SliderImage src="https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg" />
+          <SliderImage width={100} height={100} src="https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg" />
         </SwiperSlide>
         <SwiperSlide>
           <SliderReportWrapper>
@@ -70,11 +70,11 @@ const SliderComponent = () => {
                 <ArrowRightIcon />
               </DownloadNow>
             </SliderReportBody>
-            <SliderReportImage src={ReportImg.src} />
+            <SliderReportImage width={100} height={100}  src={ReportImg.src} />
           </SliderReportWrapper>
         </SwiperSlide>
         <SwiperSlide>
-          <SliderImage src="https://images.pexels.com/photos/6289030/pexels-photo-6289030.jpeg" />
+          <SliderImage width={100} height={100}  src="https://images.pexels.com/photos/6289030/pexels-photo-6289030.jpeg" />
         </SwiperSlide>
       </Swiper>
     </SliderContainer>

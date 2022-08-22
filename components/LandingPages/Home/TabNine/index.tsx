@@ -6,7 +6,7 @@ import { useState } from "react";
 const TabNine = () => {
   const [view, setView] = useState(false);
   return (
-    <InView triggerOnce={true} delay={1000} threshold={0} onChange={setView}>
+    <InView triggerOnce={true}  threshold={0} onChange={setView}>
       {({ ref, inView }) => (
         <TabNineContainer ref={ref}>
           {inView && (

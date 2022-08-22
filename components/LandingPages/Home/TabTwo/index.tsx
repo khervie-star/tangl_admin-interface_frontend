@@ -12,7 +12,7 @@ const TabTwo = () => {
   return (
     <TabTwoContainer>
       <HeadWrap>
-        <InView triggerOnce={true} delay={1000} threshold={0} onChange={setView}>
+        <InView triggerOnce={true}  threshold={0} onChange={setView}>
           {({ ref, inView }) => (
             <div ref={ref}>
               {inView && (
@@ -59,7 +59,7 @@ const TabTwo = () => {
           )}
         </InView>
       </HeadWrap>
-      <InView triggerOnce={true} delay={1000} threshold={0} onChange={setView}>
+      <InView triggerOnce={true}  threshold={0} onChange={setView}>
         {({ ref, inView }) => (
           <div ref={ref}>
             {inView && (

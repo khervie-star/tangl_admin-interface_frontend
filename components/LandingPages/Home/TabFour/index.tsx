@@ -9,7 +9,7 @@ import { useState } from "react";
 const TabFour = () => {
   const [view, setView] = useState(false);
   return (
-    <InView triggerOnce={true} delay={1000} threshold={0} onChange={setView}>
+    <InView triggerOnce={true}  threshold={0} onChange={setView}>
       {({ ref, inView }) => (
         <TabFourContainer ref={ref}>
           {inView && (
