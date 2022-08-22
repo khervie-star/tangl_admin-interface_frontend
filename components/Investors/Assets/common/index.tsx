@@ -39,8 +39,8 @@ export const Card = styled.div`
   ${({ active }: CommonTypes) =>
     active
       ? css`
-          color: #0070f3;
-          border-color: #0070f3;
+          color: #007afb;
+          border-color: #007afb;
         `
       : css`
           color: #43566a;
@@ -61,6 +61,16 @@ export const Card = styled.div`
     letter-spacing: -0.4px;
     margin: auto;
   }
+`;
+
+export const CardLabel = styled.p`
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #43566a;
+  // margin-top: 1rem;
 `;
 
 export const Grid = styled.div`
@@ -122,6 +132,93 @@ export const Input = styled.input`
   &:hover {
     border: 0;
     border-bottom: 1px solid #a0aaba;
+  }
+  @media ${device.mobileL} {
+    font-size: 14px;
+    line-height: 20px;
+  }
+`;
+
+export const BorderedInput = styled.input`
+  background: #ffffff;
+  border: 1px solid #e1e8f4;
+  box-sizing: border-box;
+  border-radius: 8px;
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: -0.1px;
+  font-feature-settings: "liga" off;
+  color: #324a64;
+  padding: ${({ padding }: CommonTypes) => (padding ? padding : "0.5rem 1rem")};
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 2rem;
+  &::placeholder {
+    color: #a0aaba;
+    font-weight: 400;
+    // font-family: "Cera Pro";
+    font-style: medium;
+    font-size: 14px;
+    line-height: 20px;
+    vertical-align: center;
+  }
+  &:focus {
+    outline: none;
+    border: 1px solid #e1e8f4;
+    box-sizing: border-box;
+    border-radius: 8px;
+  }
+  &:hover {
+    border: 1px solid #e1e8f4;
+    box-sizing: border-box;
+    border-radius: 8px;
+  }
+  @media ${device.mobileL} {
+    font-size: 14px;
+    line-height: 20px;
+  }
+`;
+
+export const BorderedTextField = styled.textarea`
+  resize: none;
+  background: #ffffff;
+  border: 1px solid #e1e8f4;
+  box-sizing: border-box;
+  border-radius: 8px;
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: -0.1px;
+  font-feature-settings: "liga" off;
+  color: #324a64;
+  padding: ${({ padding }: CommonTypes) => (padding ? padding : "0.5rem 1rem")};
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 2rem;
+  &::placeholder {
+    color: #a0aaba;
+    font-weight: 400;
+    // font-family: "Cera Pro";
+    font-style: medium;
+    font-size: 14px;
+    line-height: 20px;
+    vertical-align: center;
+  }
+  &:focus {
+    outline: none;
+    border: 1px solid #e1e8f4;
+    box-sizing: border-box;
+    border-radius: 8px;
+  }
+  &:hover {
+    border: 1px solid #e1e8f4;
+    box-sizing: border-box;
+    border-radius: 8px;
   }
   @media ${device.mobileL} {
     font-size: 14px;
@@ -340,4 +437,20 @@ export const CheckboxContainer = styled.div`
     color: #43566a;
     margin-left: 16px;
   }
+`;
+
+export const SelectRadio = styled.div`
+  border: 1px solid #e1e8f4;
+  box-sizing: border-box;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  padding: 2rem;
+`;
+
+export const SelectCheckbox = styled.div`
+  border: 1px solid #e1e8f4;
+  box-sizing: border-box;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  padding: 2rem;
 `;
