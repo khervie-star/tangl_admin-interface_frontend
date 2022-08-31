@@ -2,9 +2,9 @@ import styled, { css } from "styled-components";
 import { device } from "../../../../Global";
 import { BtnProps } from "./types";
 
-export const BackButton = ({ onClick }: BtnProps) => {
+export const BackButton = ({ onClick, disabled }: BtnProps) => {
   return (
-    <ButtonWrapper onClick={onClick}>
+    <ButtonWrapper onClick={onClick} disabled={disabled}>
       <svg
         width="8"
         height="12"
@@ -117,3 +117,27 @@ export const DarkContBtn = styled.button`
           background: #007afb;
         `}
 `;
+
+export const ContToLogin = styled.button`
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5em;
+  border-radius: 4px;
+  padding: 0.886rem 1.042rem;
+  border: 1px solid #e1e8f4;
+  cursor: pointer;
+  box-sizing: border-box;
+  @media ${device.tablet} {
+    margin-bottom: 2rem;
+  }
+`;
+
+export const ContinueToLogin = ({ children, onClick, disabled }: BtnProps) => {
+  return (
+    <ContToLogin disabled={disabled} onClick={onClick}>
+      {children}
+    </ContToLogin>
+  );
+};

@@ -1,6 +1,5 @@
 export type BtnProps = {
-  children?: string;
+  children?: any;
   onClick?: any;
-  disabled?:boolean;
-  type?: "submit" | "reset" | "button";
+  disabled?: boolean;
 };

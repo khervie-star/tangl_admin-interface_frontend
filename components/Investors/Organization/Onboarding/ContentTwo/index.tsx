@@ -1,9 +1,15 @@
 import { useState } from "react";
-import { MdSentimentDissatisfied } from "react-icons/md";
+import { MdDisabledByDefault, MdSentimentDissatisfied } from "react-icons/md";
 import { useDispatch } from "react-redux";
 import { organizationFowardRoute } from "../../../../../store/actions";
 import { ContinueButton } from "../../../Assets/Buttons";
-import { LabelFlex, TextBody, TextTitle } from "../../../Assets/common";
+import {
+  FlexItems,
+  FlexText,
+  LabelFlex,
+  TextBody,
+  TextTitle,
+} from "../../../Assets/common";
 import { DeleteIcon, LockIcon } from "../../../Assets/Icons";
 import { PageBarTypes } from "../../../types";
 import {
@@ -13,6 +19,7 @@ import {
   InputWrapper,
   InputText,
 } from "./styles";
+import { AvatarIcon } from "../../../Assets/Icons";
 
 const ContentTwo = ({ page }: PageBarTypes) => {
   const [countryDialCode, setCountryDialCode] = useState("+1");
@@ -30,6 +37,7 @@ const ContentTwo = ({ page }: PageBarTypes) => {
   };
 
   const handleSubmit = () => {
+    // dispatch(setOrganization(cardType));
     if (page) dispatch(organizationFowardRoute(page));
   };
 
@@ -64,7 +72,7 @@ const ContentTwo = ({ page }: PageBarTypes) => {
           </LabelFlex>
         </InputWrapper>
       </InputContainer>
-      <ContinueButton disabled={true && disabled}>Send Code</ContinueButton>
+      <ContinueButton>Send Code</ContinueButton>
     </form>
   );
 };

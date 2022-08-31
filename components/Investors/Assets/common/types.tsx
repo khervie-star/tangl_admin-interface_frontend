@@ -4,4 +4,5 @@ export type CommonTypes = {
   flexPercentage?: string;
   page?: number;
   flexWrap?: string;
+  withIcon?: boolean;
 };

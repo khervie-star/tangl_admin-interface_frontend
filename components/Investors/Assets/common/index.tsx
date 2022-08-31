@@ -454,3 +454,24 @@ export const SelectCheckbox = styled.div`
   margin-bottom: 2rem;
   padding: 2rem;
 `;
+
+export const FlexItems = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+`;
+
+export const FlexText = styled.div`
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: -0.1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  color: ${({ withIcon }: CommonTypes) => (withIcon ? "#007AFB" : "#324a64")};
+`;
