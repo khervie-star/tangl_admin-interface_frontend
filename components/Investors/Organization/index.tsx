@@ -46,7 +46,12 @@ const OrganizationContent = () => {
     <>
       <Display>
         <div>
-          <BackButton onClick={handleBack} />
+          <BackButton
+            onClick={handleBack}
+            disabled={
+              OrgPage === 6 || OrgPage === 7 || OrgPage === 8 || OrgPage === 11
+            }
+          />
         </div>
         <Pad>
           {OrgPage !== 13 && <PageBar page={OrgPage} />}

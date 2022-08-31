@@ -75,18 +75,9 @@ export const HeadWrap = styled.div`
     font-feature-settings: "liga" off;
     color: #324a64;
     margin-right: 2.375rem;
-  }
-  ${({ active, completed }: CardProps) =>
-    active
-      ? css`
-          span {
-            color: #011122;
-            opacity: 1;
-          }
-        `
-      : completed
-      ? css`
-          span {
+    ${({ active }: CardProps) =>
+      active
+        ? css`
             color: #007afb;
             opacity: 1;
           }
@@ -94,9 +85,8 @@ export const HeadWrap = styled.div`
       : css`
           span {
             color: #324a64;
-            opacity: 0.5;
-          }
-        `}
+          `};
+  }
 `;
 
 export const Current = styled.div`

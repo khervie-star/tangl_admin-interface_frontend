@@ -51,8 +51,8 @@ const FunctionCard = ({ page }: PageBarTypes) => {
             Current
           </Current>
           <TickIcon
-            display={page && page > 6 ? true : false}
-            active={page && page > 6 ? true : false}
+            display={page && page > 6 && page < 7 ? false : true}
+            active={page && page > 6 && page < 7 ? false : true}
           />
         </HeadWrap>
         <DropList active={page && page > 5 && page < 7 ? true : false}>

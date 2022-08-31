@@ -1,10 +1,17 @@
-import { ContinueButton } from "./Assets/Buttons";
-import { Card, Grid, TextBody, TextTitle } from "./Assets/common";
+import { ContinueButton, ContinueToLogin } from "./Assets/Buttons";
+import {
+  Card,
+  Grid,
+  TextBody,
+  TextTitle,
+  FlexItems,
+  FlexText,
+} from "./Assets/common";
 import { useDispatch, useSelector } from "react-redux";
 import { setInvestor } from "../../store/actions/session";
 import { RootState } from "../../store/reducers";
 import Router from "next/router";
-import { TickIcon } from "./Assets/Icons";
+import { AvatarIcon, TickIcon } from "./Assets/Icons";
 
 const selectCards = [
   {
@@ -58,9 +65,20 @@ const InvestorSelect = () => {
           );
         })}
       </Grid>
-      <ContinueButton onClick={handleClick} disabled={!InvType && true}>
-        Continue
-      </ContinueButton>
+      <FlexItems>
+        <ContinueToLogin>
+          <FlexText>Have an account?</FlexText>
+          <FlexText withIcon>
+            <div style={{ display: "flex", alignItems: "center" }}>
+              <AvatarIcon />
+            </div>
+            Login
+          </FlexText>
+        </ContinueToLogin>
+        <ContinueButton onClick={handleClick} disabled={!InvType && true}>
+          Continue
+        </ContinueButton>
+      </FlexItems>
     </>
   );
 };
