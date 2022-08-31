@@ -1,6 +1,6 @@
 import Router from "next/router";
 import { useDispatch } from "react-redux";
-import { individualFowardRoute } from "../../../../../store/actions";
+import { individualBackwardRoute, individualFowardRoute } from "../../../../../store/actions";
 import { ContinueButton, DarkContinueButton } from "../../../Assets/Buttons";
 import { TextBody, TextTitle } from "../../../Assets/common";
 import { EditIcon, ReloadIcon } from "../../../Assets/Icons";
@@ -9,8 +9,9 @@ import { ButtonWrap, MailContainer, ResendLink } from "./styles";
 
 const ContentFour = ({ page }: PageBarTypes) => {
   const dispatch = useDispatch();
+
   const handleClick = () => {
-    if (page) dispatch(individualFowardRoute(page));
+    if (page) dispatch(individualBackwardRoute(page));
   };
 
   const handleRoute = () => {
@@ -38,10 +39,6 @@ const ContentFour = ({ page }: PageBarTypes) => {
           <p>Send again</p>
         </span>
       </ResendLink>
-      <ButtonWrap>
-        <DarkContinueButton onClick={handleClick}>Start KYC</DarkContinueButton>
-        <ContinueButton onClick={handleRoute}>Go to Dashboard</ContinueButton>
-      </ButtonWrap>
     </>
   );
 };

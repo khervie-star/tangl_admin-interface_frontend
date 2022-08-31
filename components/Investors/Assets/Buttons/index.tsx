@@ -38,9 +38,14 @@ export const ButtonWrapper = styled.button`
   }
 `;
 
-export const ContinueButton = ({ children, onClick, disabled }: BtnProps) => {
+export const ContinueButton = ({
+  children,
+  onClick,
+  disabled,
+  type,
+}: BtnProps) => {
   return (
-    <ContBtn disabled={disabled} onClick={onClick}>
+    <ContBtn disabled={disabled} onClick={onClick} type={type}>
       {children}
     </ContBtn>
   );
@@ -77,9 +82,10 @@ export const DarkContinueButton = ({
   children,
   onClick,
   disabled,
+  type
 }: BtnProps) => {
   return (
-    <DarkContBtn disabled={disabled} onClick={onClick}>
+    <DarkContBtn disabled={disabled} onClick={onClick} type={type}>
       {children}
     </DarkContBtn>
   );
@@ -94,10 +100,20 @@ export const DarkContBtn = styled.button`
   text-align: center;
   letter-spacing: -0.1px;
   background: #007afb;
-  border: 1px solid #007afb;
+  border: none;
   box-sizing: border-box;
   border-radius: 4px;
   padding: 1rem 1.5rem;
   color: #fff;
   cursor: pointer;
+  ${({ disabled }: BtnProps) =>
+    disabled
+      ? css`
+          color: #ffffff;
+          background: #a0aaba;
+        `
+      : css`
+          color: #ffffff;
+          background: #007afb;
+        `}
 `;

@@ -11,11 +11,29 @@ import {
   InputWrapper,
   InputText,
 } from "./styles";
+import { useState } from "react";
+import { savePhone } from "../../../../../store/actions/register";
 
 const ContentOne = ({ page }: PageBarTypes) => {
+  const [countryDialCode, setCountryDialCode] = useState("+1");
+  const [phone, setPhone] = useState<string>();
+  const [disabled, setDisabled] = useState(true);
   const dispatch = useDispatch();
-  const handleSubmit = () => {
-    if (page) dispatch(individualFowardRoute(page));
+
+  const handlePhoneNumberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setPhone(e.target.value);
+    setDisabled(!e.target.value.length);
+  };
+
+  const handleDialCodeChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    console.log(e.target.value);
+    setCountryDialCode(e.target.value);
+  };
+  const handleSubmit = async () => {
+    try {
+      phone && (await dispatch(savePhone(countryDialCode + "" + phone)));
+      page && dispatch(individualFowardRoute(page));
+    } catch (error: any) {}
   };
 
   return (
@@ -38,18 +56,24 @@ const ContentOne = ({ page }: PageBarTypes) => {
           <p>Enter your phone number</p>
         </InputText>
         <InputWrapper>
-          <LabelFlex flexPercentage="30%" padding= "0rem .5rem 0rem 0rem">
-            <Select>
+          <LabelFlex flexPercentage="30%" padding="0rem .5rem 0rem 0rem">
+            <Select value={countryDialCode} onChange={handleDialCodeChange}>
               <option>+234</option>
               <option>+1</option>
             </Select>
           </LabelFlex>
-          <LabelFlex flexPercentage="70%" padding ="0rem 0rem 0rem .5rem">
-            <input type="text" />
+          <LabelFlex flexPercentage="70%" padding="0rem 0rem 0rem .5rem">
+            <input
+              type="text"
+              value={phone}
+              onChange={handlePhoneNumberChange}
+            />
           </LabelFlex>
         </InputWrapper>
       </InputContainer>
-      <ContinueButton>Send Code</ContinueButton>
+      <ContinueButton type="submit" disabled={disabled}>
+        Send Code
+      </ContinueButton>
     </form>
   );
 };

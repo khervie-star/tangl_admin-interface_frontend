@@ -36,7 +36,7 @@ export const TelContainer = styled.div`
 export const Title = styled.span``;
 
 export const Confirmation = styled.div`
-  margin-bottom: 11rem;
+  margin-bottom: 3rem;
   ${Title} {
     font-style: normal;
     font-weight: 500;
