@@ -5,7 +5,7 @@ import { FlowBar, FlowCircle, FlowWrap } from "./styles";
 const PageBar = ({page}: PageBarTypes) => {
   return (
     <>
-      {page && page < 6 ? (
+      {page && page < 7 ? (
         <FlowWrap>
           <FlowCircle active={page > 0 ? true : false} page={page}></FlowCircle>
           <FlowBar active={page > 1 ? true : false} page={page}></FlowBar>
@@ -18,14 +18,14 @@ const PageBar = ({page}: PageBarTypes) => {
       ) : page && (
         <FlowWrap>
           <FlowCircle
-            active={page > 5 ? true : false}
+            active={page > 6 ? true : false}
             page={page}
             pending
           ></FlowCircle>
-          <FlowBar active={page > 7 ? true : false} page={page}></FlowBar>
-          <FlowCircle active={page > 8 ? true : false} page={page}></FlowCircle>
-          <FlowBar active={page > 9 ? true : false} page={page}></FlowBar>
+          <FlowBar active={page > 8 ? true : false} page={page}></FlowBar>
           <FlowCircle active={page > 9 ? true : false} page={page}></FlowCircle>
+          <FlowBar active={page > 10 ? true : false} page={page}></FlowBar>
+          <FlowCircle active={page > 10 ? true : false} page={page}></FlowCircle>
         </FlowWrap>
       )}
     </>

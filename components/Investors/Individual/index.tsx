@@ -18,6 +18,7 @@ import ContentNine from "./Onboarding/ContentNine";
 import ContentTen from "./Onboarding/ContentTen";
 import FinalContent from "./Onboarding/FinalContent";
 import ContentEleven from "./Onboarding/ContentEleven";
+import ExtraContent from "./Onboarding/ExtraContent";
 
 const IndividualContent = () => {
   const { IndPage } = useSelector((store: RootState) => ({
@@ -28,7 +29,7 @@ const IndividualContent = () => {
 
   const handleBack = () => {
     if (IndPage === 2) Router.push("/Investor/Onboarding");
-    else if (IndPage === 6) Router.replace("/")
+    else if (IndPage === 6) Router.replace("/");
     else dispatch(individualBackwardRoute(IndPage));
   };
 
@@ -40,18 +41,18 @@ const IndividualContent = () => {
             <BackButton onClick={handleBack} />
           </div>
         )}
-        <Pad page = {IndPage} >
+        <Pad page={IndPage}>
           {IndPage !== 13 && <PageBar page={IndPage} />}
           {IndPage === 2 && <ContentOne page={IndPage} />}
           {IndPage === 3 && <ContentTwo page={IndPage} />}
           {IndPage === 4 && <ContentThree page={IndPage} />}
           {IndPage === 5 && <ContentFour page={IndPage} />}
-          {IndPage === 6 && <ContentFive page={IndPage} />}
-          {IndPage === 7 && <ContentSix page={IndPage} />}
-          {IndPage === 8 && <ContentSeven page={IndPage} />}
-          {IndPage === 9 && <ContentEight page={IndPage} />}
-          {IndPage === 10 && <ContentNine page={IndPage} />}
-          {IndPage === 11 && <ContentTen page={IndPage} />}
+          {IndPage === 6 && <ExtraContent page={IndPage} />}
+          {IndPage === 7 && <ContentFive page={IndPage} />}
+          {IndPage === 8 && <ContentSix page={IndPage} />}
+          {IndPage === 9 && <ContentSeven page={IndPage} />}
+          {IndPage === 10 && <ContentEight page={IndPage} />}
+          {IndPage === 11 && <ContentNine page={IndPage} />}
           {IndPage === 12 && <ContentEleven page={IndPage} />}
           {IndPage === 13 && <FinalContent />}
         </Pad>

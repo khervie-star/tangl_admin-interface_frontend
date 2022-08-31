@@ -43,34 +43,6 @@ const ContentEight = ({ page }: PageBarTypes) => {
           </Click>
           <input type="file" onChange={handleChange} />
         </File>
-        <FormContainer>
-        <Row>
-          <LabelFlex padding="0rem 1rem 0rem 0rem">
-            <Label>Country</Label>
-            <Select>
-              <option>United Kingdom</option>
-            </Select>
-          </LabelFlex>
-          <LabelFlex padding="0rem 0rem 0rem 1rem">
-            <Label>State</Label>
-            <Select>
-              <option>London</option>
-            </Select>
-          </LabelFlex>
-        </Row>
-        <Label>Address</Label>
-        <Input type="text"/>
-        <Row>
-          <LabelFlex padding="0rem 1rem 0rem 0rem">
-            <Label>City/Province</Label>
-            <Input type={"text"}  />
-          </LabelFlex>
-          <LabelFlex padding="0rem 0rem 0rem 1rem">
-            <Label>ZipCode</Label>
-            <Input type={"text"} />
-          </LabelFlex>
-        </Row>
-        </FormContainer>
       <ContinueButton onClick={handleClick}>Continue</ContinueButton>
     </>
   );

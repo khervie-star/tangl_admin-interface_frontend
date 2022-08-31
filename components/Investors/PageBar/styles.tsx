@@ -12,7 +12,7 @@ export const FlowCircle = styled.div`
   border: 1px solid #007afb;
   background: ${({ active }: FlowTypes) => (active ? "#007AFB" : "#ffffff")};
   ${({ page, active }: FlowTypes) =>
-    page === 5 || !active
+    page === 5 || page === 6 || !active
       ? css`
           opacity: 0.5;
         `
@@ -20,7 +20,7 @@ export const FlowCircle = styled.div`
           opacity: 1;
         `};
   ${({ page }: FlowTypes) =>
-    page === 6
+    page === 7
       ? css`
           background: #fff;
         `

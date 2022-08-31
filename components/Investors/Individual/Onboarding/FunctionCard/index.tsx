@@ -31,22 +31,22 @@ const FunctionCard = ({ page }: PageBarTypes) => {
         </DropList>
       </Function>
       <Function>
-        <HeadWrap active={page && page > 10 ? true : false}>
+        <HeadWrap active={page && page > 11 ? true : false}>
           <span>KYC</span>
-          <Current active={page && page > 5 && page < 11 ? true : false}>
+          <Current active={page && page > 6 && page < 12 ? true : false}>
             Current
           </Current>
           <TickIcon
-            display={page && page > 5 && page < 11 ? false : true}
-            active={page && page > 10 ? true : false}
+            display={page && page > 6 && page < 12 ? false : true}
+            active={page && page > 11 ? true : false}
           />
         </HeadWrap>
-        <DropList active={page && page > 5 && page < 11 ? true : false}>
-          <Text active={page === 6 ? true : false}>Personal Information</Text>
-          <Text active={page === 7 || page === 8 ? true : false}>
+        <DropList active={page && page > 6 && page < 12 ? true : false}>
+          <Text active={page === 7 ? true : false}>Personal Information</Text>
+          <Text active={page === 8 || page === 9 ? true : false}>
             Upload Government ID
           </Text>
-          <Text active={page === 9 || page === 10 ? true : false}>
+          <Text active={page === 10 || page === 11 ? true : false}>
             Upload proof of address
           </Text>
         </DropList>

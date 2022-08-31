@@ -11,7 +11,7 @@ const FinalContent = () => {
   const handleClick = () => {
     Router.replace("/");
     dispatch(setInvestorType(""))
-    dispatch(setIndividualPage(1))
+    dispatch(setIndividualPage(2))
   }
   return (
     <FinalWrapper>
