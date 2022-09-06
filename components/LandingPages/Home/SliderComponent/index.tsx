@@ -33,7 +33,7 @@ const SliderComponent = () => {
         spaceBetween={-500}
         rewind={true}
         centeredSlides={true}
-        slidesPerView={3}
+        slidesPerView={typeof window !== 'undefined' && window.innerWidth < 768 ? 1 : 3}
         coverflowEffect={{
           rotate: 0,
           stretch: 0,
@@ -52,7 +52,11 @@ const SliderComponent = () => {
         // className="mySwiper"
       >
         <SwiperSlide>
-          <SliderImage width={100} height={100} src="https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg" />
+          <SliderImage
+            width={100}
+            height={100}
+            src="https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg"
+          />
         </SwiperSlide>
         <SwiperSlide>
           <SliderReportWrapper>
@@ -70,11 +74,15 @@ const SliderComponent = () => {
                 <ArrowRightIcon />
               </DownloadNow>
             </SliderReportBody>
-            <SliderReportImage width={100} height={100}  src={ReportImg.src} />
+            <SliderReportImage width={100} height={100} src={ReportImg.src} />
           </SliderReportWrapper>
         </SwiperSlide>
         <SwiperSlide>
-          <SliderImage width={100} height={100}  src="https://images.pexels.com/photos/6289030/pexels-photo-6289030.jpeg" />
+          <SliderImage
+            width={100}
+            height={100}
+            src="https://images.pexels.com/photos/6289030/pexels-photo-6289030.jpeg"
+          />
         </SwiperSlide>
       </Swiper>
     </SliderContainer>

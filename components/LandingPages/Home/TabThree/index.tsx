@@ -9,7 +9,7 @@ import { useState } from "react";
 const TabThree = () => {
   const [view, setView] = useState(false);
   return (
-    <InView delay={2000} triggerOnce={true} trackVisibility={true} threshold={0} onChange={setView}>
+    <InView  triggerOnce={true} threshold={0} onChange={setView}>
       {({ ref, inView }) => (
         <TabThreeContainer inView={inView} ref={ref}>
           <>

@@ -5,19 +5,24 @@ import { ArrowRightIcon } from "../../Common/Icons";
 
 export const SliderContainer = styled.section`
   margin: 5rem;
-  /* position: relative;
-  width: 100%;
-  height: 400px; */
+  height: 400px;
+  box-sizing: border-box;
   @media ${device.tablet} {
-    padding: 2.5rem 1.5rem;
+    margin: 2.5rem 1.5rem;
+    height: 200px;
+    margin-bottom: 8rem;
   }
 `;
 
 export const SliderImage = styled.img`
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: 450px;
+  /* object-fit: cover; */
   border-radius: 23.8667px;
+  box-sizing: border-box;
+  @media ${device.mobileL} {
+    height: 200px;
+  }
 `;
 
 export const SliderReportWrapper = styled.div`

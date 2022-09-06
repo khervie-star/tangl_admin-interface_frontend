@@ -42,6 +42,7 @@ export const Container = styled.div`
   box-sizing: border-box;
   color: #ffffff;
   background: #000000;
+  width: 100%;
 `;
 export const pulse = keyframes`
   0% {
