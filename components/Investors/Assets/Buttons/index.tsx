@@ -82,7 +82,7 @@ export const DarkContinueButton = ({
   children,
   onClick,
   disabled,
-  type
+  type,
 }: BtnProps) => {
   return (
     <DarkContBtn disabled={disabled} onClick={onClick} type={type}>

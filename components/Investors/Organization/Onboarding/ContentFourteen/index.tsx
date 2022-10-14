@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   individualFowardRoute,
@@ -51,7 +52,7 @@ const investmentVehicleCards = [
   {
     key: 7,
     content: "Listed shares",
-    cardType: "LSTSHRS",
+    cardType: "LSTDSHRS",
   },
   {
     key: 8,
@@ -76,7 +77,7 @@ const investmentVehicleCards = [
   {
     key: 12,
     content: "Other",
-    cardType: "OTHR",
+    cardType: "OTHER",
   },
   {
     key: 13,
@@ -87,12 +88,15 @@ const investmentVehicleCards = [
 
 const ContentFourteen = ({ page }: PageBarTypes) => {
   const dispatch = useDispatch();
+  const [investmentVehicles, setInvestmentVehicles] = useState([]);
   const handleSelect = (cardType: string) => {
     dispatch(setOrganization(cardType));
   };
   const handleSubmit = () => {
     if (page) dispatch(organizationFowardRoute(page));
   };
+
+  console.log(investmentVehicles);
   return (
     <form onSubmit={handleSubmit}>
       <TextTitle>Investment Nature</TextTitle>
@@ -107,7 +111,12 @@ const ContentFourteen = ({ page }: PageBarTypes) => {
                 key={card.key}
               >
                 <CheckboxContainer key={card.key}>
-                  <input type="checkbox" name="select" value={card.cardType} />
+                  <input
+                    type="checkbox"
+                    name="Investment Vehicles"
+                    value={investmentVehicles}
+                    onChange={() => setInvestmentVehicles(card.cardType)}
+                  />
                   <label>{card.content}</label>
                 </CheckboxContainer>
               </LabelFlex>
@@ -115,7 +124,9 @@ const ContentFourteen = ({ page }: PageBarTypes) => {
           })}
         </Row>
       </SelectInvestmentNature>
-      <ContinueButton>Continue</ContinueButton>
+      <ContinueButton disabled={!investmentVehicles.length}>
+        Continue
+      </ContinueButton>
     </form>
   );
 };

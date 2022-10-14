@@ -5,4 +5,6 @@ export type CommonTypes = {
   page?: number;
   flexWrap?: string;
   withIcon?: boolean;
+  children?: any;
+  smaller?: boolean;
 };

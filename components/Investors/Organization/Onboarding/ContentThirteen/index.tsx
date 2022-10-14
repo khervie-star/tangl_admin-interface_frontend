@@ -1,4 +1,9 @@
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import {
+  financialAssetManagementMethodArray,
+  financialTransactionFrequencyArray,
+} from "../../../../../constants";
 import {
   individualFowardRoute,
   organizationBackwardRoute,
@@ -18,75 +23,34 @@ import {
 import { PageBarTypes } from "../../../types";
 import { CardLabel, SelectInvestmentNature } from "./styles";
 
-const financialAssetManagementMethod = [
-  {
-    key: 1,
-    content: "Internal management",
-    cardType: "INTMGMT",
-  },
-  {
-    key: 2,
-    content: "With the advice of an authourized third party institution",
-    cardType: "THIRDPARTYINST",
-  },
-  {
-    key: 3,
-    content: "By mandate(s) entrusted to a manager",
-    cardType: "MANDATE",
-  },
-];
-
-const financialTransactionFrequency = [
-  {
-    key: 1,
-    content: "Daily",
-    cardType: "DAILY",
-  },
-  {
-    key: 2,
-    content: "Quarterly",
-    cardType: "QUARTERLY",
-  },
-  {
-    key: 3,
-    content: "Weekly",
-    cardType: "WEEKLY",
-  },
-  {
-    key: 4,
-    content: "Annually",
-    cardType: "ANNUALLY",
-  },
-  {
-    key: 5,
-    content: "Monthly",
-    cardType: "MONTHLY",
-  },
-
-  {
-    key: 6,
-    content: "Punctually",
-    cardType: "PUNCTUALLY",
-  },
-];
-
 const ContentThirteen = ({ page }: PageBarTypes) => {
   const dispatch = useDispatch();
+  const [financialTransactionFrequency, setFinancialTransactionFrequency] =
+    useState("");
+  const [financialAssetMgmntMethod, setFinancialAssetMgmntMethod] =
+    useState("");
+
   const handleSelect = (cardType: string) => {
     dispatch(setOrganization(cardType));
   };
   const handleSubmit = () => {
     if (page) dispatch(organizationFowardRoute(page));
   };
+
   return (
     <form onSubmit={handleSubmit}>
       <TextTitle>Investment Nature</TextTitle>
       <SelectInvestmentNature>
         <CardLabel>What is your financial asset management method?</CardLabel>
-        {financialAssetManagementMethod.map((card) => {
+        {financialAssetManagementMethodArray.map((card) => {
           return (
             <RadioContainer key={card.key}>
-              <input type="radio" name="select" value={card.cardType} />
+              <input
+                type="radio"
+                name="Financial Asset Mgmnt Method"
+                value={financialAssetMgmntMethod}
+                onChange={() => setFinancialAssetMgmntMethod(card.cardType)}
+              />
               <label>{card.content}</label>
             </RadioContainer>
           );
@@ -98,7 +62,7 @@ const ContentThirteen = ({ page }: PageBarTypes) => {
           What is your expected frequency of financials transactions?
         </CardLabel>
         <Row flexWrap="wrap">
-          {financialTransactionFrequency.map((card) => {
+          {financialTransactionFrequencyArray.map((card) => {
             return (
               <LabelFlex
                 flexPercentage="50%"
@@ -106,7 +70,15 @@ const ContentThirteen = ({ page }: PageBarTypes) => {
                 key={card.key}
               >
                 <RadioContainer>
-                  <input type="radio" name="select" value={card.cardType} />
+                  <input
+                    type="radio"
+                    name="Financial Transaction
+                    Frequency"
+                    value={financialTransactionFrequency}
+                    onChange={() =>
+                      setFinancialTransactionFrequency(card.cardType)
+                    }
+                  />
                   <label>{card.content}</label>
                 </RadioContainer>
               </LabelFlex>
@@ -114,7 +86,11 @@ const ContentThirteen = ({ page }: PageBarTypes) => {
           })}
         </Row>
       </SelectInvestmentNature>
-      <ContinueButton>Continue</ContinueButton>
+      <ContinueButton
+        disabled={!financialTransactionFrequency || !financialAssetMgmntMethod}
+      >
+        Continue
+      </ContinueButton>
     </form>
   );
 };

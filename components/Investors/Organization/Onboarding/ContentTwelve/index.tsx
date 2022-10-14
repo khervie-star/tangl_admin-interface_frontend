@@ -10,6 +10,7 @@ import {
   Select,
   TextTitle,
   Date,
+  CardLabel,
 } from "../../../Assets/common";
 import { PageBarTypes } from "../../../types";
 import { useDispatch } from "react-redux";
@@ -17,9 +18,11 @@ import { organizationFowardRoute } from "../../../../../store/actions";
 import { ContinueButton } from "../../../Assets/Buttons";
 import { CloudIcon, EditIcon, RemoveIcon } from "../../../Assets/Icons";
 import { Click, ClickText, File } from "../ContentSeven/styles";
+import { helper } from "../../../../../utils/helper";
+import Image from "next/image";
 
 const ContentTwelve = ({ page }: PageBarTypes) => {
-  const [imgFile, setImageFile] = useState("");
+  const [businessRegImgFile, setImageFile] = useState("");
 
   const dispatch = useDispatch();
   const handleClick = () => {
@@ -27,75 +30,115 @@ const ContentTwelve = ({ page }: PageBarTypes) => {
   };
 
   const handleChange = (event: any) => {
-    setImageFile(event.currentTarget.files[0].name);
+    if (event.target.files && event.target.files[0]) {
+      setImageFile(event.target.files[0]);
+    }
+  };
+
+  const deleteImage = () => {
+    setImageFile("");
+  };
+
+  const editImage = () => {
+    null;
   };
 
   return (
     <>
       <TextTitle>Upload proof of business registration</TextTitle>
-      <File>
-        <Click>
-          <ClickText>
-            <h1>Upload photo</h1>
-            {imgFile ? (
-              <p>{imgFile}</p>
-            ) : (
-              <p>jpeg, png, jpg not more than 1M in size</p>
-            )}
-          </ClickText>
-          <div>
-            <CloudIcon />
-          </div>
-        </Click>
-        <input type="file" onChange={handleChange} />
-      </File>
+      {businessRegImgFile ? (
+        <>
+          <Click>
+            <ClickText>
+              <p>{businessRegImgFile.name}</p>
+              <p>{helper.formatBytes(businessRegImgFile.size)}</p>
+            </ClickText>
+            <div>
+              <Image
+                src={URL.createObjectURL(businessRegImgFile)}
+                alt=""
+                width={"107px"}
+                height="70px"
+              />
+            </div>
+            <div onClick={editImage}>
+              <File>
+                <EditIcon />
+                <input type="file" onChange={handleChange} />
+              </File>
+            </div>
+            <div onClick={deleteImage}>
+              <RemoveIcon />
+            </div>
+          </Click>
+        </>
+      ) : (
+        <>
+          <File>
+            <Click>
+              <ClickText>
+                <h1>Upload photo</h1>
+                {businessRegImgFile ? (
+                  <p>{businessRegImgFile}</p>
+                ) : (
+                  <p>jpeg, png, jpg not more than 1M in size</p>
+                )}
+              </ClickText>
+              <div>
+                <CloudIcon />
+              </div>
+            </Click>
+            <input type="file" onChange={handleChange} />
+          </File>
+        </>
+      )}
       <FormContainer>
         <Label>
           <Row>
-            <span>Registration Number</span>
+            <CardLabel>Registration Number</CardLabel>
           </Row>
         </Label>
         <Input type="text" />
         <Row>
           <LabelFlex flexPercentage="50%" padding="0rem 0rem 0rem 0rem">
-            <Label>Country of Business Registration</Label>
-            <Select>
+            <CardLabel>Country of Business Registration</CardLabel>
+            <Select smaller>
               <option>United Kingdom</option>
               <option>United States</option>
               <option>Nigeria</option>
             </Select>
           </LabelFlex>
           <LabelFlex flexPercentage="50%" padding="0rem 0rem 0rem 1rem">
-            <Label>State of Business Registration</Label>
-            <Select>
+            <CardLabel>State of Business Registration</CardLabel>
+            <Select smaller>
               <option>United Kingdom</option>
               <option>United States</option>
               <option>Nigeria</option>
             </Select>
           </LabelFlex>
         </Row>
-        <Label>
+        <CardLabel>
           <Row>
             <span>Office Address</span>
           </Row>
-        </Label>
+        </CardLabel>
         <Input type="text" />
         <Row>
           <LabelFlex flexPercentage="50%" padding="0rem 0rem 0rem 0rem">
-            <Label>
+            <CardLabel>
               <Row>
                 <span>City/Province</span>
               </Row>
-            </Label>
-            <Input type="text" />
+            </CardLabel>
+            <Input type="text" placeholder="Enter here" />
           </LabelFlex>
           <LabelFlex flexPercentage="50%" padding="0rem 0rem 0rem 1rem">
-            <Label>
+            <CardLabel>
               <Row>
                 <span>Zip Code</span>
               </Row>
-            </Label>
-            <Input type="text" />
+            </CardLabel>
+            <Input type="text" placeholder="xxxx" />
           </LabelFlex>
         </Row>
       </FormContainer>

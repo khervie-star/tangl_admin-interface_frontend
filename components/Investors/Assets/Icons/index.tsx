@@ -112,7 +112,7 @@ export const VerifiedIcon = () => {
   );
 };
 
-export const ReloadIcon = () => {
+export const ReloadIcon = ({ animate }: IconProps) => {
   return (
     <svg
       width="12"
@@ -125,6 +125,17 @@ export const ReloadIcon = () => {
         d="M9.76667 2.23333C8.80001 1.26666 7.47334 0.666664 6.00001 0.666664C3.05334 0.666664 0.67334 3.05333 0.67334 6C0.67334 8.94666 3.05334 11.3333 6.00001 11.3333C8.48667 11.3333 10.56 9.63333 11.1533 7.33333H9.76667C9.22001 8.88666 7.74001 10 6.00001 10C3.79334 10 2.00001 8.20666 2.00001 6C2.00001 3.79333 3.79334 2 6.00001 2C7.10667 2 8.09334 2.46 8.81334 3.18666L6.66667 5.33333H11.3333V0.666664L9.76667 2.23333Z"
         fill="#007AFB"
       />
+      {animate && (
+        <animateTransform
+          attributeName="transform"
+          attributeType="XML"
+          type="rotate"
+          dur="1s"
+          from="0"
+          to="360"
+          repeatCount="indefinite"
+        />
+      )}
     </svg>
   );
 };
@@ -233,6 +244,59 @@ export const AvatarIcon = () => {
         stroke="#007AFB"
         strokeLinecap="round"
         strokeLinejoin="round"
+      />
+    </svg>
+  );
+};
+
+export const CheckmarkIcon = () => {
+  return (
+    <>
+      <svg
+        className="checkmark"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 52 52"
+      >
+        <circle
+          className="checkmark__circle"
+          cx="26"
+          cy="26"
+          r="25"
+          fill="none"
+        />
+        <path
+          className="checkmark__check"
+          fill="none"
+          d="M14.1 27.2l7.1 7.2 16.7-16.8"
+        />
+      </svg>
+    </>
+  );
+};
+
+export const CrossmarkIcon = () => {
+  return (
+    <svg
+      className="crossmark addClass animateElement"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 52 52"
+    >
+      <circle
+        className="crossmark__circle addClass animateElement"
+        cx="26"
+        cy="26"
+        r="25"
+        fill="none"
+      />
+      <path
+        className="cross__path cross__path--right addClass animateElement"
+        fill="none"
+        d="M16,16 l20,20"
+      />
+      <path
+        className="cross__path cross__path--left addClass animateElement"
+        fill="none"
+        d="M16,36 l20,-20"
       />
     </svg>
   );

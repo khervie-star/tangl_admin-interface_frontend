@@ -2,6 +2,7 @@ import { useDispatch } from "react-redux";
 import { organizationFowardRoute } from "../../../../../store/actions";
 import { ContinueButton } from "../../../Assets/Buttons";
 import {
+  CardLabel,
   Date,
   FormContainer,
   Input,
@@ -28,26 +29,26 @@ const ContentSix = ({ page }: PageBarTypes) => {
       <FormContainer>
         <Label>
           <Row>
-            <span>First name</span>
+            <CardLabel>First name</CardLabel>
             <LabelComment>{"*as shown on ID"}</LabelComment>
           </Row>
         </Label>
         <Input type="text" />
         <Label>
           <Row>
-            <span>Last name</span>
+            <CardLabel>Last name</CardLabel>
             <LabelComment>{"*as shown on ID"}</LabelComment>
           </Row>
         </Label>
         <Input type="text" />
         <Row>
           <LabelFlex flexPercentage="50%" padding="0rem 1rem 0rem 0rem">
-            <Label>Date of Birth</Label>
+            <CardLabel>Date of Birth</CardLabel>
             <Date padding=".5rem 1rem" type="date" />
           </LabelFlex>
           <LabelFlex flexPercentage="50%" padding="0rem 0rem 0rem 1rem">
-            <Label>Nationality</Label>
-            <Select>
+            <CardLabel>Nationality</CardLabel>
+            <Select smaller>
               <option>United Kingdom</option>
               <option>United States</option>
               <option>Nigeria</option>

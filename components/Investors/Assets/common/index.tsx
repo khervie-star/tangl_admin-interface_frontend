@@ -106,7 +106,7 @@ export const FormContainer = styled.div`
   box-sizing: border-box;
   border-radius: 8px;
   margin-bottom: 3rem;
-  padding: 2rem 2rem 0rem 2rem;
+  padding: 2rem;
 `;
 export const Input = styled.input`
   background: #ffffff;
@@ -272,7 +272,7 @@ export const Select = styled.select`
   font-family: "Outfit";
   font-style: normal;
   font-weight: 500;
-  font-size: 18px;
+  font-size: ${({ smaller }: CommonTypes) => (smaller ? "14px" : "18px")};
   line-height: 28px;
   letter-spacing: -0.1px;
   font-feature-settings: "liga" off;
@@ -288,7 +288,7 @@ export const Select = styled.select`
     font-family: "Outfit";
     font-style: normal;
     font-weight: 500;
-    font-size: 18px;
+    font-size: ${({ smaller }: CommonTypes) => (smaller ? "10px" : "18px")};
     line-height: 28px;
     letter-spacing: -0.1px;
     font-feature-settings: "liga" off;
@@ -474,4 +474,24 @@ export const FlexText = styled.div`
   justify-content: center;
   gap: 5px;
   color: ${({ withIcon }: CommonTypes) => (withIcon ? "#007AFB" : "#324a64")};
+`;
+
+export const ErrorMessage = ({ children }: CommonTypes) => {
+  return (
+    <>
+      <MessageText>{children}</MessageText>
+    </>
+  );
+};
+
+export const MessageText = styled.div`
+  font-family: Montserrat;
+  color: crimson;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+  background-color: #ffebee;
+  text-align: center;
+  padding: 1rem;
+  border-radius: 4px;
 `;

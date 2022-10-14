@@ -27,6 +27,7 @@ import ContentNineteen from "./Onboarding/ContentNineteen";
 import ContentTwenty from "./Onboarding/ContentTwenty";
 import ContentTwentyOne from "./Onboarding/ContentTwentyOne";
 import ContentEighteen from "./Onboarding/ContentEighteen";
+import ContentTwentyTwo from "./Onboarding/ContentTwentyTwo";
 
 const OrganizationContent = () => {
   const { OrgPage } = useSelector((store: RootState) => ({
@@ -98,8 +99,11 @@ const OrganizationContent = () => {
           {OrgType === "STARTUP" && OrgPage === 13 && (
             <ContentTwentyOne page={OrgPage} />
           )}
+          {OrgType === "STARTUP" && OrgPage === 14 && (
+            <ContentTwentyTwo page={OrgPage} />
+          )}
         </Pad>
-        {OrgPage && OrgPage >= 1 && OrgPage < 14 && (
+        {OrgPage && OrgPage >= 1 && OrgPage < 15 && (
           <div>
             <FunctionCard page={OrgPage} />
           </div>

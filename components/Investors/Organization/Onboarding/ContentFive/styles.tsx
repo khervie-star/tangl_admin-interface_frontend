@@ -54,18 +54,13 @@ export const ResendLink = styled.div`
     margin: 0;
   }
   span {
-    display: flex;
-    align-items: center;
-    margin: 0;
-    p {
-      font-weight: 400;
-      font-size: 12px;
-      line-height: 15px;
-      text-align: center;
-      font-feature-settings: "liga" off;
-      color: #007afb;
-      margin-left: 4px;
-    }
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    font-feature-settings: "liga" off;
+    color: #007afb;
+    margin-left: 0.75rem;
   }
 `;
 
@@ -80,5 +75,4 @@ export const ButtonWrap = styled.div`
   @media ${device.mobileL} {
     margin-top: 2rem;
   }
-`
-
+`;

@@ -61,8 +61,8 @@ export const CodeContainer = styled.div`
   align-items: center;
   input {
     border: 0;
-    border-bottom: 1px solid #007AFB;
-    padding: 0.75rem 0.5rem; 
+    border-bottom: 1px solid #007afb;
+    padding: 0.75rem 0.5rem;
     font-style: normal;
     font-weight: 500;
     font-size: 16px;
@@ -78,19 +78,19 @@ export const CodeContainer = styled.div`
   }
 `;
 
-
 export const InputContainer = styled.div`
   width: 70%;
   @media ${device.mobileL} {
     width: 60%;
   }
-`
+`;
 
 export const Resend = styled.div`
   display: flex;
   align-items: center;
   margin-top: -3rem;
   margin-left: 2rem;
+  cursor: pointer;
   span {
     font-weight: 400;
     font-size: 12px;
@@ -100,4 +100,4 @@ export const Resend = styled.div`
     color: #007afb;
     margin-left: 0.75rem;
   }
-`
+`;

@@ -43,7 +43,7 @@ const ContentEight = ({ page }: PageBarTypes) => {
           </LabelFlex>
           <LabelFlex flexPercentage="50%" padding="0rem 0rem 0rem 1rem">
             <Label>Expiry</Label>
-            <Date padding=".5rem 1rem" type="date"/>
+            <Date padding=".5rem 1rem" type="date" />
           </LabelFlex>
         </Row>
       </FormContainer>

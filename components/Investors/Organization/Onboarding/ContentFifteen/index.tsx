@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   individualFowardRoute,
@@ -32,6 +33,7 @@ const investmentObjectivesCard = [
 
 const ContentFifteen = ({ page }: PageBarTypes) => {
   const dispatch = useDispatch();
+  const [investmentObjectives, setInvestmentObjectives] = useState("");
   const handleSelect = (cardType: string) => {
     dispatch(setOrganization(cardType));
   };
@@ -46,14 +48,19 @@ const ContentFifteen = ({ page }: PageBarTypes) => {
         {investmentObjectivesCard.map((card) => {
           return (
             <RadioContainer key={card.key}>
-              <input type="radio" name="select" value={card.cardType} />
+              <input
+                type="radio"
+                name="Investment Objectives"
+                value={investmentObjectives}
+                onChange={() => setInvestmentObjectives(card.cardType)}
+              />
               <label>{card.content}</label>
             </RadioContainer>
           );
         })}
       </SelectInvestmentNature>
 
-      <ContinueButton>Continue</ContinueButton>
+      <ContinueButton disabled={!investmentObjectives}>Continue</ContinueButton>
     </form>
   );
 };

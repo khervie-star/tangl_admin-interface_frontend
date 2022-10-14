@@ -42,6 +42,10 @@ const InvestorSelect = () => {
       : Router.push("/Investor/Organization/Onboarding");
   };
 
+  const handleLogin = () => {
+    Router.push("/Investor/Login");
+  };
+
   return (
     <>
       <TextTitle>Welcome to the registration platform</TextTitle>
@@ -66,7 +70,7 @@ const InvestorSelect = () => {
         })}
       </Grid>
       <FlexItems>
-        <ContinueToLogin>
+        <ContinueToLogin onClick={handleLogin}>
           <FlexText>Have an account?</FlexText>
           <FlexText withIcon>
             <div style={{ display: "flex", alignItems: "center" }}>
