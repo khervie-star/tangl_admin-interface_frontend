@@ -16,7 +16,12 @@ import {
   TextBody,
   TextTitle,
 } from "../../../Assets/common";
-import { FundraisingFormTitle } from "./styles";
+import {
+  FundraisingFormTitle,
+  PoundsInputContainer,
+  Prefix,
+  Column,
+} from "./styles";
 import { PageBarTypes } from "../../../types";
 
 const financialStageCard = [
@@ -70,14 +75,48 @@ const ContentSix = ({ page }: PageBarTypes) => {
 
       <FormContainer>
         <CardLabel>How much funding are you planning to raise? (£)</CardLabel>
+        <PoundsInputContainer justify="flex-start" width="30%">
+          <Prefix>
+            <span>£</span>
+          </Prefix>
+          <input type="number" name="funds to be raised" placeholder="0" />
+        </PoundsInputContainer>
       </FormContainer>
 
       <FormContainer>
-        <CardLabel>How much funding are you planning to raise? (£)</CardLabel>
+        <Row>
+          <LabelFlex flexPercentage="50%" padding="0rem 1rem 0rem 0rem">
+            <CardLabel>Equity Offered (%) *</CardLabel>
+            <PoundsInputContainer>
+              <input type="number" name="funds to be raised" placeholder="0" />
+              <Prefix>
+                <span>%</span>
+              </Prefix>
+            </PoundsInputContainer>
+          </LabelFlex>
+
+          <LabelFlex flexPercentage="50%" padding="0rem 1rem 0rem 0rem">
+            <CardLabel>Pre-money Valuation (EUR) *</CardLabel>
+            <PoundsInputContainer>
+              <Prefix>
+                <span>EUR</span>
+              </Prefix>
+              <input type="number" name="funds to be raised" placeholder="0" />
+            </PoundsInputContainer>
+          </LabelFlex>
+        </Row>
       </FormContainer>
 
       <FormContainer>
-        <CardLabel>How much funding are you planning to raise? (£)</CardLabel>
+        <CardLabel>
+          What % of the business do the founders currently own? *
+        </CardLabel>
+        <PoundsInputContainer justify="space-between" width="30%">
+          <input type="number" name="funds to be raised" placeholder="0" />
+          <Prefix>
+            <span>%</span>
+          </Prefix>
+        </PoundsInputContainer>
       </FormContainer>
       <ContinueButton onClick={handleClick}>Continue</ContinueButton>
     </>

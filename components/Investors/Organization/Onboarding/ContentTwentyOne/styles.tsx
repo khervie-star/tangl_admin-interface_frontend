@@ -34,7 +34,6 @@ export const Title = styled.h1`
 export const File = styled.div`
   position: relative;
   overflow: hidden;
-  margin: 2rem 0rem;
   input[type="file"] {
     font-size: 100px;
     position: absolute;
@@ -52,6 +51,7 @@ export const Click = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin: 2rem 0rem;
 `;
 
 export const ClickText = styled.div`
