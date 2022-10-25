@@ -1,6 +1,10 @@
 import Router from "next/router";
 import { useDispatch } from "react-redux";
-import { individualBackwardRoute, individualFowardRoute } from "../../../../../store/actions";
+import { useAppDispatch } from "../../../../../hooks";
+import {
+  individualBackwardRoute,
+  individualFowardRoute,
+} from "../../../../../store/actions";
 import { ContinueButton, DarkContinueButton } from "../../../Assets/Buttons";
 import { TextBody, TextTitle } from "../../../Assets/common";
 import { EditIcon, ReloadIcon } from "../../../Assets/Icons";
@@ -8,7 +12,7 @@ import { PageBarTypes } from "../../../types";
 import { ButtonWrap, MailContainer, ResendLink } from "./styles";
 
 const ContentFour = ({ page }: PageBarTypes) => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const handleClick = () => {
     if (page) dispatch(individualBackwardRoute(page));

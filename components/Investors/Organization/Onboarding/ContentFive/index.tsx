@@ -9,9 +9,11 @@ import { PageBarTypes } from "../../../types";
 import { ButtonWrap, MailContainer, ResendLink } from "./styles";
 import { sendEmailConfirmation } from "../../../../../services/requests";
 import toast from "react-hot-toast";
+import { useAppDispatch, useAppSelector } from "../../../../../hooks";
+import { RootState } from "../../../../../store/reducers";
 
 const ContentFive = ({ page }: PageBarTypes) => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const [sending, setSending] = useState(false);
   const [error, setError] = useState("");
   const handleClick = () => {
@@ -19,7 +21,7 @@ const ContentFive = ({ page }: PageBarTypes) => {
   };
 
   // Get Email from redux store
-  const { email } = useSelector((store: RootState) => ({
+  const { email } = useAppSelector((store: RootState) => ({
     email: store.register.email,
   }));
 

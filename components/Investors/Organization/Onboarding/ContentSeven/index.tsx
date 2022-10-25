@@ -13,11 +13,12 @@ import { organizationFowardRoute } from "../../../../../store/actions";
 import { TextTitle } from "../../../Assets/common";
 import { CloudIcon } from "../../../Assets/Icons";
 import { ContinueButton } from "../../../Assets/Buttons";
+import { useAppDispatch } from "../../../../../hooks";
 
 const ContentSeven = ({ page }: PageBarTypes) => {
   const [businessRegImgFile, setImageFile] = useState("");
 
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const handleClick = () => {
     if (page) dispatch(organizationFowardRoute(page));
   };

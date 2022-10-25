@@ -28,6 +28,7 @@ import ContentTwenty from "./Onboarding/ContentTwenty";
 import ContentTwentyOne from "./Onboarding/ContentTwentyOne";
 import ContentEighteen from "./Onboarding/ContentEighteen";
 import ContentTwentyTwo from "./Onboarding/ContentTwentyTwo";
+import { useAppDispatch } from "../../../hooks";
 
 const OrganizationContent = () => {
   const { OrgPage } = useSelector((store: RootState) => ({
@@ -37,7 +38,7 @@ const OrganizationContent = () => {
     OrgType: store.OrganizationType.selectedType,
   }));
 
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const handleBack = () => {
     if (OrgPage === 1) Router.push("/Investor/Onboarding");
     else dispatch(organizationBackwardRoute(OrgPage));

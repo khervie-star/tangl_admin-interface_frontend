@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
+import { useAppDispatch } from "../../../../../hooks";
 import { individualFowardRoute } from "../../../../../store/actions";
 import { registerUser } from "../../../../../store/actions/register";
 import { DarkContinueButton } from "../../../Assets/Buttons";
@@ -18,7 +19,7 @@ const ContentThree = ({ page }: PageBarTypes) => {
   const [email, setEmail] = useState<string>();
   const [password, setPassword] = useState<string>();
   const [disabled, setDisabled] = useState(true);
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);

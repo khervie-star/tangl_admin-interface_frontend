@@ -16,13 +16,9 @@ import {
   TextBody,
   TextTitle,
 } from "../../../Assets/common";
-import {
-  FundraisingFormTitle,
-  PoundsInputContainer,
-  Prefix,
-  Column,
-} from "./styles";
+import { FundraisingFormTitle, PoundsInputContainer, Prefix } from "./styles";
 import { PageBarTypes } from "../../../types";
+import { useAppDispatch } from "../../../../../hooks";
 
 const financialStageCard = [
   {
@@ -43,7 +39,7 @@ const financialStageCard = [
 ];
 
 const ContentSix = ({ page }: PageBarTypes) => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const handleClick = () => {
     if (page) dispatch(organizationFowardRoute(page));
   };

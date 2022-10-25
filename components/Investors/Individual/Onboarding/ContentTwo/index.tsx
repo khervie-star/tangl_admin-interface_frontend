@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
+import { useAppDispatch } from "../../../../../hooks";
 import { individualFowardRoute } from "../../../../../store/actions";
 import { ContinueButton } from "../../../Assets/Buttons";
 import { TextBody, TextTitle } from "../../../Assets/common";
@@ -15,9 +16,9 @@ import {
 } from "./styles";
 
 const ContentTwo = ({ page }: PageBarTypes) => {
-  const [otpCode, setOtpCode] = useState("")
+  const [otpCode, setOtpCode] = useState("");
   const [disabled, setDisabled] = useState(true);
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const handleOTPChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setOtpCode(e.target.value);
@@ -46,7 +47,12 @@ const ContentTwo = ({ page }: PageBarTypes) => {
         <Title>Confirmation Code</Title>
         <CodeContainer>
           <InputContainer>
-            <input type="text" value={otpCode} onChange={handleOTPChange} placeholder="- - - -" />
+            <input
+              type="text"
+              value={otpCode}
+              onChange={handleOTPChange}
+              placeholder="- - - -"
+            />
             <p>Confirm phone number with code from sms message</p>
           </InputContainer>
           <Resend>

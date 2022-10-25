@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { useAppDispatch } from "../../../../../hooks";
 import {
   individualFowardRoute,
   organizationBackwardRoute,
@@ -32,7 +33,7 @@ const investmentObjectivesCard = [
 ];
 
 const ContentFifteen = ({ page }: PageBarTypes) => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const [investmentObjectives, setInvestmentObjectives] = useState("");
   const handleSelect = (cardType: string) => {
     dispatch(setOrganization(cardType));

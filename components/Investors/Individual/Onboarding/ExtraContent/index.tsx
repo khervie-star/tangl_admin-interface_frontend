@@ -1,5 +1,6 @@
 import Router from "next/router";
 import { useDispatch } from "react-redux";
+import { useAppDispatch } from "../../../../../hooks";
 import {
   individualFowardRoute,
   setIndividualPage,
@@ -10,7 +11,7 @@ import { TextBody, TextTitle } from "../../../Assets/common";
 import { ButtonWrap } from "./styles";
 
 const ExtraContent = ({ page }: { page: number }) => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const handleClick = () => {
     Router.replace("/");
     dispatch(setInvestorType(""));

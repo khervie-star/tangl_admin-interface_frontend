@@ -1,4 +1,5 @@
 import { useDispatch } from "react-redux";
+import { useAppDispatch } from "../../../../../hooks";
 import { individualFowardRoute } from "../../../../../store/actions";
 import { ContinueButton, DarkContinueButton } from "../../../Assets/Buttons";
 import { TextTitle } from "../../../Assets/common";
@@ -7,7 +8,7 @@ import { InputConatainer, RadioContainer, Title } from "./styles";
 
 
 const ContentTen = ({ page }: PageBarTypes) => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const handleClick = () => {
     if (page) dispatch(individualFowardRoute(page));
   };

@@ -20,11 +20,18 @@ import { CloudIcon, EditIcon, RemoveIcon } from "../../../Assets/Icons";
 import { Click, ClickText, File } from "../ContentSeven/styles";
 import { helper } from "../../../../../utils/helper";
 import Image from "next/image";
+import { useAppDispatch } from "../../../../../hooks";
 
 const ContentTwelve = ({ page }: PageBarTypes) => {
-  const [businessRegImgFile, setImageFile] = useState("");
+  const [businessRegImgFile, setImageFile] = useState<fileTypes>({});
 
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
+
+  type fileTypes = {
+    name?: string;
+    size?: any;
+  };
+
   const handleClick = () => {
     if (page) dispatch(organizationFowardRoute(page));
   };
@@ -36,7 +43,7 @@ const ContentTwelve = ({ page }: PageBarTypes) => {
   };
 
   const deleteImage = () => {
-    setImageFile("");
+    setImageFile({});
   };
 
   const editImage = () => {
@@ -54,12 +61,12 @@ const ContentTwelve = ({ page }: PageBarTypes) => {
               <p>{helper.formatBytes(businessRegImgFile.size)}</p>
             </ClickText>
             <div>
-              <Image
+              {/* <Image
                 src={URL.createObjectURL(businessRegImgFile)}
                 alt=""
                 width={"107px"}
                 height="70px"
-              />
+              /> */}
             </div>
             <div onClick={editImage}>
               <File>

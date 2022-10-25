@@ -15,9 +15,10 @@ import {
 } from "../../../Assets/common";
 import { FundraisingFormTitle } from "./styles";
 import { PageBarTypes } from "../../../types";
+import { useAppDispatch } from "../../../../../hooks";
 
 const ContentSix = ({ page }: PageBarTypes) => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const handleClick = () => {
     if (page) dispatch(organizationFowardRoute(page));
   };

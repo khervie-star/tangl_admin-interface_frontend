@@ -8,6 +8,7 @@ import {
   CrossmarkIcon,
 } from "../../../components/Investors/Assets/Icons";
 import OnBoardNavBar from "../../../components/Investors/OnboardNav";
+import { useAppDispatch } from "../../../hooks";
 import { verifyEmail } from "../../../services/requests";
 import {
   individualFowardRoute,
@@ -28,7 +29,7 @@ const VerifyUser = () => {
   const { token, role } = query;
   console.log(role);
 
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => {
     const data = {

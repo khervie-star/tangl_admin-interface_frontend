@@ -12,6 +12,8 @@ import { setInvestor } from "../../store/actions/session";
 import { RootState } from "../../store/reducers";
 import Router from "next/router";
 import { AvatarIcon, TickIcon } from "./Assets/Icons";
+import { useAppDispatch } from "../../hooks";
+import { AppDispatch } from "../../store";
 
 const selectCards = [
   {
@@ -31,7 +33,7 @@ const InvestorSelect = () => {
     InvType: store.InvestorType.selectedType,
   }));
 
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const handleSelect = (cardType: string) => {
     dispatch(setInvestor(cardType));
   };

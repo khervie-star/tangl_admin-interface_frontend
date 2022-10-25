@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { MdSentimentDissatisfied } from "react-icons/md";
 import { useDispatch } from "react-redux";
+import { useAppDispatch } from "../../../../../hooks";
 import { organizationFowardRoute } from "../../../../../store/actions";
 import { DarkContinueButton } from "../../../Assets/Buttons";
 import { TextTitle } from "../../../Assets/common";
@@ -9,7 +10,7 @@ import { SectionContentTitle, SectionContentText } from "./styles";
 
 const ContentTwo = ({ page }: PageBarTypes) => {
   const [countryDialCode, setCountryDialCode] = useState("+1");
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const handlePhoneNumberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     console.log(countryDialCode + " " + e.target.value);

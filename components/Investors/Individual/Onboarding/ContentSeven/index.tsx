@@ -1,4 +1,5 @@
 import { useDispatch } from "react-redux";
+import { useAppDispatch } from "../../../../../hooks";
 import { individualFowardRoute } from "../../../../../store/actions";
 import { ContinueButton } from "../../../Assets/Buttons";
 import {
@@ -17,7 +18,7 @@ import { EditIcon, RemoveIcon } from "../../../Assets/Icons";
 import { PageBarTypes } from "../../../types";
 
 const ContentSeven = ({ page }: PageBarTypes) => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const handleClick = () => {
     if (page) dispatch(individualFowardRoute(page));
   };
@@ -43,7 +44,7 @@ const ContentSeven = ({ page }: PageBarTypes) => {
           </LabelFlex>
           <LabelFlex flexPercentage="50%" padding="0rem 0rem 0rem 1rem">
             <Label>Expiry</Label>
-            <Date padding=".5rem 1rem" type="date"/>
+            <Date padding=".5rem 1rem" type="date" />
           </LabelFlex>
         </Row>
       </FormContainer>
