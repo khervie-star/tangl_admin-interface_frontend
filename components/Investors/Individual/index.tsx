@@ -19,13 +19,14 @@ import ContentTen from "./Onboarding/ContentTen";
 import FinalContent from "./Onboarding/FinalContent";
 import ContentEleven from "./Onboarding/ContentEleven";
 import ExtraContent from "./Onboarding/ExtraContent";
+import { useAppDispatch } from "../../../hooks";
 
 const IndividualContent = () => {
   const { IndPage } = useSelector((store: RootState) => ({
     IndPage: store.Individual.page,
   }));
 
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const handleBack = () => {
     if (IndPage === 2) Router.push("/Investor/Onboarding");

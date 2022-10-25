@@ -13,12 +13,12 @@ import { useDispatch } from "react-redux";
 import { individualFowardRoute } from "../../../../../store/actions";
 import { CloudIcon } from "../../../Assets/Icons";
 import { ContinueButton } from "../../../Assets/Buttons";
-
+import { useAppDispatch } from "../../../../../hooks";
 
 const ContentSix = ({ page }: PageBarTypes) => {
   const [imgFile, setImageFile] = useState("");
 
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const handleClick = () => {
     if (page) dispatch(individualFowardRoute(page));
   };

@@ -1,4 +1,5 @@
 import { useDispatch } from "react-redux";
+import { useAppDispatch } from "../../../../../hooks";
 import { individualFowardRoute } from "../../../../../store/actions";
 import { DarkContinueButton } from "../../../Assets/Buttons";
 import {
@@ -17,7 +18,7 @@ import { EditIcon, RemoveIcon } from "../../../Assets/Icons";
 import { PageBarTypes } from "../../../types";
 
 const ContentNine = ({ page }: PageBarTypes) => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const handleClick = () => {
     if (page) dispatch(individualFowardRoute(page));
   };

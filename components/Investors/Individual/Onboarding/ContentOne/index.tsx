@@ -13,12 +13,13 @@ import {
 } from "./styles";
 import { useState } from "react";
 import { savePhone } from "../../../../../store/actions/register";
+import { useAppDispatch } from "../../../../../hooks";
 
 const ContentOne = ({ page }: PageBarTypes) => {
   const [countryDialCode, setCountryDialCode] = useState("+1");
   const [phone, setPhone] = useState<string>();
   const [disabled, setDisabled] = useState(true);
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   const handlePhoneNumberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setPhone(e.target.value);

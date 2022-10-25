@@ -23,6 +23,7 @@ import {
   verifyPhone,
 } from "../../../../../services/requests";
 import toast from "react-hot-toast";
+import { useAppDispatch } from "../../../../../hooks";
 
 const ContentThree = ({ page }: PageBarTypes) => {
   const [disabled, setDisabled] = useState(true);
@@ -33,7 +34,7 @@ const ContentThree = ({ page }: PageBarTypes) => {
   });
   const [error, setError] = useState("");
   const [code, setConfirmationCode] = useState("");
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   // Get saved phone number from store for confirmation
   const { phone } = useSelector((store: RootState) => ({

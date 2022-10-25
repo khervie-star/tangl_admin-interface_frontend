@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { adminType } from "../../../../../constants";
+import { useAppDispatch } from "../../../../../hooks";
 import {
   individualFowardRoute,
   organizationBackwardRoute,
@@ -23,7 +24,7 @@ import { PageBarTypes } from "../../../types";
 import { CardLabel, SelectAdmin } from "./styles";
 
 const ContentOne = ({ page }: PageBarTypes) => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const [disabled, setDisabled] = useState(true);
   const [cardType, setCardType] = useState<string>("");
 

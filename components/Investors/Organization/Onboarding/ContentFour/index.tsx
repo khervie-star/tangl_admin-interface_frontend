@@ -16,14 +16,15 @@ import { formatPhoneNumberIntl } from "react-phone-number-input";
 import { RootState } from "../../../../../store/reducers";
 import { useState } from "react";
 import { investmentCompanySignup } from "../../../../../services/requests";
-import adminSignupSchema from "../../../../../Schema/adminSignUpSchema";
+// import adminSignupSchema from "../../../../../Schema/adminSignupSchema";
 import { adminType } from "../../../../../constants";
 import _ from "lodash";
 import toast from "react-hot-toast";
 import { setAdminRegister } from "../../../../../store/actions/register";
+import { useAppDispatch } from "../../../../../hooks";
 
 const ContentFour = ({ page }: PageBarTypes) => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [disabled, setDisabled] = useState(false);

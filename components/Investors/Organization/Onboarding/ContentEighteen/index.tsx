@@ -17,9 +17,10 @@ import {
 } from "../../../Assets/common";
 import { FundraisingFormTitle } from "./styles";
 import { PageBarTypes } from "../../../types";
+import { useAppDispatch } from "../../../../../hooks";
 
 const ContentEighteen = ({ page }: PageBarTypes) => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const handleClick = () => {
     if (page) dispatch(organizationFowardRoute(page));
   };
@@ -45,11 +46,7 @@ const ContentEighteen = ({ page }: PageBarTypes) => {
             </span>
           </Row>
         </CardLabel>
-        <BorderedTextField
-          type="text"
-          placeholder="Type or paste here"
-          rows={4}
-        />
+        <BorderedTextField placeholder="Type or paste here" rows={4} />
 
         <CardLabel>
           <Row>
@@ -58,11 +55,7 @@ const ContentEighteen = ({ page }: PageBarTypes) => {
             </span>
           </Row>
         </CardLabel>
-        <BorderedTextField
-          type="text"
-          placeholder="Type or paste here"
-          rows={4}
-        />
+        <BorderedTextField placeholder="Type or paste here" rows={4} />
       </FormContainer>
       <ContinueButton onClick={handleClick}>Continue</ContinueButton>
     </>

@@ -1,11 +1,23 @@
 import { useDispatch } from "react-redux";
+import { useAppDispatch } from "../../../../../hooks";
 import { individualFowardRoute } from "../../../../../store/actions";
 import { ContinueButton } from "../../../Assets/Buttons";
-import { Date, FormContainer, Input, Label, LabelComment, LabelFlex, Row, Select, TextBody, TextTitle } from "../../../Assets/common";
+import {
+  Date,
+  FormContainer,
+  Input,
+  Label,
+  LabelComment,
+  LabelFlex,
+  Row,
+  Select,
+  TextBody,
+  TextTitle,
+} from "../../../Assets/common";
 import { PageBarTypes } from "../../../types";
 
 const ContentFive = ({ page }: PageBarTypes) => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const handleClick = () => {
     if (page) dispatch(individualFowardRoute(page));
   };
@@ -21,18 +33,18 @@ const ContentFive = ({ page }: PageBarTypes) => {
             <LabelComment>{"*as shown on ID"}</LabelComment>
           </Row>
         </Label>
-        <Input type="text"/>
+        <Input type="text" />
         <Label>
           <Row>
             <span>Last name</span>
             <LabelComment>{"*as shown on ID"}</LabelComment>
           </Row>
         </Label>
-        <Input type="text"/>
+        <Input type="text" />
         <Row>
           <LabelFlex flexPercentage="50%" padding="0rem 1rem 0rem 0rem">
             <Label>Date of Birth</Label>
-            <Date padding=".5rem 1rem" type="date"/>
+            <Date padding=".5rem 1rem" type="date" />
           </LabelFlex>
           <LabelFlex flexPercentage="50%" padding="0rem 0rem 0rem 1rem">
             <Label>Nationality</Label>

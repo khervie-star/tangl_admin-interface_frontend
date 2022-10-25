@@ -5,9 +5,10 @@ import { PageBarTypes } from "../../../types";
 import { useDispatch } from "react-redux";
 import { individualFowardRoute } from "../../../../../store/actions";
 import { ContinueButton } from "../../../Assets/Buttons";
+import { useAppDispatch } from "../../../../../hooks";
 
 const ContentEleven = ({ page }: PageBarTypes) => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const handleClick = () => {
     if (page) dispatch(individualFowardRoute(page));
   };

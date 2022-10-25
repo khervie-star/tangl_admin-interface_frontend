@@ -25,12 +25,13 @@ import {
 import "react-phone-number-input/style.css";
 import PhoneInput from "react-phone-number-input";
 import toast from "react-hot-toast";
+import { useAppDispatch } from "../../../../../hooks";
 
 const ContentTwo = ({ page }: PageBarTypes) => {
   const [disabled, setDisabled] = useState(true);
   const [error, setError] = useState("");
   const [sending, setSending] = useState(false);
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
 
   // Get selected organization type from store for header specification
   const { OrgType } = useSelector((store: RootState) => ({

@@ -1,4 +1,5 @@
 import { useDispatch } from "react-redux";
+import { useAppDispatch } from "../../../../../hooks";
 import { organizationFowardRoute } from "../../../../../store/actions";
 import { ContinueButton } from "../../../Assets/Buttons";
 import {
@@ -17,7 +18,7 @@ import { EditIcon, RemoveIcon } from "../../../Assets/Icons";
 import { PageBarTypes } from "../../../types";
 
 const ContentEight = ({ page }: PageBarTypes) => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const handleClick = () => {
     if (page) dispatch(organizationFowardRoute(page));
   };

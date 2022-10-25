@@ -4,6 +4,7 @@ import {
   financialAssetManagementMethodArray,
   financialTransactionFrequencyArray,
 } from "../../../../../constants";
+import { useAppDispatch } from "../../../../../hooks";
 import {
   individualFowardRoute,
   organizationBackwardRoute,
@@ -24,7 +25,7 @@ import { PageBarTypes } from "../../../types";
 import { CardLabel, SelectInvestmentNature } from "./styles";
 
 const ContentThirteen = ({ page }: PageBarTypes) => {
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
   const [financialTransactionFrequency, setFinancialTransactionFrequency] =
     useState("");
   const [financialAssetMgmntMethod, setFinancialAssetMgmntMethod] =

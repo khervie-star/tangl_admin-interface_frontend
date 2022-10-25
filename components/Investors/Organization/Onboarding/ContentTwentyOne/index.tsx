@@ -19,14 +19,21 @@ import { FundraisingFormTitle, Click, ClickText, File, Title } from "./styles";
 import { useRef, useState } from "react";
 import { helper } from "../../../../../utils/helper";
 import { CgNametag } from "react-icons/cg";
+import { useAppDispatch } from "../../../../../hooks";
 
 const ContentTwentyOne = ({ page }: PageBarTypes) => {
   const inputRef = useRef(null);
-  const [pitchDeck, setPitchdeck] = useState("");
-  const [financials, setFinancialsFile] = useState("");
-  const [additionalDocuments, setAdditionalDocuments] = useState("");
+  const [pitchDeck, setPitchdeck] = useState<fileTypes>({});
+  const [financials, setFinancialsFile] = useState<fileTypes>({});
+  const [additionalDocuments, setAdditionalDocuments] = useState<fileTypes>({});
 
-  const dispatch = useDispatch();
+  const dispatch = useAppDispatch();
+
+  type fileTypes = {
+    name?: string;
+    size?: any;
+  };
+
   const handleClick = () => {
     if (page) dispatch(organizationFowardRoute(page));
   };
@@ -67,7 +74,7 @@ const ContentTwentyOne = ({ page }: PageBarTypes) => {
                 />
               </File>
             </div>
-            <div onClick={() => setPitchdeck("")}>
+            <div onClick={() => setPitchdeck({})}>
               <RemoveIcon />
             </div>
           </Click>
@@ -106,7 +113,7 @@ const ContentTwentyOne = ({ page }: PageBarTypes) => {
                 <input type="file" onChange={handleFinancialsChange} />
               </File>
             </div>
-            <div onClick={() => setFinancialsFile("")}>
+            <div onClick={() => setFinancialsFile({})}>
               <RemoveIcon />
             </div>
           </Click>
@@ -145,7 +152,7 @@ const ContentTwentyOne = ({ page }: PageBarTypes) => {
                 <input type="file" onChange={handleAdditionalDocumentsChange} />
               </File>
             </div>
-            <div onClick={() => setAdditionalDocuments("")}>
+            <div onClick={() => setAdditionalDocuments({})}>
               <RemoveIcon />
             </div>
           </Click>
