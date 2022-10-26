@@ -48,7 +48,7 @@ input[type="number"] {
 .checkmark__circle {
   stroke-dasharray: 166;
   stroke-dashoffset: 166;
-  stroke-width: 2;
+  strokeWidth: 2;
   stroke-miterlimit: 10;
   stroke: #7ac142;
   fill: none;
@@ -60,7 +60,7 @@ input[type="number"] {
   height: 56px;
   border-radius: 50%;
   display: block;
-  stroke-width: 2;
+  strokeWidth: 2;
   stroke: #fff;
   stroke-miterlimit: 10;
   margin: 10% auto;
@@ -100,7 +100,7 @@ input[type="number"] {
 .checkmark__circle {
   stroke-dasharray: 166;
   stroke-dashoffset: 166;
-  stroke-width: 2;
+  strokeWidth: 2;
   stroke-miterlimit: 10;
   stroke: #7ac142;
   fill: none;
@@ -112,7 +112,7 @@ input[type="number"] {
   height: 56px;
   border-radius: 50%;
   display: block;
-  stroke-width: 2;
+  strokeWidth: 2;
   stroke: #fff;
   stroke-miterlimit: 10;
   margin: 10% auto;
@@ -151,7 +151,7 @@ input[type="number"] {
 .crossmark__circle.animateElement {
   stroke-dasharray: 166;
   stroke-dashoffset: 166;
-  stroke-width: 2;
+  strokeWidth: 2;
   stroke-miterlimit: 10;
   stroke: #ff0000;
   fill: none;
@@ -163,7 +163,7 @@ input[type="number"] {
   height: 56px;
   border-radius: 50%;
   display: block;
-  stroke-width: 2;
+  strokeWidth: 2;
   stroke: #ff0000;
   stroke-miterlimit: 10;
   margin: 10% auto;
@@ -222,7 +222,7 @@ input[type="number"] {
   -webkit-animation: dash 1.5s ease-in-out infinite,
     color 6s ease-in-out infinite;
   animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
-  stroke-linecap: round;
+  strokeLinecap: round;
 }
 
 @-webkit-keyframes rotate {

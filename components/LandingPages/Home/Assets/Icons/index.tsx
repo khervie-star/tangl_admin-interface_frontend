@@ -31,16 +31,16 @@ export const ListTag = () => {
       <path
         d="M26 15.1667H18C14.134 15.1667 11 18.3008 11 22.1667C11 26.0327 14.134 29.1667 18 29.1667H26C29.866 29.1667 33 26.0327 33 22.1667C33 18.3008 29.866 15.1667 26 15.1667Z"
         stroke="#F4F4F4"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M26 25.1667C27.6569 25.1667 29 23.8236 29 22.1667C29 20.5099 27.6569 19.1667 26 19.1667C24.3431 19.1667 23 20.5099 23 22.1667C23 23.8236 24.3431 25.1667 26 25.1667Z"
         stroke="#F4F4F4"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

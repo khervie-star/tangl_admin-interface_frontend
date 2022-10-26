@@ -33,7 +33,7 @@ const TabTwo = () => {
         </TextTitleDark>
 
         <TextBodyDark>
-          TANGL's digital platform puts alternative investments and private
+          TANGL&apos;s digital platform puts alternative investments and private
           market strategies in the hands of high-net-worth investors and
           independent financial advisors (IFAs).
         </TextBodyDark>
