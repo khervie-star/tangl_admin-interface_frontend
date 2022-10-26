@@ -4,7 +4,8 @@ import { FlexWrap } from "../Home/Assets/Common";
 
 export const WaitlistContainer = styled.div`
   background: #324a64;
-  padding: 5rem;
+  padding: 1rem 5rem;
+  height: 100%;
   @media ${device.tablet} {
     padding: 1.5rem;
     ${FlexWrap} {
@@ -22,9 +23,11 @@ export const Flex = styled.div`
 `;
 
 export const WaitlistDescription = styled.div`
+  padding-left: 5rem;
   width: 75%;
   @media ${device.tablet} {
     width: 100%;
+    padding-left: 0rem;
   }
 `;
 
@@ -217,9 +220,10 @@ export const RadioContainer = styled.div`
 export const WaitlistFlex = styled.div`
   display: flex;
   align-items: center;
-  margin: 3.125rem 0rem;
+  // margin: 3.125rem 0rem;
   flex-wrap: wrap;
   box-sizing: border-box;
+  height: 100%;
   @media ${device.tablet} {
     margin: 0rem;
     ${FlexWrap} {
@@ -227,4 +231,22 @@ export const WaitlistFlex = styled.div`
       padding: 1rem 0rem;
     }
   }
+`;
+
+export const WaitlistBar = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  @media ${device.tablet} {
+    width: 100%;
+  }
+`;
+
+export const Terminate = styled.button`
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
 `;

@@ -11,18 +11,33 @@ import {
   Select,
   RadioContainer,
   WaitlistFlex,
+  Terminate,
+  WaitlistBar,
 } from "./styles";
 import { FlexWrap, Image, List } from "../Home/Assets/Common";
+import { DeleteIcon } from "./Icons";
+import { useRouter } from "next/router";
 
 const WaitlistContent = () => {
+  const router = useRouter();
+
+  const handleBack = () => {
+    router.back();
+  };
   return (
     <>
       <WaitlistContainer>
+        <WaitlistBar>
+          <Terminate onClick={handleBack}>
+            <DeleteIcon />
+          </Terminate>
+        </WaitlistBar>
+
         <WaitlistFlex>
           <FlexWrap display="both" flexPercentage="50%">
             <WaitlistDescription>
               <WaitlistDescriptionHeader>
-                Join our waitlist
+                Join our waiting list
               </WaitlistDescriptionHeader>
               <WaitlistDescriptionText>
                 We would love to have you as one of our first users. We&apos;ll

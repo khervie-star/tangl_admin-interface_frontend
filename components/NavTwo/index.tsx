@@ -144,8 +144,8 @@ const NavBarTwo = () => {
           background="#007afb"
           margin="0rem 0rem 0rem 1.25rem"
           display="desktop"
-          // onClick={handleClick}
-          onClick={gotoWaitlist}
+          onClick={handleClick}
+          // onClick={gotoWaitlist}
         >
           Sign up
         </AuthButton>
@@ -153,8 +153,8 @@ const NavBarTwo = () => {
           background="#007afb"
           display="mobile"
           margin="0rem 2.8rem 0rem 0rem"
-          // onClick={handleClick}
-          onClick={gotoWaitlist}
+          onClick={handleClick}
+          // onClick={gotoWaitlist}
         >
           Get funded
         </AuthButton>
