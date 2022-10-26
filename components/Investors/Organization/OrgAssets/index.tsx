@@ -50,7 +50,7 @@ const OrgAssets = () => {
         {cards.map((card) => (
           <AssetCard key={card.symbol}>
             <AssetImage>
-              <img src={card.image} />
+              <img  height="100%"src={card.image} />
               <StatusTag status={card.tag}>{card.tag}</StatusTag>
             </AssetImage>
             <AssetName>

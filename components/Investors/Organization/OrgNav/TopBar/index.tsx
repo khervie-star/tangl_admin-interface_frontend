@@ -14,7 +14,7 @@ const TopBar = () => {
       <Account>
         <NotificationIcon/>
         <AccountInfo>
-          <img src={profile.src}/>
+          <img  height="100%"src={profile.src}/>
           <span>Blessing .O</span>
           <DropIcon/>
         </AccountInfo>

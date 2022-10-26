@@ -43,7 +43,7 @@ const ContactContent = () => {
           </ContactFormContainer>
         </div>
         <ContactImage>
-            <img src={ContactImg.src}/>
+            <img  height="100%"src={ContactImg.src}/>
         </ContactImage>
       </ContactGrid>
     </ContactContainer>

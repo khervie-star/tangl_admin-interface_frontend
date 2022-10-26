@@ -44,7 +44,7 @@ const NewsContent = () => {
       <ReportGrid>
         <div>
           <ReportImage>
-            <img src={ReportCover.src} />
+            <img  height="100%"src={ReportCover.src} />
           </ReportImage>
           <ReportUpdated>
             <li>
