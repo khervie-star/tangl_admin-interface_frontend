@@ -5,12 +5,12 @@ import { FlexWrap } from "../Home/Assets/Common";
 export const WaitlistContainer = styled.div`
   background: #324a64;
   padding: 1rem 5rem;
-  height: 100%;
+  height: 100vh;
   @media ${device.tablet} {
     padding: 1.5rem;
     ${FlexWrap} {
       flex: 100%;
-    }
+    } 
   }
 `;
 
