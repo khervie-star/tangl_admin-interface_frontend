@@ -163,19 +163,16 @@ const AboutContent = () => {
       </AboutFlex>
       <AboutFlex>
         <FlexWrap display="both" flexPercentage="50%">
-          <AboutTitle>
-          What we look for in our startups
-          </AboutTitle>
+          <AboutTitle>What we look for in our startups</AboutTitle>
           <AboutText>
-          We pride ourselves in being sector agnostic, we look to back startups disrupting industries.
+            We pride ourselves in being sector agnostic, we look to back
+            startups disrupting industries.
           </AboutText>
           <List>
             <div>
               <ListTag />
             </div>
-            <AboutListText>
-            Seed, Pre-seed and Series A startups.
-            </AboutListText>
+            <AboutListText>Seed, Pre-seed and Series A startups.</AboutListText>
           </List>
           <List>
             <div>
@@ -187,21 +184,24 @@ const AboutContent = () => {
             <div>
               <ListTag />
             </div>
+            <AboutListText>High Total addressable market.</AboutListText>
+          </List>
+          <List>
+            <div>
+              <ListTag />
+            </div>
             <AboutListText>
-            High Total addressable market.
+              Well defined Go-to-market strategy and are close to achieving
+              product market fit.
             </AboutListText>
           </List>
           <List>
             <div>
               <ListTag />
             </div>
-            <AboutListText>Well defined Go-to-market strategy and are close to achieving product market fit.</AboutListText>
-          </List>
-          <List>
-            <div>
-              <ListTag />
-            </div>
-            <AboutListText>Based in the UK or Europe or looking to penetrate the UK market</AboutListText>
+            <AboutListText>
+              Based in the UK or Europe or looking to penetrate the UK market
+            </AboutListText>
           </List>
           <ApplyButton text="Fund your Startup" />
         </FlexWrap>

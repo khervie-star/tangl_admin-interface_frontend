@@ -48,6 +48,7 @@ const links = [
 
 const NavBarTwo = () => {
   const Router = useRouter();
+
   const handleClick = () => {
     Router.push("/Investor/Onboarding");
   };
@@ -56,6 +57,9 @@ const NavBarTwo = () => {
     Router.push("/Investor/Login");
   };
 
+  const gotoWaitlist = () => {
+    Router.push("/waitlist");
+  };
   const [open, setOpen] = useState(false);
   const handleOpen = () => {
     setOpen(true);
@@ -131,7 +135,8 @@ const NavBarTwo = () => {
           borderColor="#a0aaba"
           margin="0rem 1.25rem 0rem 0rem"
           display="desktop"
-          onClick={handleLogin}
+          // onClick={handleLogin}
+          onClick={gotoWaitlist}
         >
           Sign in
         </AuthButton>
@@ -139,7 +144,8 @@ const NavBarTwo = () => {
           background="#007afb"
           margin="0rem 0rem 0rem 1.25rem"
           display="desktop"
-          onClick={handleClick}
+          // onClick={handleClick}
+          onClick={gotoWaitlist}
         >
           Sign up
         </AuthButton>
@@ -147,7 +153,8 @@ const NavBarTwo = () => {
           background="#007afb"
           display="mobile"
           margin="0rem 2.8rem 0rem 0rem"
-          onClick={handleClick}
+          // onClick={handleClick}
+          onClick={gotoWaitlist}
         >
           Get funded
         </AuthButton>
