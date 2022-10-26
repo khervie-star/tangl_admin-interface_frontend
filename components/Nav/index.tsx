@@ -32,7 +32,8 @@ const links = [
     name: "About",
   },
   {
-    href: "/Pricing",
+    // href: "/Pricing",
+    href: "/waitlist",
     name: "Pricing",
   },
   {
@@ -52,6 +53,9 @@ const NavBar = () => {
   };
   const handleLogin = () => {
     Router.push("/Investor/Login");
+  };
+  const gotoWaitlist = () => {
+    Router.push("/waitlist");
   };
 
   const [open, setOpen] = useState(false);
@@ -129,7 +133,8 @@ const NavBar = () => {
           borderColor="#a0aaba"
           margin="0rem 1.25rem 0rem 0rem"
           display="desktop"
-          onClick={handleLogin}
+          // onClick={handleLogin}
+          onClick={gotoWaitlist}
         >
           Sign in
         </AuthButton>
@@ -137,7 +142,8 @@ const NavBar = () => {
           background="#007afb"
           margin="0rem 0rem 0rem 1.25rem"
           display="desktop"
-          onClick={handleClick}
+          // onClick={handleClick}
+          onClick={gotoWaitlist}
         >
           Sign up
         </AuthButton>
@@ -145,7 +151,8 @@ const NavBar = () => {
           background="#007afb"
           display="mobile"
           margin="0rem 2.8rem 0rem 0rem"
-          onClick={handleClick}
+          // onClick={handleClick}
+          onClick={gotoWaitlist}
         >
           Get funded
         </AuthButton>
