@@ -5,6 +5,7 @@ import {
   Image,
   List,
   ListText,
+  TextBody,
   TextTitle,
 } from "../Assets/Common";
 import { ListTag } from "../Assets/Icons";
@@ -16,32 +17,23 @@ import { useState } from "react";
 const TabFive = () => {
   const [view, setView] = useState(false);
   return (
-    <InView  triggerOnce={true}  threshold={0} onChange={setView}>
+    <InView triggerOnce={true} threshold={0} onChange={setView}>
       {({ ref, inView }) => (
         <TabFiveContainer ref={ref}>
           {inView && (
             <>
-              <FlexWrap display="both" flexPercentage="50%">
+              <FlexWrap
+                display="both"
+                flexPercentage="50%"
+                padding="0rem 2.5rem 0rem 0rem"
+              >
                 <TextContainer>
                   <TextTitle>... and startups too</TextTitle>
-                  <List>
-                    <div>
-                      <ListTag />
-                    </div>
-                    <ListText>
-                      Digitised cap table management for staff and external
-                      investors
-                    </ListText>
-                  </List>
-                  <List>
-                    <div>
-                      <ListTag />
-                    </div>
-                    <ListText>
-                      Self-custody of equity stake for team members in secure
-                      digital wallet.
-                    </ListText>
-                  </List>
+                  <TextBody>
+                    We provide digitised cap table management for staff and
+                    external investors, as well as self-custody of equity stake
+                    for team members in secure digital wallet.
+                  </TextBody>
                   <List>
                     <div>
                       <ListTag />
@@ -66,7 +58,7 @@ const TabFive = () => {
               <FlexWrap
                 display="both"
                 flexPercentage="50%"
-                padding="0rem 0rem 0rem 3.125rem"
+                padding="0rem 0rem 0rem 2.5rem"
               >
                 <Image src={Image10.src} />
               </FlexWrap>

@@ -5,6 +5,7 @@ import { ArrowRightIcon } from "../../Common/Icons";
 
 export const SliderContainer = styled.section`
   margin: 5rem;
+  margin-bottom: 10rem;
   height: 400px;
   box-sizing: border-box;
   @media ${device.tablet} {

@@ -1,4 +1,4 @@
-import { TextBody, TextTitle } from "../Assets/Common";
+import { TextBody, TextTitle, TextTitleBlue } from "../Assets/Common";
 import {
   BarWrapper,
   ButtonFlex,
@@ -7,22 +7,22 @@ import {
 } from "./styles";
 import Router from "next/router";
 
-
 const TabEight = () => {
-  
   const handleClick = () => {
     Router.push("/Investors/Onboarding");
   };
   return (
     <TabEightContainer>
       <BarWrapper>
-        <TextTitle >Ready to get started?</TextTitle>
+        <TextTitleBlue>Ready to get started?</TextTitleBlue>
         <TextBody>
           Smart connections between Startups, Venture Capital and Real Estate
           Asset classes
         </TextBody>
         <ButtonFlex>
-          <OtherButton background="#007AFB" onClick={handleClick}>Become a partner</OtherButton>
+          <OtherButton background="#007AFB" onClick={handleClick}>
+            Become a partner
+          </OtherButton>
           <OtherButton
             background="#011122"
             borderColor="#A0AABA"

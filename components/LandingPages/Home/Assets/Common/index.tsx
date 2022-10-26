@@ -41,6 +41,33 @@ export const TextTitle = styled.h1`
   }
 `;
 
+export const TextTitleDark = styled.h1`
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 50px;
+  color: #011122;
+  @media ${device.tablet} {
+    font-size: 32px;
+    line-height: 40px;
+  }
+`;
+
+export const TextTitleBlue = styled.h1`
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 50px;
+  color: #007afb;
+  text-align: center;
+  @media ${device.tablet} {
+    font-size: 32px;
+    line-height: 40px;
+  }
+`;
+
 export const TextBody = styled.p`
   font-family: "Outfit";
   font-style: normal;
@@ -49,6 +76,20 @@ export const TextBody = styled.p`
   line-height: 32px;
   letter-spacing: -0.2px;
   color: #a0aaba;
+  @media ${device.tablet} {
+    font-size: 16px;
+    line-height: 24px;
+  }
+`;
+
+export const TextBodyDark = styled.p`
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: -0.2px;
+  color: #43566a;
   @media ${device.tablet} {
     font-size: 16px;
     line-height: 24px;

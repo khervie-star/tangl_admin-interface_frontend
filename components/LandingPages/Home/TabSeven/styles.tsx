@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { device } from "../../../../Global";
 import { FlexWrap, Image } from "../Assets/Common";
 
-
 export const TabSevenContainer = styled.div`
   margin: 5rem;
   border-radius: 16px;
@@ -10,14 +9,14 @@ export const TabSevenContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  background: #011122;
+  background: #324a64;
   @media ${device.tablet} {
     margin: 2.5rem 1.5rem;
     padding: 2.5rem;
-    ${FlexWrap}{
+    ${FlexWrap} {
       flex: 100%;
     }
-    ${Image}{
+    ${Image} {
       margin-top: 2.5rem;
     }
   }
@@ -41,4 +40,9 @@ export const OfferButton = styled.button`
 
 export const IconText = styled.span`
   margin-left: 12px;
+`;
+
+export const Benefits = styled.div`
+  display: flex;
+  align-items: center;
 `;

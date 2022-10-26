@@ -1,5 +1,12 @@
 import { ApplyButton } from "../Assets/Buttons";
-import { FlexWrap, Image, List, ListText, TextTitle } from "../Assets/Common";
+import {
+  FlexWrap,
+  Image,
+  List,
+  ListText,
+  TextBody,
+  TextTitle,
+} from "../Assets/Common";
 import { ListTag } from "../Assets/Icons";
 import { TabThreeContainer } from "./styles";
 import Image3 from "../Assets/Images/image3.png";
@@ -9,48 +16,30 @@ import { useState } from "react";
 const TabThree = () => {
   const [view, setView] = useState(false);
   return (
-    <InView  triggerOnce={true} threshold={0} onChange={setView}>
+    <InView triggerOnce={true} threshold={0} onChange={setView}>
       {({ ref, inView }) => (
         <TabThreeContainer inView={inView} ref={ref}>
           <>
-            <FlexWrap display="both" flexPercentage="55%">
+            <FlexWrap
+              display="both"
+              flexPercentage="50%"
+              padding="0rem 2.5rem 0rem 0rem"
+            >
               <TextTitle>
                 Supporting Private Market Investors and Emerging Managers
               </TextTitle>
-              <List>
-                <div>
-                  <ListTag />
-                </div>
-                <ListText>
-                  TANGL Capital Partners is a group of forward thinking
-                  entrepreneurs, finance professionals and legal advisors, With
-                  experience across the Venture Capital, Private Equity and Real
-                  Estate ecosystems.
-                </ListText>
-              </List>
-              <List>
-                <div>
-                  <ListTag />
-                </div>
-                <ListText>
-                  TANGL&apos;s digital platform puts alternative investments and
-                  private market strategies in the hands of high-net-worth
-                  investors and independent advisors.
-                </ListText>
-              </List>
-              <List>
-                <div>
-                  <ListTag />
-                </div>
-                <ListText>
-                  We provide the digital solutions needed for advisors, asset &
-                  wealth managers, private banks and fund managers to digitise
-                  their investment operations.
-                </ListText>
-              </List>
+              <TextBody>
+                We provide the digital solutions needed for asset & wealth
+                managers, private banks and fund managers to digitise their
+                investment operations.
+              </TextBody>
               <ApplyButton text="Create Admin account" />
             </FlexWrap>
-            <FlexWrap display="both" flexPercentage="40%">
+            <FlexWrap
+              display="both"
+              flexPercentage="50%"
+              padding="0rem 0rem 0rem 2.5rem"
+            >
               <Image src={Image3.src} />
             </FlexWrap>
           </>

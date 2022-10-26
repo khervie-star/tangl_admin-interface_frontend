@@ -7,9 +7,10 @@ export const TabSixContainer = styled.div`
   align-items: center;
   padding: 5rem;
   flex-wrap: wrap;
+  background: #007afb;
   @media ${device.tablet} {
     padding: 2.5rem 1.5rem;
-    ${FlexWrap}{
+    ${FlexWrap} {
       flex: 100%;
     }
   }

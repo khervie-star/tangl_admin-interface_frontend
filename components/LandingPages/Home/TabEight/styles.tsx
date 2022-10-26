@@ -18,7 +18,7 @@ export const TabEightContainer = styled.div`
 
 export const BarWrapper = styled.div`
   padding: 5rem;
-  background: #011122;
+  background: #FFFFFF;
   border-radius: 16px;
   ${TextTitle}{
       text-align: center;
@@ -39,12 +39,19 @@ export const ButtonFlex = styled.div`
   justify-content: center;
 `;
 
+// export const ContentText = styled.p`
+//   display: flex;
+//   flex-wrap: wrap;
+//   align-items: center;
+//   justify-content: center;
+// `;
+
 export const OtherButton = styled.button`
   background: ${({ background }: ButtonProps) =>
     background ? background : "007AFB"};
   border: ${({ borderColor }: ButtonProps) =>
     borderColor ? `1px solid ${borderColor}` : "0"};
-  border-radius: 32px;
+  border-radius: 4px;
   font-family: "Outfit";
   font-style: normal;
   font-weight: 500;

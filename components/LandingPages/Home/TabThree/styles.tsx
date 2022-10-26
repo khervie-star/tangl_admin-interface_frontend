@@ -11,6 +11,7 @@ export const TabThreeContainer = styled.div`
   align-items: center;
   padding: 5rem;
   flex-wrap: wrap;
+  background: #43566A;
   ${({ inView }: TabThreeType) =>
     inView
       ? css`
