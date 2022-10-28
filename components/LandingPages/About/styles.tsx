@@ -4,9 +4,7 @@ import { FlexWrap } from "../Home/Assets/Common";
 
 export const AboutContainer = styled.div`
   background: #ffffff;
-  padding: 5rem;
   @media ${device.tablet} {
-    padding: 1.5rem;
     ${FlexWrap} {
       flex: 100%;
     }
@@ -17,17 +15,24 @@ export const Heading = styled.div`
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
+  background: #011122;
+  padding: 5rem;
+  @media ${device.tablet} {
+    padding: 1.5rem;
+  }
   h1 {
+    max-width: 46.875rem;
     font-family: "Outfit";
     font-style: normal;
     font-weight: 700;
     font-size: 80px;
     line-height: 96px;
     text-align: center;
-    color: #011122;
-    margin: 0;
+    color: #ffffff;
+    margin: 0 auto;
   }
   p {
+    max-width: 46.875rem;
     font-family: "Outfit";
     font-style: normal;
     font-weight: 500;
@@ -36,12 +41,29 @@ export const Heading = styled.div`
     text-align: center;
     letter-spacing: -0.2px;
     color: #43566a;
-    margin: 6.25rem auto 0rem auto;
+    margin: 1rem auto 0rem auto;
     max-width: 37.5rem;
     @media ${device.tablet} {
       margin: 3rem auto 0rem auto;
     }
   }
+`;
+
+export const LenghtyTextAlert = styled.button`
+  background: #5ac179;
+  border-radius: 4px;
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-feature-settings: "liga" off;
+  color: #ffffff;
+  border: 0;
+  margin-bottom: 0.5rem;
 `;
 
 export const AboutTitle = styled.div`
@@ -98,18 +120,28 @@ export const AboutText = styled.p`
 `;
 
 export const AboutMargin = styled.div`
-  margin: 3.125rem 0rem;
+  margin: 5rem;
+  @media ${device.tablet} {
+    margin: 1.5rem;
+  }
 `;
 
 export const AboutFlex = styled.div`
   display: flex;
   align-items: center;
-  margin: 3.125rem 0rem;
+  margin: 5rem;
   flex-wrap: wrap;
   @media ${device.tablet} {
+    margin: 1.5rem;
     ${FlexWrap} {
       flex: 100%;
       padding: 1rem 0rem;
     }
   }
+`;
+
+export const AboutBox = styled.div`
+  height: 40rem;
+  width: 100%;
+  background: #d9d9d9;
 `;

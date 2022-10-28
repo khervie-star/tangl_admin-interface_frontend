@@ -1,6 +1,7 @@
 import { FlexWrap, Image, List } from "../Home/Assets/Common";
 import { ListTag } from "../Home/Assets/Icons";
 import {
+  AboutBox,
   AboutContainer,
   AboutFlex,
   AboutListText,
@@ -8,6 +9,7 @@ import {
   AboutText,
   AboutTitle,
   Heading,
+  LenghtyTextAlert,
 } from "./styles";
 import AboutImage1 from "./Images/aboutimage1.png";
 import AboutImage2 from "./Images/aboutimage2.png";
@@ -16,97 +18,79 @@ const AboutContent = () => {
   return (
     <AboutContainer>
       <Heading>
-        <h1>About</h1>
+        <h1>We provide capital raising & fund distribution services</h1>
         <p>We are building the Digital Home for Global Private Placements.</p>
       </Heading>
-      <AboutMargin>
-        <AboutTitle>How we do it</AboutTitle>
-        <List>
-          <div>
-            <ListTag />
-          </div>
-          <AboutListText>
+      <AboutFlex>
+        <FlexWrap
+          display="both"
+          flexPercentage="50%"
+          padding="0rem 2.5rem 0rem 0rem"
+        >
+          <LenghtyTextAlert>Lengthy text alert</LenghtyTextAlert>
+          <AboutTitle>About TANGL</AboutTitle>
+          <AboutText>
             We are a Private Placements firm serving our clients with capital
             raising & fund distribution services, whilst providing our
             High-Net-Worth clients with systematic access to investment
             opportunities, by providing them with allocations to top tier
             preforming Private Equity & Venture Capital funds and Real Estate
             investment opportunities through our digital investment platform.
+          </AboutText>
+          <AboutText>
             Our Experience and professional network within the Private Equity,
             Venture Capital and Real estate industries allows us to partake in
             conversations with industry professionals and start up founders at
             various stages of their business Lifecyle, and support founders with
-            access to funding and ancillary services. Our team liaises with all
-            industry participants to create a selection of prospectus investment
-            vehicles, we partner with Top-Tier investment firms and provide
-            coverage of EMEA operating funds and leverage our regional network
-            within Africa to be able to facilitate an investors allocation to
-            African domiciled and Emerging markets focussed investment vehicles
-            and Real estate projects.
-            <p>
-              Our strategic relationship with financial institutions allows us
-              to merge capital with effective expertise and introduce an
-              infrastructure layer for emerging markets to benefit from the ease
-              of inflows through FDIs and mainly FPIs (Foreign portfolio
-              investments) via our technology solution, something we are
-              personally passionate about.
-            </p>
-          </AboutListText>
-        </List>
-        <List>
-          <div>
-            <ListTag />
-          </div>
-          <AboutListText>
+            access to funding and ancillary services.
+          </AboutText>
+
+          <AboutText>
             Our team liaises with all industry participants to create a
-            selection of prospectus companies, we partner with Top-Tier
-            investment firms and support founders with access to funding and
-            ancillary services.
-          </AboutListText>
-        </List>
-        <List>
-          <div>
-            <ListTag />
-          </div>
-          <AboutListText>
-            Our strategic relationships with financial institutions allows us to
-            merge capital with effective expertise.
-          </AboutListText>
-        </List>
-      </AboutMargin>
+            selection of prospectus investment vehicles, we partner with
+            Top-Tier investment firms and provide coverage of EMEA operating
+            funds and leverage our regional network within Africa to be able to
+            facilitate an investors allocation to African domiciled and Emerging
+            markets focussed investment vehicles and Real estate projects
+          </AboutText>
+
+          <AboutText>
+            Our strategic relationship with financial institutions allows us to
+            merge capital with effective expertise and introduce an
+            infrastructure layer for emerging markets to benefit from the ease
+            of inflows through FDIs and mainly FPIs (Foreign portfolio
+            investments) via Depositary Receipts programs and our technology
+            solution.
+          </AboutText>
+        </FlexWrap>
+        <FlexWrap
+          display="both"
+          flexPercentage="50%"
+          padding="0rem 0rem 0rem 2.5rem"
+        >
+          <AboutBox></AboutBox>
+        </FlexWrap>
+      </AboutFlex>
       <AboutMargin>
-        <AboutTitle>How we do it</AboutTitle>
-        <List>
-          <div>
-            <ListTag />
-          </div>
-          <AboutListText>
-            Our Experience and professional network within the Private Equity,
-            Venture Capital and Real estate industries allows us to partake in
-            conversations with industry professionals and start up founders at
-            various stages of their business Lifecyle.
-          </AboutListText>
-        </List>
-        <List>
-          <div>
-            <ListTag />
-          </div>
-          <AboutListText>
-            Our team liaises with all industry participants to create a
-            selection of prospectus companies, we partner with Top-Tier
-            investment firms and support founders with access to funding and
-            ancillary services.
-          </AboutListText>
-        </List>
-        <List>
-          <div>
-            <ListTag />
-          </div>
-          <AboutListText>
-            Our strategic relationships with financial institutions allows us to
-            merge capital with effective expertise.
-          </AboutListText>
-        </List>
+        <AboutTitle>Digital Private Placement</AboutTitle>
+        <AboutText>
+          For Financial institutions and innovative Companies looking to utilise
+          the Benefits of Tokenisation and Distributed ledger technology we
+          specialise in offer a range of Services including Compliant Security
+          Token issuance, corporate action and Investment advisory pertaining to
+          Security Token issuance and listing, investment Offering due
+          diligence, White paper creation and investment prospectus Distribution
+          through our network.
+        </AboutText>
+        <AboutText>
+          Through our wholly owned subsidiary TANGL Tech, we offer technical
+          support and an all-inclusive issuance and investor relations platform
+          to support our clients with their Security Token Lifecyle from
+          distribution, investor onboarding, Token minting and distribution via
+          our ERC compatible investor wallets, our digital solution takes care
+          of all the investors access rights and Security token legality so you
+          can focus on investing and producing return for investors.
+        </AboutText>
       </AboutMargin>
       <AboutFlex>
         <FlexWrap display="both" flexPercentage="50%">
