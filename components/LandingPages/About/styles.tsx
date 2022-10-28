@@ -4,6 +4,7 @@ import { FlexWrap } from "../Home/Assets/Common";
 
 export const AboutContainer = styled.div`
   background: #ffffff;
+  box-sizing: border-box;
   @media ${device.tablet} {
     ${FlexWrap} {
       flex: 100%;
@@ -17,10 +18,16 @@ export const Heading = styled.div`
   justify-content: center;
   background: #011122;
   padding: 5rem;
+  box-sizing: border-box;
   @media ${device.tablet} {
     padding: 1.5rem;
   }
   h1 {
+    @media ${device.mobileL} {
+      font-size: 36px;
+      line-height: 48px;
+      letter-spacing: -0.6px;
+    }
     max-width: 46.875rem;
     font-family: "Outfit";
     font-style: normal;
@@ -30,8 +37,14 @@ export const Heading = styled.div`
     text-align: center;
     color: #ffffff;
     margin: 0 auto;
+    box-sizing: border-box;
   }
   p {
+    @media ${device.mobileL} {
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: -0.6px;
+    }
     max-width: 46.875rem;
     font-family: "Outfit";
     font-style: normal;

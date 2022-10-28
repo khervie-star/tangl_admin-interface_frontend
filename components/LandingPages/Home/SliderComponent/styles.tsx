@@ -9,9 +9,9 @@ export const SliderContainer = styled.section`
   height: 400px;
   box-sizing: border-box;
   @media ${device.tablet} {
-    margin: 2.5rem 1.5rem;
+    margin: 1.5rem 1.5rem;
     height: 200px;
-    margin-bottom: 8rem;
+    margin-bottom: 4rem;
   }
 `;
 

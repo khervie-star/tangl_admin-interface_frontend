@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { device } from "../../../../Global";
-import { FlexWrap } from "../Assets/Common";
+import { FlexWrap, Image } from "../Assets/Common";
 
 export const TabFiveContainer = styled.div`
   display: flex;
@@ -11,6 +11,10 @@ export const TabFiveContainer = styled.div`
     padding: 2.5rem 1.5rem;
     ${FlexWrap} {
       flex: 100%;
+    }
+    ${Image} {
+      margin-left: 0;
+      margin-top: 2.5rem;
     }
   }
 `;

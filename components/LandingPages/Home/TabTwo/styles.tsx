@@ -10,6 +10,13 @@ export const TabTwoContainer = styled.div`
   background: #ffffff;
   @media ${device.tablet} {
     padding: 2.5rem 1.5rem;
+    ${FlexWrap} {
+      flex: 100%;
+    }
+    ${Image} {
+      margin-left: 0;
+      margin-bottom: 2.5rem;
+    }
   }
 `;
 
