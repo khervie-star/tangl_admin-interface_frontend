@@ -30,7 +30,7 @@ const SliderComponent = () => {
       <Swiper
         effect={"coverflow"}
         // grabCursor={true}
-        spaceBetween={-500}
+        spaceBetween={typeof window !== 'undefined' && window.innerWidth < 768 ? 0 : -500}
         rewind={true}
         centeredSlides={true}
         slidesPerView={typeof window !== 'undefined' && window.innerWidth < 768 ? 1 : 3}

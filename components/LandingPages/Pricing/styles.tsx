@@ -7,7 +7,9 @@ type PricingTypes = {
 export const PricingContainer = styled.div`
   background: #ffffff;
   padding: 5rem;
-  margin-top: 5em;
+
+  max-width: 1440px;
+  margin: auto;
   @media ${device.tablet} {
     padding: 1.5rem;
   }

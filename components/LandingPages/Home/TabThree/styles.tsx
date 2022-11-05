@@ -7,30 +7,28 @@ type TabThreeType = {
 };
 
 export const TabThreeContainer = styled.div`
+  padding: 5rem;
+  background: #43566a;
+  @media ${device.tablet} {
+    padding: 2.5rem 1.5rem;
+  }
+`;
+
+export const TabThreeWrapper = styled.div`
   display: flex;
   align-items: center;
-  padding: 5rem;
+  max-width: 1440px;
+  margin: 0px auto;
   flex-wrap: wrap;
-  background: #43566A;
-  ${({ inView }: TabThreeType) =>
-    inView
-      ? css`
-          visibility: visible;
-          opacity: 1;
-        `
-      : css`
-          visibility: hidden;
-          opacity: 0;
-          transition: visibility 2s, opacity 5s linear;
-        `}
   ${Image} {
     margin-left: 5rem;
+    display: flex;
+    justify-content: center;
   }
   ${TextTitle} {
     max-width: 36rem;
   }
   @media ${device.tablet} {
-    padding: 2.5rem 1.5rem;
     ${FlexWrap} {
       flex: 100%;
     }
