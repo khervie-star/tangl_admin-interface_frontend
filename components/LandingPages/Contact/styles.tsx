@@ -4,6 +4,8 @@ import { device } from "../../../Global";
 export const ContactContainer = styled.div`
   background: #ffffff;
   padding: 5rem;
+  max-width: 1440px;
+  margin: auto;
   @media ${device.tablet} {
     padding: 1.5rem;
   }

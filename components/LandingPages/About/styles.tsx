@@ -133,7 +133,8 @@ export const AboutText = styled.p`
 `;
 
 export const AboutMargin = styled.div`
-  margin: 5rem;
+  margin: 5rem auto;
+  max-width: 1440px;
   @media ${device.tablet} {
     margin: 1.5rem;
   }
@@ -142,7 +143,8 @@ export const AboutMargin = styled.div`
 export const AboutFlex = styled.div`
   display: flex;
   align-items: center;
-  margin: 5rem;
+  margin: 5rem auto;
+  max-width: 1440px;
   flex-wrap: wrap;
   @media ${device.tablet} {
     margin: 1.5rem;

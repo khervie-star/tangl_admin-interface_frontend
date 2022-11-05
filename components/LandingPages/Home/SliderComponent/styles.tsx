@@ -4,7 +4,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { ArrowRightIcon } from "../../Common/Icons";
 
 export const SliderContainer = styled.section`
-  margin: 5rem;
+  margin: 5rem auto;
+  max-width: 1440px;
   margin-bottom: 10rem;
   height: 400px;
   box-sizing: border-box;
@@ -31,6 +32,9 @@ export const SliderReportWrapper = styled.div`
   display: flex;
   align-items: center;
   /* justify-content: center; */
+  @media ${device.mobileL} {
+    margin: 1rem;
+  }
 `;
 
 export const SliderReportBody = styled.div`
@@ -49,6 +53,7 @@ export const SliderReportImage = styled.img`
   @media ${device.tablet} {
     max-height: 10.625rem;
     max-width: 8.625rem;
+    margin-right: -1rem;
   }
 `;
 
@@ -68,8 +73,14 @@ export const SliderReportFloat = styled.span`
   color: #ffffff;
   box-sizing: content-box;
   @media ${device.mobileL} {
-    font-size: 12px;
-    line-height: 16px;
+    font-size: 10px;
+    line-height: 14px;
+    padding: 0.2rem 0.5rem;
+  }
+  @media ${device.mobileM} {
+    font-size: 8px;
+    line-height: 12px;
+    padding: 0.1rem 0.35rem;
   }
 `;
 
@@ -83,8 +94,12 @@ export const SliderReportText = styled.p`
   color: #ffffff;
   text-align: left;
   @media ${device.mobileL} {
-    font-size: 16px;
-    line-height: 18px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+  @media ${device.mobileM} {
+    font-size: 12px;
+    line-height: 14px;
   }
 `;
 
@@ -98,8 +113,12 @@ export const SliderReportTinyText = styled.p`
   color: #ffffff;
   text-align: left;
   @media ${device.mobileL} {
-    font-size: 16px;
-    line-height: 18px;
+    font-size: 8px;
+    line-height: 12px;
+  }
+  @media ${device.mobileS} {
+    font-size: 6px;
+    line-height: 11px;
   }
 `;
 
@@ -127,8 +146,15 @@ export const DownloadNow = styled.button`
     }
   }
   @media ${device.mobileL} {
-    font-size: 12px;
-    line-height: 16px;
-    padding: 0.75rem 1rem;
+    font-size: 10px;
+    line-height: 14px;
+    padding: 0.35rem 0.75rem;
+    margin-top: 1rem;
+  }
+  @media ${device.mobileS} {
+    font-size: 8px;
+    line-height: 12px;
+    padding: 0.2rem 0.5rem;
+    margin-top: 0.75rem;
   }
 `;

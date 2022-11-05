@@ -1,18 +1,26 @@
 import styled from "styled-components";
 import { device } from "../../../../Global";
-import { FlexWrap, Image } from "../Assets/Common";
+import { FlexWrap, Image, TextTitle } from "../Assets/Common";
 
 export const TabSevenContainer = styled.div`
   margin: 5rem;
   border-radius: 16px;
   padding: 5rem;
+  background: #324a64;
+  @media ${device.tablet} {
+    margin: 2.5rem 1.5rem;
+    padding: 2.5rem;
+  }
+`;
+
+export const TabSevenWrapper = styled.div`
+  max-width: 1440px;
+  margin: 0px auto;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   background: #324a64;
   @media ${device.tablet} {
-    margin: 2.5rem 1.5rem;
-    padding: 2.5rem;
     ${FlexWrap} {
       flex: 100%;
     }
@@ -45,4 +53,9 @@ export const IconText = styled.span`
 export const Benefits = styled.div`
   display: flex;
   align-items: center;
+  @media ${device.mobileL} {
+    ${TextTitle} {
+      font-size: 28px;
+    }
+  }
 `;
