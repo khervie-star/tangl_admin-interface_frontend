@@ -144,6 +144,7 @@ export const DownloadNow = styled.button`
     margin-left: 0.625rem;
     @media ${device.mobileL} {
       margin-left: 0.35rem;
+      font-size: 10px;
     }
   }
   @media ${device.mobileL} {
@@ -152,10 +153,16 @@ export const DownloadNow = styled.button`
     padding: 0.3rem 0.7rem;
     margin-top: 0.75rem;
   }
-  @media ${device.mobileS} {
+  @media ${device.mobileL} {
     font-size: 7px;
     line-height: 11px;
+    padding: 0.3rem 0.7rem;
+    margin-top: 0.55rem;
+  }
+  @media ${device.mobileS} {
+    font-size: 6px;
+    line-height: 10px;
     padding: 0.2rem 0.5rem;
-    margin-top: 0.50rem;
+    margin-top: 0.40rem;
   }
 `;
