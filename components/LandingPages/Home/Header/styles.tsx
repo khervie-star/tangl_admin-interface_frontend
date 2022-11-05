@@ -1,7 +1,8 @@
-import styled from "styled-components"
-import { device} from "../../../../Global";
+import styled from "styled-components";
+import { device } from "../../../../Global";
 
 export const HeaderWrapper = styled.div`
+  margin-top: 5em;
   padding: 5rem 0rem 5rem 0rem;
   @media ${device.mobileL} {
     padding: 3.5rem 2.125rem 2.5rem 2.125rem;
@@ -30,7 +31,7 @@ export const HeaderText = styled.p`
   text-align: center;
   letter-spacing: -0.2px;
   margin: 0rem auto;
-  color:#A0AABA;;
+  color: #a0aaba;
   max-width: 40.375rem;
   @media ${device.mobileL} {
     font-size: 18px;
@@ -58,9 +59,9 @@ export const HeaderButton = styled.button`
   padding: 0.75rem 1.25rem;
   border: 0;
   cursor: pointer;
-  &:hover{
+  &:hover {
     filter: grayscale(50%) blur(0.1px);
-    transition: .1s ease-in-out;
+    transition: 0.1s ease-in-out;
   }
   @media ${device.mobileL} {
     font-size: 16px;

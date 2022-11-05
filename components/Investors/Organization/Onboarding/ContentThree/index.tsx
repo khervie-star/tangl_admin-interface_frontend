@@ -75,7 +75,7 @@ const ContentThree = ({ page }: PageBarTypes) => {
     try {
       setLoading({ ...loading, confirming: true });
       setError("");
-      await verifyPhone({ phone, code });
+      // await verifyPhone({ phone, code });
       if (page) dispatch(organizationFowardRoute(page));
       setLoading({ ...loading, confirming: false });
       setError("");

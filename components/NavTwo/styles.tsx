@@ -7,7 +7,7 @@ export type NavProps = {
   display?: string;
   borderColor?: string;
   open?: boolean;
-  active?: boolean
+  active?: boolean;
 };
 
 export const NavTwoContainer = styled.div`
@@ -18,6 +18,14 @@ export const NavTwoContainer = styled.div`
   align-items: center;
   margin: 0;
   padding: 2.25rem 5rem;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  box-sizing: border-box;
+
   @media ${device.laptopL} {
     padding: 2.25rem 3.5rem;
   }
@@ -170,7 +178,7 @@ export const Navlist = styled.ul`
   display: flex;
   margin: 0;
   padding: 0;
-  ${({ active } : NavProps) =>
+  ${({ active }: NavProps) =>
     active &&
     css`
       color: #007afb;

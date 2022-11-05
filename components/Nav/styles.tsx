@@ -18,7 +18,15 @@ export const NavContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   margin: 0;
+
   padding: 2rem 5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  box-sizing: border-box;
+
   @media ${device.laptopL} {
     padding: 2rem 3.5rem;
   }

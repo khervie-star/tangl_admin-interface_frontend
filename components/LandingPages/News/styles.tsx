@@ -10,6 +10,7 @@ type NewsType = {
 export const NewsContainer = styled.div`
   background: #ffffff;
   padding: 5rem;
+  margin-top: 5em;
   @media ${device.tablet} {
     padding: 1.5rem;
   }
@@ -236,9 +237,9 @@ export const BaseTitle = styled.div`
       width: 100%;
     }
     @media ${device.mobileL} {
-    font-size: 28px;
-    line-height: 36px;
-  }
+      font-size: 28px;
+      line-height: 36px;
+    }
   }
 `;
 

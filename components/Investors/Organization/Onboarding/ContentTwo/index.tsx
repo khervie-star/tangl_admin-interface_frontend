@@ -60,8 +60,8 @@ const ContentTwo = ({ page }: PageBarTypes) => {
     try {
       setSending(true);
       setError("");
-      const resp = await sendVerificationCode({ phone });
-      toast.success(resp.data.message);
+      // const resp = await sendVerificationCode({ phone });
+      // toast.success(resp.data.message);
       if (page) dispatch(organizationFowardRoute(page));
       setSending(false);
       setError("");

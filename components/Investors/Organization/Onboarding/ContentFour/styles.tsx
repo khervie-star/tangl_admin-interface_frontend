@@ -1,5 +1,19 @@
 import styled from "styled-components";
+import { Input } from "../../../Assets/common";
+import { contentTypes } from "../../../types";
 
+export const PasswordContainer = styled.div`
+  display: flex;
+  position: relative;
+  span {
+    position: absolute;
+    right: 10px;
+    color: #43566a;
+    font-size: 24px;
+    cursor: pointer;
+    margin-bottom: -10px;
+  }
+`;
 
 export const TelVerified = styled.div`
   border: 1px solid #e1e8f4;
@@ -38,4 +52,20 @@ export const TelVerified = styled.div`
   }
 `;
 
+export const HelperText = styled.div`
+  box-sizing: border-box;
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 8px;
+  color: ${({ validated }: contentTypes) =>
+    validated ? "#5ac179" : "#a0aaba"};
 
+  span {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    color: #a0aaba;
+  }
+`;

@@ -7,6 +7,7 @@ type PricingTypes = {
 export const PricingContainer = styled.div`
   background: #ffffff;
   padding: 5rem;
+  margin-top: 5em;
   @media ${device.tablet} {
     padding: 1.5rem;
   }
@@ -61,7 +62,7 @@ export const PricingGrid = styled.div`
   display: inline-grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1.125rem;
-  @media ${device.tablet}{
+  @media ${device.tablet} {
     grid-template-columns: repeat(1, 1fr);
   }
 `;
