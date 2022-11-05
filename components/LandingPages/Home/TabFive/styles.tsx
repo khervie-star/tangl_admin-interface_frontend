@@ -7,6 +7,8 @@ export const TabFiveContainer = styled.div`
   align-items: center;
   padding: 5rem;
   flex-wrap: wrap;
+  max-width: 1440px;
+  margin: 0px auto;
   @media ${device.tablet} {
     padding: 2.5rem 1.5rem;
     ${FlexWrap} {

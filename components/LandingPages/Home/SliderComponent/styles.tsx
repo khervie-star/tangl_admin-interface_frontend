@@ -4,7 +4,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { ArrowRightIcon } from "../../Common/Icons";
 
 export const SliderContainer = styled.section`
-  margin: 5rem;
+  margin: 5rem auto;
+  max-width: 1440px;
   margin-bottom: 10rem;
   height: 400px;
   box-sizing: border-box;
@@ -30,7 +31,11 @@ export const SliderReportWrapper = styled.div`
   margin: 3.5rem;
   display: flex;
   align-items: center;
+  box-sizing: border-box;
   /* justify-content: center; */
+  @media ${device.mobileL} {
+    margin: 1.75rem;
+  }
 `;
 
 export const SliderReportBody = styled.div`
@@ -49,6 +54,7 @@ export const SliderReportImage = styled.img`
   @media ${device.tablet} {
     max-height: 10.625rem;
     max-width: 8.625rem;
+    margin-right: -1rem;
   }
 `;
 
@@ -68,8 +74,14 @@ export const SliderReportFloat = styled.span`
   color: #ffffff;
   box-sizing: content-box;
   @media ${device.mobileL} {
-    font-size: 12px;
-    line-height: 16px;
+    font-size: 9px;
+    line-height: 13px;
+    padding: 0.2rem 0.5rem;
+  }
+  @media ${device.mobileM} {
+    font-size: 8px;
+    line-height: 12px;
+    padding: 0.1rem 0.35rem;
   }
 `;
 
@@ -83,8 +95,12 @@ export const SliderReportText = styled.p`
   color: #ffffff;
   text-align: left;
   @media ${device.mobileL} {
-    font-size: 16px;
-    line-height: 18px;
+    font-size: 13px;
+    line-height: 15px;
+  }
+  @media ${device.mobileM} {
+    font-size: 12px;
+    line-height: 14px;
   }
 `;
 
@@ -98,8 +114,12 @@ export const SliderReportTinyText = styled.p`
   color: #ffffff;
   text-align: left;
   @media ${device.mobileL} {
-    font-size: 16px;
-    line-height: 18px;
+    font-size: 8px;
+    line-height: 12px;
+  }
+  @media ${device.mobileS} {
+    font-size: 6px;
+    line-height: 11px;
   }
 `;
 
@@ -124,11 +144,25 @@ export const DownloadNow = styled.button`
     margin-left: 0.625rem;
     @media ${device.mobileL} {
       margin-left: 0.35rem;
+      font-size: 10px;
     }
   }
   @media ${device.mobileL} {
-    font-size: 12px;
-    line-height: 16px;
-    padding: 0.75rem 1rem;
+    font-size: 8px;
+    line-height: 12px;
+    padding: 0.3rem 0.7rem;
+    margin-top: 0.75rem;
+  }
+  @media ${device.mobileL} {
+    font-size: 7px;
+    line-height: 11px;
+    padding: 0.3rem 0.7rem;
+    margin-top: 0.55rem;
+  }
+  @media ${device.mobileS} {
+    font-size: 6px;
+    line-height: 10px;
+    padding: 0.2rem 0.5rem;
+    margin-top: 0.40rem;
   }
 `;
