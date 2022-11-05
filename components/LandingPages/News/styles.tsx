@@ -238,9 +238,9 @@ export const BaseTitle = styled.div`
       width: 100%;
     }
     @media ${device.mobileL} {
-    font-size: 28px;
-    line-height: 36px;
-  }
+      font-size: 28px;
+      line-height: 36px;
+    }
   }
 `;
 

@@ -35,9 +35,7 @@ const FunctionCard = ({ page }: PageBarTypes) => {
           <Text active={page === 1 ? true : false}>Choose admin type</Text>
           <Text active={page === 2 ? true : false}>Add phone number</Text>
           <Text active={page === 3 ? true : false}>Confirm phone number</Text>
-          <Text active={page === 4 ? true : false}>
-            2-Factor Authentication
-          </Text>
+          <Text active={page === 4 ? true : false}>Create Password</Text>
           <Text active={page === 5 ? true : false}>Email Verification</Text>
         </DropList>
       </Function>

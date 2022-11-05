@@ -18,6 +18,7 @@ export const Heading = styled.div`
   justify-content: center;
   background: #011122;
   padding: 5rem;
+  margin-top: 5em;
   box-sizing: border-box;
   @media ${device.tablet} {
     padding: 1.5rem;

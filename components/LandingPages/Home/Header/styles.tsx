@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { device } from "../../../../Global";
 
 export const HeaderWrapper = styled.div`
+  margin-top: 5em;
   padding: 5rem 0rem 5rem 0rem;
   max-width: 1440px;
   margin: 0px auto;

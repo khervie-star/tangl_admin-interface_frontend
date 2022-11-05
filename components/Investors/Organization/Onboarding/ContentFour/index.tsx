@@ -11,7 +11,7 @@ import {
 } from "../../../Assets/common";
 import { VerifiedIcon } from "../../../Assets/Icons";
 import { PageBarTypes } from "../../../types";
-import { TelVerified } from "./styles";
+import { TelVerified, PasswordContainer } from "./styles";
 import { formatPhoneNumberIntl } from "react-phone-number-input";
 import { RootState } from "../../../../../store/reducers";
 import { useState } from "react";
@@ -22,12 +22,25 @@ import _ from "lodash";
 import toast from "react-hot-toast";
 import { setAdminRegister } from "../../../../../store/actions/register";
 import { useAppDispatch } from "../../../../../hooks";
+import PasswordValidation from "./PasswordValidation";
+import { RiEyeCloseFill, RiEyeFill } from "react-icons/ri";
 
 const ContentFour = ({ page }: PageBarTypes) => {
   const dispatch = useAppDispatch();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [disabled, setDisabled] = useState(false);
+
+  // Validation states
+  const [lowerValidated, setLowerValidated] = useState(false);
+  const [upperValidated, setUpperValidated] = useState(false);
+  const [numberValidated, setNumberValidated] = useState(false);
+  const [specialValidated, setSpecialValidated] = useState(false);
+  const [lengthValidated, setLengthValidated] = useState(false);
+  const [nameValidated, setNameValidated] = useState(false);
+
+  // View password
+  const [type, setType] = useState("password");
 
   // Get Admin type and phone number saved prevously in state
   const { OrgType } = useSelector((store: RootState) => ({
@@ -82,9 +95,55 @@ const ContentFour = ({ page }: PageBarTypes) => {
       dispatch(setAdminRegister({ ...data, [prop]: event?.target.value }));
     };
 
+  const handlePasswordChange = (e: { target: { value: string } }) => {
+    const lower = new RegExp("(?=.*[a-z])");
+    const upper = new RegExp("(?=.*[A-Z])");
+    const number = new RegExp("(?=.*[0-9])");
+    const special = new RegExp("(?=.*[!@#$%^&*])");
+    const length = new RegExp("(?=.{8,})");
+    if (lower.test(e.target.value)) {
+      setLowerValidated(true);
+    } else {
+      setLowerValidated(false);
+    }
+    if (upper.test(e.target.value)) {
+      setUpperValidated(true);
+    } else {
+      setUpperValidated(false);
+    }
+    if (number.test(e.target.value)) {
+      setNumberValidated(true);
+    } else {
+      setNumberValidated(false);
+    }
+    if (special.test(e.target.value)) {
+      setSpecialValidated(true);
+    } else {
+      setSpecialValidated(false);
+    }
+    if (length.test(e.target.value)) {
+      setLengthValidated(true);
+    } else {
+      setLengthValidated(false);
+    }
+    if (e.target.value.includes("blessing")) {
+      setNameValidated(false);
+    } else {
+      setNameValidated(true);
+    }
+  };
+
+  const handleViewPassword = () => {
+    if (type == "password") {
+      setType("text");
+    } else {
+      setType("password");
+    }
+  };
+
   return (
     <form onSubmit={handleSubmit}>
-      <TextTitle>2-Factor Authentication</TextTitle>
+      <TextTitle>Create Password</TextTitle>
       <TextBody>
         Fill in the registration data. It will take a couple of minutes. You
         only need your phone number and e-mail.
@@ -99,9 +158,26 @@ const ContentFour = ({ page }: PageBarTypes) => {
       {error && <ErrorMessage>{error}</ErrorMessage>}
       <FormContainer>
         <Label>Email</Label>
-        <Input type="text" onChange={handleChange("email")} />
+
+        <Input type="text" name="email" onChange={handleChange("email")} />
+
         <Label>Password</Label>
-        <Input type="password" onChange={handleChange("password")} />
+        <PasswordContainer>
+          <Input type={type} onChange={handlePasswordChange} />
+
+          <span onClick={handleViewPassword}>
+            {type == "password" ? <RiEyeCloseFill /> : <RiEyeFill />}
+          </span>
+        </PasswordContainer>
+
+        <PasswordValidation
+          lowerValidated={lowerValidated}
+          upperValidated={upperValidated}
+          numberValidated={numberValidated}
+          specialValidated={specialValidated}
+          lengthValidated={lengthValidated}
+          nameValidated={nameValidated}
+        />
       </FormContainer>
       <DarkContinueButton disabled={loading}>
         {loading && "Creating Account"}
