@@ -55,7 +55,17 @@ export const Benefits = styled.div`
   align-items: center;
   @media ${device.mobileL} {
     ${TextTitle} {
-      font-size: 28px;
+      font-size: 27px;
+    }
+  }
+  @media ${device.mobileM} {
+    ${TextTitle} {
+      font-size: 26px;
+    }
+  }
+  @media ${device.mobileS} {
+    ${TextTitle} {
+      font-size: 24px;
     }
   }
 `;

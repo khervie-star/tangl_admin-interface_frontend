@@ -73,8 +73,8 @@ export const SliderReportFloat = styled.span`
   color: #ffffff;
   box-sizing: content-box;
   @media ${device.mobileL} {
-    font-size: 10px;
-    line-height: 14px;
+    font-size: 9px;
+    line-height: 13px;
     padding: 0.2rem 0.5rem;
   }
   @media ${device.mobileM} {
@@ -94,8 +94,8 @@ export const SliderReportText = styled.p`
   color: #ffffff;
   text-align: left;
   @media ${device.mobileL} {
-    font-size: 14px;
-    line-height: 16px;
+    font-size: 13px;
+    line-height: 15px;
   }
   @media ${device.mobileM} {
     font-size: 12px;
@@ -148,8 +148,8 @@ export const DownloadNow = styled.button`
   @media ${device.mobileL} {
     font-size: 10px;
     line-height: 14px;
-    padding: 0.35rem 0.75rem;
-    margin-top: 1rem;
+    padding: 0.3rem 0.7rem;
+    margin-top: 0.875rem;
   }
   @media ${device.mobileS} {
     font-size: 8px;
