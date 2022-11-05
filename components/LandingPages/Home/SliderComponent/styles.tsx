@@ -146,15 +146,15 @@ export const DownloadNow = styled.button`
     }
   }
   @media ${device.mobileL} {
-    font-size: 10px;
-    line-height: 14px;
-    padding: 0.3rem 0.7rem;
-    margin-top: 0.875rem;
-  }
-  @media ${device.mobileS} {
     font-size: 8px;
     line-height: 12px;
-    padding: 0.2rem 0.5rem;
+    padding: 0.3rem 0.7rem;
     margin-top: 0.75rem;
+  }
+  @media ${device.mobileS} {
+    font-size: 7px;
+    line-height: 11px;
+    padding: 0.2rem 0.5rem;
+    margin-top: 0.50rem;
   }
 `;
