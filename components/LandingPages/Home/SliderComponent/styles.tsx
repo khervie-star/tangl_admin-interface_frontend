@@ -31,9 +31,10 @@ export const SliderReportWrapper = styled.div`
   margin: 3.5rem;
   display: flex;
   align-items: center;
+  box-sizing: border-box;
   /* justify-content: center; */
   @media ${device.mobileL} {
-    margin: 1rem;
+    margin: 1.75rem;
   }
 `;
 
