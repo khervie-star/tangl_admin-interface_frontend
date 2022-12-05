@@ -18,6 +18,7 @@ export const NavContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   margin: 0;
+  margin-bottom: 10rem;
 
   padding: 2rem 5rem;
   position: fixed;
@@ -32,6 +33,7 @@ export const NavContainer = styled.div`
   }
   @media ${device.tablet} {
     padding: 1.75rem 1.375rem;
+    margin-bottom: 2.5rem;
   }
 `;
 

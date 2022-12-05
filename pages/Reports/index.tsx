@@ -1,12 +1,15 @@
 import Footer from "../../components/LandingPages/Home/Footer";
 import ReportsContent from "../../components/LandingPages/Reports";
 import NavBarTwo from "../../components/NavTwo";
+import { BodyContainer } from "../../Global";
 
 const Reports = () => {
   return (
     <>
       <NavBarTwo />
-      <ReportsContent />
+      <BodyContainer>
+        <ReportsContent />
+      </BodyContainer>
       <Footer />
     </>
   );
