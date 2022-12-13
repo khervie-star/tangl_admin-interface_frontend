@@ -1,5 +1,6 @@
 import axios from "axios";
 import { api } from "./api";
+import { waitlist_api } from "./waitlist";
 
 const CancelToken = axios.CancelToken;
 let source = CancelToken.source();
@@ -28,4 +29,8 @@ export const verifyEmail = (data: any) => {
 
 export const investmentCompanySignup = (data: any) => {
   return api.post("/onboard/investment-company/signup", data);
+};
+
+export const joinWaitinglist = (data: any) => {
+  return waitlist_api.post("/waitlist", data);
 };

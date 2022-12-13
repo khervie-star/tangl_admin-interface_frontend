@@ -66,9 +66,9 @@ const SliderComponent = () => {
                 The Role of Blockchain Technology in the Investment Funds
                 Industry
               </SliderReportText>
-              <SliderReportTinyText>
+              {/* <SliderReportTinyText>
                 Some tiny text to convey more information
-              </SliderReportTinyText>
+              </SliderReportTinyText> */}
               <DownloadNow>
                 Download Now
                 <ArrowRightIcon />

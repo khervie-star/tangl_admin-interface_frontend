@@ -44,6 +44,90 @@ const ContentTwentyOne = ({ page }: PageBarTypes) => {
         </SectionItem>
       </SectionCard>
 
+      {/* SECTION A DATA REVIEW */}
+      <SectionTitle>Section A - Basic Data</SectionTitle>
+      <SectionCard>
+        <SectionItem>
+          <ItemLabel>First name</ItemLabel>
+          <SectionValue>Blessing</SectionValue>
+        </SectionItem>
+        <SectionItem>
+          <ItemLabel>Last name</ItemLabel>
+          <SectionValue>Ojediran</SectionValue>
+        </SectionItem>
+        <SectionItem>
+          <ItemLabel>Company name</ItemLabel>
+          <SectionValue>Cutis Beauty Shop</SectionValue>
+        </SectionItem>
+        <SectionItem>
+          <ItemLabel>First name</ItemLabel>
+          <SectionValue>Blessing</SectionValue>
+        </SectionItem>
+      </SectionCard>
+
+      {/* SECTION A DATA REVIEW */}
+      <SectionTitle>Section A - Basic Data</SectionTitle>
+      <SectionCard>
+        <SectionItem>
+          <ItemLabel>First name</ItemLabel>
+          <SectionValue>Blessing</SectionValue>
+        </SectionItem>
+        <SectionItem>
+          <ItemLabel>Last name</ItemLabel>
+          <SectionValue>Ojediran</SectionValue>
+        </SectionItem>
+        <SectionItem>
+          <ItemLabel>Company name</ItemLabel>
+          <SectionValue>Cutis Beauty Shop</SectionValue>
+        </SectionItem>
+        <SectionItem>
+          <ItemLabel>First name</ItemLabel>
+          <SectionValue>Blessing</SectionValue>
+        </SectionItem>
+      </SectionCard>
+
+      {/* SECTION A DATA REVIEW */}
+      <SectionTitle>Section A - Basic Data</SectionTitle>
+      <SectionCard>
+        <SectionItem>
+          <ItemLabel>First name</ItemLabel>
+          <SectionValue>Blessing</SectionValue>
+        </SectionItem>
+        <SectionItem>
+          <ItemLabel>Last name</ItemLabel>
+          <SectionValue>Ojediran</SectionValue>
+        </SectionItem>
+        <SectionItem>
+          <ItemLabel>Company name</ItemLabel>
+          <SectionValue>Cutis Beauty Shop</SectionValue>
+        </SectionItem>
+        <SectionItem>
+          <ItemLabel>First name</ItemLabel>
+          <SectionValue>Blessing</SectionValue>
+        </SectionItem>
+      </SectionCard>
+
+      {/* SECTION A DATA REVIEW */}
+      <SectionTitle>Section A - Basic Data</SectionTitle>
+      <SectionCard>
+        <SectionItem>
+          <ItemLabel>First name</ItemLabel>
+          <SectionValue>Blessing</SectionValue>
+        </SectionItem>
+        <SectionItem>
+          <ItemLabel>Last name</ItemLabel>
+          <SectionValue>Ojediran</SectionValue>
+        </SectionItem>
+        <SectionItem>
+          <ItemLabel>Company name</ItemLabel>
+          <SectionValue>Cutis Beauty Shop</SectionValue>
+        </SectionItem>
+        <SectionItem>
+          <ItemLabel>First name</ItemLabel>
+          <SectionValue>Blessing</SectionValue>
+        </SectionItem>
+      </SectionCard>
+
       <DarkContinueButton onClick={null}>
         Submit Fundraising Questionnaire
       </DarkContinueButton>

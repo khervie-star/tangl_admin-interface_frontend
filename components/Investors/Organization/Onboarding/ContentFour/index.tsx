@@ -57,8 +57,6 @@ const ContentFour = ({ page }: PageBarTypes) => {
     data: store.register,
   }));
 
-  console.log(data);
-
   // Handle admin/ Organization signup
   const handleSubmit = async (e: any) => {
     e.preventDefault();
