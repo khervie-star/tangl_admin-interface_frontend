@@ -136,6 +136,9 @@ export const AboutText = styled.p`
 export const AboutMargin = styled.div`
   margin: 5rem auto;
   max-width: 1440px;
+  @media ${device.laptopM} {
+    margin: 5rem 3.5rem;
+  }
   @media ${device.tablet} {
     margin: 1.5rem;
   }
@@ -147,6 +150,9 @@ export const AboutFlex = styled.div`
   margin: 5rem auto;
   max-width: 1440px;
   flex-wrap: wrap;
+  @media ${device.laptopM} {
+    margin: 5rem 3.5rem;
+  }
   @media ${device.tablet} {
     margin: 1.5rem;
     ${FlexWrap} {

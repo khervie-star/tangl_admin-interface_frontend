@@ -7,6 +7,7 @@ const size = {
   tablet: "820px",
   laptop: "1024px",
   laptopE: "1096px",
+  laptopM: "1280px",
   laptopL: "1440px",
   desktop: "2560px",
 };
@@ -18,6 +19,7 @@ export const device = {
   tablet: `(max-width: ${size.tablet})`,
   laptop: `(max-width: ${size.laptop})`,
   laptopE: `(max-width: ${size.laptopE})`,
+  laptopM: `(max-width: ${size.laptopM})`,
   laptopL: `(max-width: ${size.laptopL})`,
   desktop: `(max-width: ${size.desktop})`,
   desktopL: `(max-width: ${size.desktop})`,
@@ -43,7 +45,12 @@ export const Container = styled.div`
   color: #ffffff;
   background: #000000;
   width: 100%;
+  position: relative;
 `;
+
+export const BodyContainer = styled.div`
+margin-top: 5rem;
+`
 export const pulse = keyframes`
   0% {
     opacity: 0.5;
