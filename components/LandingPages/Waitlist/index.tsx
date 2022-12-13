@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { countryListAllIsoData } from "../../../constants";
 import {
   Flex,
@@ -17,18 +17,101 @@ import {
 import { FlexWrap, Image, List } from "../Home/Assets/Common";
 import { DeleteIcon } from "./Icons";
 import { useRouter } from "next/router";
+import { useAppDispatch, useAppSelector } from "../../../hooks";
+import { setWaitlist } from "../../../store/actions/waitlist";
+import { RootState } from "../../../store";
+import { joinWaitinglist } from "../../../services/requests";
+import Swal from "sweetalert2";
+import { DotLoader } from "react-spinners";
+
+type waitlistForm = {
+  fullname?: string;
+  email?: string;
+  country?: string;
+  update_status?: any;
+};
 
 const WaitlistContent = () => {
+  const [sending, setSending] = useState(false);
+  const dispatch = useAppDispatch();
   const router = useRouter();
+  const [waitlistDetails, setWaitlistDetails] = useState<waitlistForm>({
+    fullname: "",
+    email: "",
+    country: "",
+    update_status: null,
+  });
 
-  const handleBack = () => {
+  const goBack = () => {
     router.back();
   };
+
+  // Get waitlist data from root state
+  const { data } = useAppSelector((store: RootState) => ({
+    data: store.waitlist,
+  }));
+
+  const handleChange =
+    (prop: string) => (event: { target: { value: string } }) => {
+      dispatch(setWaitlist({ ...data, [prop]: event?.target.value }));
+    };
+
+  const handleSubmit = async (event: { preventDefault: () => void }) => {
+    event.preventDefault();
+    setSending(true);
+
+    try {
+      const api_response = await joinWaitinglist(data);
+
+      api_response.data.status
+        ? Swal.fire({
+            title: "Success",
+            text: api_response.data.message,
+            showConfirmButton: true,
+            showCancelButton: false,
+            confirmButtonText: "Close",
+            confirmButtonColor: "#324a64",
+            icon: "success",
+          }).then((result) => {
+            if (result.isConfirmed) {
+              goBack();
+            }
+          })
+        : Swal.fire({
+            title: "Duplicate details     ",
+            text: api_response.data.message,
+            showConfirmButton: true,
+            showCancelButton: false,
+            confirmButtonText: "Close",
+            confirmButtonColor: "#324a64",
+            icon: "warning",
+          }).then((result) => {
+            if (result.isConfirmed) {
+              goBack();
+            }
+          });
+
+      setSending(false);
+    } catch (err: any) {
+      console.log(err);
+      setSending(false);
+      Swal.fire({
+        title: "Error",
+        text: err.message,
+        showConfirmButton: false,
+        showCancelButton: true,
+        cancelButtonText: "Close",
+        cancelButtonColor: "#324a64",
+        icon: "error",
+      });
+    }
+  };
+
   return (
     <>
       <WaitlistContainer>
         <WaitlistBar>
-          <Terminate onClick={handleBack}>
+          <Terminate onClick={goBack}>
             <DeleteIcon />
           </Terminate>
         </WaitlistBar>
@@ -50,7 +133,7 @@ const WaitlistContent = () => {
             flexPercentage="50%"
             padding="0rem 0rem 0rem 5rem"
           >
-            <WaitlistForm>
+            <WaitlistForm onSubmit={handleSubmit}>
               <h1>Be one of the first to use our product.</h1>
               <div>
                 <div>
@@ -59,8 +142,8 @@ const WaitlistContent = () => {
                 <input
                   type="text"
                   placeholder="Type or paste here"
-                  name="name"
-                  autoComplete="true"
+                  name="fullname"
+                  onChange={handleChange("fullname")}
                 />
               </div>
               <div>
@@ -70,15 +153,15 @@ const WaitlistContent = () => {
                 <input
                   type="text"
                   placeholder="Type or paste here"
-                  autoComplete="true"
                   name="email"
+                  onChange={handleChange("email")}
                 />
               </div>
               <div>
                 <div>
                   <label>Country of Residence</label>
                 </div>
-                <Select>
+                <Select onChange={handleChange("country")}>
                   <option value="none" selected disabled hidden>
                     Choose
                   </option>
@@ -90,13 +173,22 @@ const WaitlistContent = () => {
                 </Select>
               </div>
               <RadioContainer>
-                <input type="radio" name="Terms and Condition" value="true" />
+                <input
+                  type="radio"
+                  name="Terms and Condition"
+                  value={1}
+                  required
+                  onChange={handleChange("update_status")}
+                />
                 <label>
                   I hereby agree to receive electronic newsletters, updates,
                   promotions and related messages regarding Tangl products.
                 </label>
               </RadioContainer>
-              <JoinWaitlist type="submit" value="Join Waitlist" />
+              <JoinWaitlist type="submit">
+                {!sending && "Join Waitlist"}
+                {sending && <DotLoader color="#fff" size={20} />}
+              </JoinWaitlist>
             </WaitlistForm>
           </FlexWrap>
         </WaitlistFlex>

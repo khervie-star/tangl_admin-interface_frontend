@@ -8,6 +8,8 @@ let refreshing_token: any = null;
 
 const BASE_URL = "https://tangl-api.herokuapp.com/api/v1";
 
+const WAITLIST_URL = "https://tangl-waitlist.herokuapp.com/api/waitlist";
+
 const api = axios.create({
   baseURL: BASE_URL,
   headers: {

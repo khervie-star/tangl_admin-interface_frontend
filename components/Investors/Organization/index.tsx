@@ -29,6 +29,7 @@ import ContentTwentyOne from "./Onboarding/ContentTwentyOne";
 import ContentEighteen from "./Onboarding/ContentEighteen";
 import ContentTwentyTwo from "./Onboarding/ContentTwentyTwo";
 import { useAppDispatch } from "../../../hooks";
+import ReviewOnboardingApplication from "./Onboarding/ReviewOnboarding";
 
 const OrganizationContent = () => {
   const { OrgPage } = useSelector((store: RootState) => ({
@@ -80,6 +81,9 @@ const OrganizationContent = () => {
           {OrgType !== "STARTUP" && OrgPage === 10 && (
             <ContentFifteen page={OrgPage} />
           )}
+          {OrgType !== "STARTUP" && OrgPage === 11 && (
+            <ReviewOnboardingApplication page={OrgPage} />
+          )}
 
           {/* ADMIN TYPE FUNDRAISING QUESTIONNAIRE SELECT */}
           {OrgType === "STARTUP" && OrgPage === 8 && (
@@ -103,8 +107,17 @@ const OrganizationContent = () => {
           {OrgType === "STARTUP" && OrgPage === 14 && (
             <ContentTwentyTwo page={OrgPage} />
           )}
+          {OrgType === "STARTUP" && OrgPage === 15 && (
+            <ReviewOnboardingApplication page={OrgPage} />
+          )}
         </Pad>
-        {OrgPage && OrgPage >= 1 && OrgPage < 15 && (
+
+        {OrgType === "STARTUP" && OrgPage >= 1 && OrgPage < 15 && (
+          <div>
+            <FunctionCard page={OrgPage} />
+          </div>
+        )}
+        {OrgType !== "STARTUP" && OrgPage >= 1 && OrgPage < 11 && (
           <div>
             <FunctionCard page={OrgPage} />
           </div>

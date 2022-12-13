@@ -69,10 +69,10 @@ const ContentFive = ({ page }: PageBarTypes) => {
           {sending && <span>Sending</span>}
         </span>
       </ResendLink>
-      {/* <ButtonWrap>
+      <ButtonWrap>
         <DarkContinueButton onClick={handleClick}>Start KYC</DarkContinueButton>
-        <ContinueButton onClick={handleRoute}>Go to Dashboard</ContinueButton>
-      </ButtonWrap> */}
+        {/* <ContinueButton onClick={handleRoute}>Go to Dashboard</ContinueButton> */}
+      </ButtonWrap>
     </>
   );
 };

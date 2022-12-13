@@ -10,6 +10,7 @@ type NewsType = {
 export const NewsContainer = styled.div`
   background: #ffffff;
   padding: 5rem;
+
   max-width: 1440px;
   margin: auto;
   @media ${device.tablet} {
