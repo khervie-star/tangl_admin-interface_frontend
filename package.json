@@ -24,11 +24,13 @@
     "react-phone-input-2": "^2.15.1",
     "react-phone-number-input": "^3.2.11",
     "react-redux": "^8.0.2",
+    "react-spinners": "^0.13.7",
     "redux": "^4.1.2",
     "redux-devtools-extension": "^2.13.9",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.4.1",
     "styled-components": "^5.3.5",
+    "sweetalert2": "^11.6.15",
     "swiper": "^8.3.2",
     "yup": "^0.32.11"
   },

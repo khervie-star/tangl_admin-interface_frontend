@@ -4,13 +4,20 @@ import { FlexWrap } from "../Home/Assets/Common";
 
 export const WaitlistContainer = styled.div`
   background: #324a64;
-  padding: 1rem 5rem;
+  padding: 1em 5rem;
   height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  overflow-y: scroll;
   @media ${device.tablet} {
     padding: 1.5rem;
     ${FlexWrap} {
       flex: 100%;
-    } 
+    }
   }
 `;
 
@@ -125,7 +132,7 @@ export const WaitlistForm = styled.form`
   }
 `;
 
-export const JoinWaitlist = styled.input.attrs({ type: "submit" })`
+export const JoinWaitlist = styled.button`
   width: 100%;
   border-radius: 4px;
   display: flex;
@@ -137,11 +144,14 @@ export const JoinWaitlist = styled.input.attrs({ type: "submit" })`
   font-weight: 500;
   font-size: 18px;
   line-height: 28px;
+  font-family: "Outfit";
   letter-spacing: -0.1px;
   margin-bottom: 0 !important;
   cursor: pointer;
   transition: all;
   transition-duration: 500ms;
+  border: 1px solid transparent;
+  padding: 12px;
   &:hover {
     box-shadow: rgba(0, 122, 251, 0.2) 0px 7px 29px 0px;
   }
@@ -220,7 +230,7 @@ export const RadioContainer = styled.div`
 export const WaitlistFlex = styled.div`
   display: flex;
   align-items: center;
-  // margin: 3.125rem 0rem;
+  margin: 1rem 0rem;
   flex-wrap: wrap;
   box-sizing: border-box;
   height: 100%;
