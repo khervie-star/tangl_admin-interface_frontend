@@ -74,7 +74,7 @@ const WaitlistContent = () => {
             icon: "success",
           })
         : Swal.fire({
-            title: "Duplicate details",
+            title: "Duplicate details   ",
             text: api_response.data.message,
             showConfirmButton: false,
             showCancelButton: true,
