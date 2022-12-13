@@ -14,6 +14,7 @@ export const WaitlistContainer = styled.div`
   bottom: 0;
   overflow-y: scroll;
   @media ${device.tablet} {
+    position: relative;
     padding: 1.5rem;
     ${FlexWrap} {
       flex: 100%;
