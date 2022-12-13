@@ -1,12 +1,15 @@
 import Footer from "../../components/LandingPages/Home/Footer";
 import NavBarTwo from "../../components/NavTwo";
 import PricingContent from "../../components/LandingPages/Pricing";
+import { BodyContainer } from "../../Global";
 
 const Pricing = () => {
   return (
     <>
       <NavBarTwo />
-      <PricingContent/>
+      <BodyContainer>
+        <PricingContent />
+      </BodyContainer>
       <Footer />
     </>
   );
