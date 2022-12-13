@@ -67,20 +67,28 @@ const WaitlistContent = () => {
         ? Swal.fire({
             title: "Success",
             text: api_response.data.message,
-            showConfirmButton: false,
-            showCancelButton: true,
-            cancelButtonText: "Close",
-            cancelButtonColor: "#324a64",
+            showConfirmButton: true,
+            showCancelButton: false,
+            confirmButtonText: "Close",
+            confirmButtonColor: "#324a64",
             icon: "success",
+          }).then((result) => {
+            if (result.isConfirmed) {
+              goBack();
+            }
           })
         : Swal.fire({
             title: "Duplicate details     ",
             text: api_response.data.message,
-            showConfirmButton: false,
-            showCancelButton: true,
-            cancelButtonText: "Close",
-            cancelButtonColor: "#324a64",
+            showConfirmButton: true,
+            showCancelButton: false,
+            confirmButtonText: "Close",
+            confirmButtonColor: "#324a64",
             icon: "warning",
+          }).then((result) => {
+            if (result.isConfirmed) {
+              goBack();
+            }
           });
 
       setSending(false);
