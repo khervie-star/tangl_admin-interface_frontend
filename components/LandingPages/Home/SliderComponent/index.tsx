@@ -23,17 +23,25 @@ import {
 } from "./styles";
 import ReportImg from "./Images/Group.png";
 import { ArrowRightIcon } from "../../Common/Icons";
+import Router from "next/router";
 
 const SliderComponent = () => {
+  const goToNewsPage = () => {
+    Router.push("/News");
+  };
   return (
     <SliderContainer>
       <Swiper
         effect={"coverflow"}
         // grabCursor={true}
-        spaceBetween={typeof window !== 'undefined' && window.innerWidth < 768 ? 0 : -500}
+        spaceBetween={
+          typeof window !== "undefined" && window.innerWidth < 768 ? 0 : -500
+        }
         rewind={true}
         centeredSlides={true}
-        slidesPerView={typeof window !== 'undefined' && window.innerWidth < 768 ? 1 : 3}
+        slidesPerView={
+          typeof window !== "undefined" && window.innerWidth < 768 ? 1 : 3
+        }
         coverflowEffect={{
           rotate: 0,
           stretch: 0,
@@ -66,10 +74,10 @@ const SliderComponent = () => {
                 The Role of Blockchain Technology in the Investment Funds
                 Industry
               </SliderReportText>
-              <SliderReportTinyText>
+              {/* <SliderReportTinyText>
                 Some tiny text to convey more information
-              </SliderReportTinyText>
-              <DownloadNow>
+              </SliderReportTinyText> */}
+              <DownloadNow onClick={goToNewsPage}>
                 Download Now
                 <ArrowRightIcon />
               </DownloadNow>
