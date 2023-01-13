@@ -9,8 +9,15 @@ import Router from "next/router";
 
 const TabEight = () => {
   const handleClick = () => {
-    Router.push("/Investors/Onboarding");
+    // Router.push("/Investors/Onboarding");
+    Router.push("waitlist");
   };
+
+  const applyForFunding = () => {
+    // Router.push("/Investors/Onboarding");
+    // Router.push("/Investors/Onboarding");
+  };
+
   return (
     <TabEightContainer>
       <BarWrapper>
@@ -28,7 +35,7 @@ const TabEight = () => {
             borderColor="#A0AABA"
             margin="0rem 0rem 0rem 1.5rem"
             display="mobile"
-            onClick={handleClick}
+            onClick={applyForFunding}
           >
             Apply for funding
           </OtherButton>

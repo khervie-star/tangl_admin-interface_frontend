@@ -23,7 +23,12 @@ import ReportCover from "./Images/reportCover.png";
 import Link from "next/link";
 import Router from "next/router";
 import { useState } from "react";
-import { DarkFacebookIcon, DarkInstagramIcon, DarkLinkedinIcon, DarkTwitterIcon } from "../Common/Icons";
+import {
+  DarkFacebookIcon,
+  DarkInstagramIcon,
+  DarkLinkedinIcon,
+  DarkTwitterIcon,
+} from "../Common/Icons";
 
 const NewsContent = () => {
   const [checked, setChecked] = useState(false);
@@ -36,15 +41,15 @@ const NewsContent = () => {
   };
 
   const handleReportRoute = () => {
-    Router.push('/Reports')
-  }
+    Router.push("/Reports");
+  };
   return (
     <NewsContainer>
       <LandingTitle>News & Reports</LandingTitle>
       <ReportGrid>
         <div>
           <ReportImage>
-            <img  height="100%"src={ReportCover.src} />
+            <img height="100%" src={ReportCover.src} />
           </ReportImage>
           <ReportUpdated>
             <li>
@@ -54,7 +59,7 @@ const NewsContent = () => {
               </Link>
             </li>
           </ReportUpdated>
-          <ViewReports>See all Reports</ViewReports>
+          <ViewReports onClick={handleReportRoute}>See all Reports</ViewReports>
         </div>
         <div>
           <ReportFormContainer>
