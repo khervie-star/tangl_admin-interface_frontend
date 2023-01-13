@@ -33,9 +33,10 @@ const links = [
     name: "About",
   },
   {
-    href: "/Pricing",
+    // href: "/Pricing",
+    href: "/waitlist",
     name: "Pricing",
-  },
+  },    
   {
     href: "/News",
     name: "News",

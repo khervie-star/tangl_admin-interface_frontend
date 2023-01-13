@@ -10,7 +10,8 @@ type TextProp = {
 
 export const ApplyButton = ({ text }: TextProp) => {
   const handleClick = () => {
-    Router.push("/Investor/Onboarding");
+    // Router.push("/Investor/Onboarding");
+    Router.push("/waitlist");
   };
   return (
     <ApplyBtn onClick={handleClick}>
@@ -35,9 +36,9 @@ const ApplyBtn = styled.button`
   line-height: inherit;
   cursor: pointer;
   margin-top: 1rem;
-  &:hover{
+  &:hover {
     filter: grayscale(50%) blur(0.1px);
-    transition: .1s ease-in-out;
+    transition: 0.1s ease-in-out;
   }
   span {
     margin-right: 0.75rem;

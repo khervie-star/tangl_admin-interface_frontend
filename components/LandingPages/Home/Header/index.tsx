@@ -8,21 +8,26 @@ import {
 } from "./styles";
 
 const Header = () => {
-
   const handleClick = () => {
     Router.push("/Investor/Onbooarding");
+  };
+
+  const joinWaitinglist = () => {
+    Router.push("/waitlist");
   };
   return (
     <HeaderWrapper>
       <HeaderTitle>
         Gain systematic access to investment opportunities
       </HeaderTitle>
-        <HeaderText>
-          Smart connections between Top-Tier Venture Capital, Private Equity
-          funds and Real Estate Asset classes, for Global investors.
-        </HeaderText>
+      <HeaderText>
+        Smart connections between Top-Tier Venture Capital, Private Equity funds
+        and Real Estate Asset classes, for Global investors.
+      </HeaderText>
       <Flex>
-        <HeaderButton onClick={handleClick}>Apply for membership</HeaderButton>
+        <HeaderButton onClick={joinWaitinglist}>
+          Apply for membership
+        </HeaderButton>
       </Flex>
     </HeaderWrapper>
   );
