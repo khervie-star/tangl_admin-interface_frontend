@@ -10,4 +10,5 @@ export type waitlistTypes = {
   email: string;
   country: string;
   update_status?: any;
+  account_type?: string;
 };

@@ -13,6 +13,8 @@ import {
   WaitlistFlex,
   Terminate,
   WaitlistBar,
+  AccountTypeWrapper,
+  AccountTypeRadioContainer,
 } from "./styles";
 import { FlexWrap, Image, List } from "../Home/Assets/Common";
 import { DeleteIcon } from "./Icons";
@@ -157,6 +159,34 @@ const WaitlistContent = () => {
                   onChange={handleChange("email")}
                 />
               </div>
+              <div>
+                <div>
+                  <label>Select Account Type</label>
+                </div>
+                <AccountTypeWrapper>
+                  <AccountTypeRadioContainer>
+                    <input
+                      type="radio"
+                      name="Account Type"
+                      value="investor"
+                      required
+                      onChange={handleChange("account_type")}
+                    />
+                    <label>Investor Account</label>
+                  </AccountTypeRadioContainer>
+                  <AccountTypeRadioContainer>
+                    <input
+                      type="radio"
+                      name="Account Type"
+                      value="admin"
+                      required
+                      onChange={handleChange("account_type")}
+                    />
+                    <label>Admin Account</label>
+                  </AccountTypeRadioContainer>
+                </AccountTypeWrapper>
+              </div>
+
               <div>
                 <div>
                   <label>Country of Residence</label>

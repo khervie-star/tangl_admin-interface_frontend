@@ -11,6 +11,7 @@ export const setWaitlist = (data: {
   email: string;
   country: string;
   update_status?: any;
+  account_type?: string;
 }) => ({
   type: SET_WAITLIST_TYPE,
   data,
