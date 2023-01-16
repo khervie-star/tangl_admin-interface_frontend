@@ -6,6 +6,7 @@ const initialState: waitlistTypes = {
   fullname: "",
   country: "",
   update_status: null,
+  account_type: "",
 };
 
 export const waitlist = (state = initialState, action: any) => {
@@ -18,6 +19,7 @@ export const waitlist = (state = initialState, action: any) => {
         fullname: action.data.fullname,
         country: action.data.country,
         update_status: action.data.update_status,
+        account_type: action.data.account_type,
       };
     default:
       return state;

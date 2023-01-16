@@ -228,6 +228,34 @@ export const RadioContainer = styled.div`
   }
 `;
 
+export const AccountTypeRadioContainer = styled.div`
+  width: 100%;
+  padding: 0.5rem 0;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  input {
+    width: 16px;
+    height: 16px;
+    border: 2px solid #007afb;
+    box-sizing: border-box;
+    margin: 0;
+    margin-right: 8px;
+  }
+  label {
+    font-family: "Outfit";
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.1px;
+    margin: 0;
+    margin-left: 12px;
+  }
+`;
+
 export const WaitlistFlex = styled.div`
   display: flex;
   align-items: center;
@@ -260,4 +288,11 @@ export const Terminate = styled.button`
   display: flex;
   justify-content: center;
   flex-direction: row-reverse;
+`;
+
+export const AccountTypeWrapper = styled.div`
+  margin: 1.5em 0;
+  display: flex;
+  align-items: center;
+  gap: 2em;
 `;
