@@ -236,7 +236,6 @@ export const AccountTypeRadioContainer = styled.div`
   border-radius: 8px;
   display: flex;
   align-items: center;
-  margin-bottom: 8px;
   input {
     width: 16px;
     height: 16px;
@@ -295,4 +294,9 @@ export const AccountTypeWrapper = styled.div`
   display: flex;
   align-items: center;
   gap: 2em;
+  @media ${device.tablet} {
+    display: block;
+    margin: 0.5em 0;
+    margin-bottom: 1em;
+  }
 `;
