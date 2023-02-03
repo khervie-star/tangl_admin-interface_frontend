@@ -164,11 +164,7 @@ const NewsContent = () => {
                 promotions and related messages regarding Tangl products.
               </label>
             </RadioContainer>
-            <DownloadReport
-              type="submit"
-              onClick={handleSubmit}
-              disabled={true}
-            >
+            <DownloadReport type="submit" onClick={handleSubmit}>
               {!sending && "Download"}
               {sending && <DotLoader color="#fff" size={20} />}
             </DownloadReport>
