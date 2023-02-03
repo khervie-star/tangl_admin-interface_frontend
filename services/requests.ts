@@ -36,5 +36,5 @@ export const joinWaitinglist = (data: any) => {
 };
 
 export const downloadArticle = (data: any) => {
-  return waitlist_api.post("/download_articles");
+  return waitlist_api.post("/download_articles", data);
 };
