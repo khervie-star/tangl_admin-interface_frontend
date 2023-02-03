@@ -18,6 +18,7 @@ import {
   ReportGrid,
   ReportImage,
   ReportUpdated,
+  Select,
   ViewReports,
 } from "./styles";
 import ReportCover from "./Images/reportCover.png";
@@ -35,6 +36,11 @@ import { DotLoader } from "react-spinners";
 import { downloadReportFormTypes } from "./types";
 import { downloadArticle } from "../../../services/requests";
 import { toast } from "react-hot-toast";
+import { countryListAllIsoData } from "../../../constants";
+import {
+  AccountTypeRadioContainer,
+  AccountTypeWrapper,
+} from "../Waitlist/styles";
 
 const NewsContent = () => {
   const dispatch = useDispatch();
@@ -69,7 +75,9 @@ const NewsContent = () => {
     try {
       const api_response = await downloadArticle(downloadReportForm);
 
-      api_response.data.status
+      console.log(api_response);
+
+      api_response.data.status == true
         ? (toast.success("Submission success! Your download will start soon."),
           fetch(
             "TANGL Capital Partners Private Placement & Digital Assets Product Development.pdf"
@@ -88,7 +96,7 @@ const NewsContent = () => {
               alink.click();
             });
           }))
-        : toast.success(api_response.data.message);
+        : toast(api_response.data.message);
 
       setSending(false);
     } catch (err: any) {
@@ -136,13 +144,7 @@ const NewsContent = () => {
                 name="email"
                 onChange={handleChange("email")}
               />
-              <label>Company</label>
-              <input
-                type="text"
-                placeholder="Type or Paste here"
-                name="company_name"
-                onChange={handleChange("company_name")}
-              />
+
               <label>Phone</label>
               <input
                 type="text"
@@ -150,6 +152,58 @@ const NewsContent = () => {
                 name="phone_number"
                 onChange={handleChange("phone_number")}
               />
+
+              <label>Company</label>
+              <input
+                type="text"
+                placeholder="Type or Paste here"
+                name="company_name"
+                onChange={handleChange("company_name")}
+              />
+
+              <div>
+                <div>
+                  <label>Select Account Type</label>
+                </div>
+                <AccountTypeWrapper>
+                  <AccountTypeRadioContainer>
+                    <input
+                      type="radio"
+                      name="Account Type"
+                      value="investor"
+                      required
+                      onChange={handleChange("account_type")}
+                    />
+                    <label>Investor Account</label>
+                  </AccountTypeRadioContainer>
+                  <AccountTypeRadioContainer>
+                    <input
+                      type="radio"
+                      name="Account Type"
+                      value="admin"
+                      required
+                      onChange={handleChange("account_type")}
+                    />
+                    <label>Admin Account</label>
+                  </AccountTypeRadioContainer>
+                </AccountTypeWrapper>
+              </div>
+
+              <div>
+                <div>
+                  <label>Country of Residence</label>
+                </div>
+                <Select onChange={handleChange("country")}>
+                  <option value="none" selected disabled hidden>
+                    Choose
+                  </option>
+                  {countryListAllIsoData.map((country, i) => (
+                    <option value={country.name} key={i}>
+                      {country.name}
+                    </option>
+                  ))}
+                </Select>
+              </div>
             </LandingForm>
             <RadioContainer>
               <input

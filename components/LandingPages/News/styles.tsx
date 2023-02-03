@@ -191,6 +191,51 @@ export const RadioContainer = styled.div`
   }
 `;
 
+export const Select = styled.select`
+  background: #ffffff;
+  border: 0;
+  border-bottom: 1px solid #a0aaba;
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: -0.1px;
+  font-feature-settings: "liga" off;
+  color: #324a64;
+  box-sizing: border-box;
+  padding: 0.65rem 1rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  option {
+    background: #ffffff;
+    border: 0;
+    border-bottom: 1px solid #a0aaba;
+    font-family: "Outfit";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: -0.1px;
+    font-feature-settings: "liga" off;
+    color: #324a64;
+    padding: 0.7rem 1rem;
+  }
+  &:focus {
+    border: 0;
+    outline: none;
+    border-bottom: 1px solid #a0aaba;
+  }
+  &:hover {
+    border: 0;
+    border-bottom: 1px solid #a0aaba;
+  }
+  @media ${device.mobileL} {
+    font-size: 14px;
+    line-height: 20px;
+  }
+`;
+
 export const DownloadReport = styled.button`
   width: 100%;
   background: #007afb;
