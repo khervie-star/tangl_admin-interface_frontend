@@ -34,3 +34,7 @@ export const investmentCompanySignup = (data: any) => {
 export const joinWaitinglist = (data: any) => {
   return waitlist_api.post("/waitlist", data);
 };
+
+export const downloadArticle = (data: any) => {
+  return waitlist_api.post("/download_articles");
+};
