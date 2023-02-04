@@ -75,9 +75,7 @@ const NewsContent = () => {
     try {
       const api_response = await downloadArticle(downloadReportForm);
 
-      console.log(api_response);
-
-      api_response.data.status == true
+      api_response.data.status
         ? (toast.success("Submission success! Your download will start soon."),
           fetch(
             "TANGL Capital Partners Private Placement & Digital Assets Product Development.pdf"
