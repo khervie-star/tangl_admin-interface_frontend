@@ -25,7 +25,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       </Head>
       <GlobalStyles />
       <Provider store={store}>
-        <Toaster />
+        <Toaster containerStyle={{ zIndex: "10000" }} />
         <Component {...pageProps} />
       </Provider>
     </>

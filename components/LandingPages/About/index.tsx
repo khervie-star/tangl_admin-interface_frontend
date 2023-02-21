@@ -78,6 +78,65 @@ const AboutContent = () => {
       </AboutFlex>
       <AboutService />
       <AboutMargin>
+        <AboutFlex>
+          <FlexWrap
+            display="both"
+            flexPercentage="50%"
+            padding="0rem 2.5rem 0rem 0rem"
+          >
+            <LenghtyTextAlert>SERVICES</LenghtyTextAlert>
+            <AboutTitle>
+              We cater to private investors, investment firms and startups
+              <AboutText>
+                Learn more about our services for each group by interacting with
+                the buttons below.
+              </AboutText>
+            </AboutTitle>
+            <AboutText>
+              We are a Private Placements firm serving our clients with capital
+              raising & fund distribution services, whilst providing our
+              High-Net-Worth clients with systematic access to investment
+              opportunities, by providing them with allocations to top tier
+              preforming Private Equity & Venture Capital funds and Real Estate
+              investment opportunities through our digital investment platform.
+            </AboutText>
+            <AboutText>
+              Our Experience and professional network within the Private Equity,
+              Venture Capital and Real estate industries allows us to partake in
+              conversations with industry professionals and start up founders at
+              various stages of their business Lifecyle, and support founders
+              with access to funding and ancillary services.
+            </AboutText>
+
+            <AboutText>
+              Our team liaises with all industry participants to create a
+              selection of prospectus investment vehicles, we partner with
+              Top-Tier investment firms and provide coverage of EMEA operating
+              funds and leverage our regional network within Africa to be able
+              to facilitate an investors allocation to African domiciled and
+              Emerging markets focussed investment vehicles and Real estate
+              projects
+            </AboutText>
+
+            <AboutText>
+              Our strategic relationship with financial institutions allows us
+              to merge capital with effective expertise and introduce an
+              infrastructure layer for emerging markets to benefit from the ease
+              of inflows through FDIs and mainly FPIs (Foreign portfolio
+              investments) via Depositary Receipts programs and our technology
+              solution.
+            </AboutText>
+          </FlexWrap>
+          <FlexWrap
+            display="both"
+            flexPercentage="50%"
+            padding="0rem 0rem 0rem 2.5rem"
+          >
+            <AboutBox></AboutBox>
+          </FlexWrap>
+        </AboutFlex>
+      </AboutMargin>
+      <AboutMargin>
         <AboutTitle>Digital Private Placement</AboutTitle>
         <AboutText>
           For Financial institutions and innovative Companies looking to utilise

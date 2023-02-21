@@ -1,4 +1,4 @@
-import { SET_WAITLIST_TYPE } from "../actionTypes";
+import { SET_WAITLIST_TYPE, SET_DOWNLOAD_FORM_TYPE } from "../actionTypes";
 import { waitlistTypes } from "../types";
 
 const initialState: waitlistTypes = {
@@ -14,7 +14,6 @@ export const waitlist = (state = initialState, action: any) => {
     case SET_WAITLIST_TYPE:
       return {
         ...state,
-
         email: action.data.email,
         fullname: action.data.fullname,
         country: action.data.country,

@@ -8,6 +8,7 @@ import {
   DownloadReport,
   KeyTakeaways,
   NewsContainer,
+  RadioContainer,
   ReportBase,
   ReportCertification,
   ReportCheck,
@@ -17,6 +18,7 @@ import {
   ReportGrid,
   ReportImage,
   ReportUpdated,
+  Select,
   ViewReports,
 } from "./styles";
 import ReportCover from "./Images/reportCover.png";
@@ -29,20 +31,79 @@ import {
   DarkLinkedinIcon,
   DarkTwitterIcon,
 } from "../Common/Icons";
+import { useDispatch } from "react-redux";
+import { DotLoader } from "react-spinners";
+import { downloadReportFormTypes } from "./types";
+import { downloadArticle } from "../../../services/requests";
+import { toast } from "react-hot-toast";
+import { countryListAllIsoData } from "../../../constants";
+import {
+  AccountTypeRadioContainer,
+  AccountTypeWrapper,
+} from "../Waitlist/styles";
 
 const NewsContent = () => {
-  const [checked, setChecked] = useState(false);
-  const handleCheck = () => {
-    if (checked) {
-      setChecked(false);
-    } else {
-      setChecked(true);
-    }
-  };
+  const dispatch = useDispatch();
+  const [sending, setSending] = useState(false);
+  const [downloadReportForm, setDownloadReportForm] =
+    useState<downloadReportFormTypes>({
+      email: "",
+      fullname: "",
+      country: "",
+      update_status: "",
+      account_type: "",
+      company_name: "",
+      phone_number: "",
+    });
+
+  const handleChange =
+    (prop: string) => (event: { target: { value: string } }) => {
+      setDownloadReportForm({
+        ...downloadReportForm,
+        [prop]: event?.target.value,
+      });
+    };
 
   const handleReportRoute = () => {
     Router.push("/Reports");
   };
+
+  const handleSubmit = async (event: { preventDefault: () => void }) => {
+    event.preventDefault();
+    setSending(true);
+
+    try {
+      const api_response = await downloadArticle(downloadReportForm);
+
+      api_response.data.status
+        ? (toast.success("Submission success! Your download will start soon."),
+          fetch(
+            "TANGL Capital Partners Private Placement & Digital Assets Product Development.pdf"
+          ).then((response) => {
+            response.blob().then((blob) => {
+              // Creating new object of PDF file
+              const fileURL = window.URL.createObjectURL(blob);
+              // Setting various property values
+              let alink = document.createElement("a");
+              alink.href = fileURL;
+              alink.target = "_blank";
+              alink.rel = "noreferrer";
+              alink.pathname = "Tangl";
+              // alink.download =
+              //   "TANGL Capital Partners Private Placement & Digital Assets Product Development.pdf";
+              alink.click();
+            });
+          }))
+        : toast(api_response.data.message);
+
+      setSending(false);
+    } catch (err: any) {
+      console.log(err);
+      setSending(false);
+      toast.error(err.message);
+    }
+  };
+
   return (
     <NewsContainer>
       <LandingTitle>News & Reports</LandingTitle>
@@ -68,24 +129,97 @@ const NewsContent = () => {
             </ReportFormTitle>
             <LandingForm>
               <label>Your Name</label>
-              <input type="text" placeholder="Type or Paste here" />
+              <input
+                type="text"
+                placeholder="Type or Paste here"
+                name="fullname"
+                onChange={handleChange("fullname")}
+              />
               <label>Business Email</label>
-              <input type="text" placeholder="Type or Paste here" />
-              <label>Company(Optional)</label>
-              <input type="text" placeholder="Type or Paste here" />
-              <label>Phone(Optional)</label>
-              <input type="text" placeholder="Type or Paste here" />
+              <input
+                type="text"
+                placeholder="Type or Paste here"
+                name="email"
+                onChange={handleChange("email")}
+              />
+
+              <label>Phone</label>
+              <input
+                type="text"
+                placeholder="Type or Paste here"
+                name="phone_number"
+                onChange={handleChange("phone_number")}
+              />
+
+              <label>Company</label>
+              <input
+                type="text"
+                placeholder="Type or Paste here"
+                name="company_name"
+                onChange={handleChange("company_name")}
+              />
+
+              <div>
+                <div>
+                  <label>Select Account Type</label>
+                </div>
+                <AccountTypeWrapper>
+                  <AccountTypeRadioContainer>
+                    <input
+                      type="radio"
+                      name="Account Type"
+                      value="investor"
+                      required
+                      onChange={handleChange("account_type")}
+                    />
+                    <label>Investor Account</label>
+                  </AccountTypeRadioContainer>
+                  <AccountTypeRadioContainer>
+                    <input
+                      type="radio"
+                      name="Account Type"
+                      value="admin"
+                      required
+                      onChange={handleChange("account_type")}
+                    />
+                    <label>Admin Account</label>
+                  </AccountTypeRadioContainer>
+                </AccountTypeWrapper>
+              </div>
+
+              <div>
+                <div>
+                  <label>Country of Residence</label>
+                </div>
+                <Select onChange={handleChange("country")}>
+                  <option value="none" selected disabled hidden>
+                    Choose
+                  </option>
+                  {countryListAllIsoData.map((country, i) => (
+                    <option value={country.name} key={i}>
+                      {country.name}
+                    </option>
+                  ))}
+                </Select>
+              </div>
             </LandingForm>
-            <ReportCertification>
-              <ReportCheck active={checked} onClick={handleCheck}>
-                {checked && <CheckedMark />}
-              </ReportCheck>
-              <p>
+            <RadioContainer>
+              <input
+                type="radio"
+                name="Terms and Condition"
+                value={1}
+                required
+                onChange={handleChange("update_status")}
+              />
+              <label>
                 I hereby agree to receive electronic newsletters, updates,
                 promotions and related messages regarding Tangl products.
-              </p>
-            </ReportCertification>
-            <DownloadReport>Download</DownloadReport>
+              </label>
+            </RadioContainer>
+            <DownloadReport type="submit" onClick={handleSubmit}>
+              {!sending && "Download"}
+              {sending && <DotLoader color="#fff" size={20} />}
+            </DownloadReport>
             <ReportFormFooter>
               <span>Or Contact Us On:</span>
               <IconGrid>

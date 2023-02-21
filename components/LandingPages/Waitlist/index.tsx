@@ -26,18 +26,11 @@ import { joinWaitinglist } from "../../../services/requests";
 import Swal from "sweetalert2";
 import { DotLoader } from "react-spinners";
 
-type waitlistForm = {
-  fullname?: string;
-  email?: string;
-  country?: string;
-  update_status?: any;
-};
-
 const WaitlistContent = () => {
   const [sending, setSending] = useState(false);
   const dispatch = useAppDispatch();
   const router = useRouter();
-  const [waitlistDetails, setWaitlistDetails] = useState<waitlistForm>({
+  const [waitlistDetails, setWaitlistDetails] = useState<any>({
     fullname: "",
     email: "",
     country: "",

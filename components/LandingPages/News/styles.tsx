@@ -166,6 +166,76 @@ export const ReportCheck = styled.div`
   }
 `;
 
+export const RadioContainer = styled.div`
+  padding: 0.5rem 0;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  input {
+    width: 32px;
+    height: 32px;
+    border: 2px solid #007afb;
+    box-sizing: border-box;
+  }
+  label {
+    font-family: "Outfit";
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.1px;
+    color: #43566a;
+    margin-left: 12px;
+  }
+`;
+
+export const Select = styled.select`
+  background: #ffffff;
+  border: 0;
+  border-bottom: 1px solid #a0aaba;
+  font-family: "Outfit";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: -0.1px;
+  font-feature-settings: "liga" off;
+  color: #324a64;
+  box-sizing: border-box;
+  padding: 0.65rem 1rem;
+  margin-bottom: 2rem;
+  width: 100%;
+  option {
+    background: #ffffff;
+    border: 0;
+    border-bottom: 1px solid #a0aaba;
+    font-family: "Outfit";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: -0.1px;
+    font-feature-settings: "liga" off;
+    color: #324a64;
+    padding: 0.7rem 1rem;
+  }
+  &:focus {
+    border: 0;
+    outline: none;
+    border-bottom: 1px solid #a0aaba;
+  }
+  &:hover {
+    border: 0;
+    border-bottom: 1px solid #a0aaba;
+  }
+  @media ${device.mobileL} {
+    font-size: 14px;
+    line-height: 20px;
+  }
+`;
+
 export const DownloadReport = styled.button`
   width: 100%;
   background: #007afb;
