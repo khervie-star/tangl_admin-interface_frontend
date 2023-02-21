@@ -3,12 +3,18 @@ import { device } from "../../../Global";
 
 export const ContactContainer = styled.div`
   background: #ffffff;
-  padding: 5rem;
+  height: 100%;
+  margin: 0;
+`;
 
+export const ContactWrapper = styled.div`
+  background: #ffffff;
+  padding: 5rem;
   max-width: 1440px;
-  margin: 5rem auto;
+  margin: 5rem auto -5rem auto;
   @media ${device.tablet} {
     padding: 1.5rem;
+    margin: 5rem auto -2.5rem auto;
   }
 `;
 

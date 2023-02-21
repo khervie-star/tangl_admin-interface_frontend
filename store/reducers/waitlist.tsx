@@ -20,7 +20,6 @@ export const waitlist = (state = initialState, action: any) => {
         update_status: action.data.update_status,
         account_type: action.data.account_type,
       };
-
     default:
       return state;
   }

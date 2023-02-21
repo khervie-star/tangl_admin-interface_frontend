@@ -10,10 +10,13 @@ import {
   AboutTitle,
   Heading,
   LenghtyTextAlert,
+  TanglLogoBox,
 } from "./styles";
 import AboutImage1 from "./Images/aboutimage1.png";
 import AboutImage2 from "./Images/aboutimage2.png";
+import TanglBackground from "./Images/tangl.png";
 import { ApplyButton } from "../Home/Assets/Buttons";
+import AboutService from "./service";
 const AboutContent = () => {
   return (
     <AboutContainer>
@@ -68,9 +71,12 @@ const AboutContent = () => {
           flexPercentage="50%"
           padding="0rem 0rem 0rem 2.5rem"
         >
-          <AboutBox></AboutBox>
+          <TanglLogoBox>
+            <img src={TanglBackground.src} />
+          </TanglLogoBox>
         </FlexWrap>
       </AboutFlex>
+      <AboutService />
       <AboutMargin>
         <AboutFlex>
           <FlexWrap

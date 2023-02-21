@@ -10,6 +10,14 @@ import { BsPatchCheck } from "react-icons/bs";
 //   }
 // `;
 
+export const SecondaryListTag = styled(BsPatchCheck)`
+  color: #a0aaba;
+  font-size: 36px;
+  @media ${device.tablet} {
+    font-size: 28px;
+  }
+`;
+
 const Tag = styled.div`
   color: #a0aaba;
   font-size: 36px;

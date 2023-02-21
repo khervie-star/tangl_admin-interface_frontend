@@ -30,6 +30,12 @@ const WaitlistContent = () => {
   const [sending, setSending] = useState(false);
   const dispatch = useAppDispatch();
   const router = useRouter();
+  const [waitlistDetails, setWaitlistDetails] = useState<any>({
+    fullname: "",
+    email: "",
+    country: "",
+    update_status: null,
+  });
 
   const goBack = () => {
     router.back();
