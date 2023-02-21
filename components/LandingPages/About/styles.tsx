@@ -1,6 +1,10 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { device } from "../../../Global";
 import { FlexWrap } from "../Home/Assets/Common";
+
+type AboutType = {
+  active?: boolean;
+};
 
 export const AboutContainer = styled.div`
   background: #ffffff;
@@ -135,7 +139,10 @@ export const AboutText = styled.p`
 
 export const AboutMargin = styled.div`
   margin: 5rem auto;
-  max-width: 1440px;
+  max-width: 1360px;
+  @media ${device.laptopL} {
+    margin: 5rem;
+  }
   @media ${device.laptopM} {
     margin: 5rem 3.5rem;
   }
@@ -147,9 +154,13 @@ export const AboutMargin = styled.div`
 export const AboutFlex = styled.div`
   display: flex;
   align-items: center;
-  margin: 5rem auto;
-  max-width: 1440px;
   flex-wrap: wrap;
+  max-width: 1360px;
+  margin: 5rem auto;
+  @media ${device.laptopL} {
+    margin: 5rem;
+  }
+
   @media ${device.laptopM} {
     margin: 5rem 3.5rem;
   }
@@ -162,8 +173,58 @@ export const AboutFlex = styled.div`
   }
 `;
 
+export const ServiceContent = styled.div`
+  max-width: 50%;
+`;
+
 export const AboutBox = styled.div`
   height: 40rem;
   width: 100%;
   background: #d9d9d9;
+  padding: 2.5rem;
+  box-sizing: border-box;
+`;
+
+export const TanglLogoBox = styled(AboutBox)`
+  padding: 0;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+`;
+
+export const ServiceButtonContainer = styled.div`
+  border: 1px solid #007afb;
+  > * {
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+`;
+
+export const ServiceButton = styled.div`
+  ${({ active }: AboutType) =>
+    active
+      ? css`
+          background: #007afb;
+          color: #ffffff;
+        `
+      : css`
+          background: #ffffff;
+          color: #007afb;
+        `}
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #007afb;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  span {
+    font-family: "Outfit";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: -0.1px;
+    font-feature-settings: "liga" off;
+  }
 `;
