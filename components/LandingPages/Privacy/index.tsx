@@ -256,8 +256,8 @@ const PrivacyContent = () => {
           <TermTitle>Use of cookies</TermTitle>
           <TermText>
             A cookie is a small piece of code, sent from a website sends to a
-            user's internet browser, which allows that website to track the
-            user's previous activity when they return to that website. This
+            user&apos;s internet browser, which allows that website to track the
+            user&apos;s previous activity when they return to that website. This
             allows us to provide you with the experience that you expect from us
             and lets us continually improve our service.
             <br /> You can block cookies by changing the settings on your

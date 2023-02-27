@@ -17,14 +17,15 @@ const TermsContent = () => {
         <TermFLex flexPercentage="70%" padding="0rem 2.5rem 0rem 0rem">
           <TermTitle>Terms and Conditions</TermTitle>
           <TermText>
-            These Terms of Use ("Agreement") should be read carefully before
-            using the services offered by TANGL Capital Partners Ltd a company
-            incorporated in the United Kingdom under company number ___________,
-            whose registered office is at __________ . This Agreement sets forth
-            the legally binding terms and conditions for your use of the website
-            at www.tanglcapitalpartners.com (the "Site") and the services owned
-            and operated by TANGL Capital Partners (collectively with the Site,
-            the "Service"). By using the Site or Service in any manner,
+            These Terms of Use (&quot;Agreement&quot;) should be read carefully
+            before using the services offered by TANGL Capital Partners Ltd a
+            company incorporated in the United Kingdom under company number
+            ___________, whose registered office is at __________ . This
+            Agreement sets forth the legally binding terms and conditions for
+            your use of the website at www.tanglcapitalpartners.com (the
+            &quot;Site&quot;) and the services owned and operated by TANGL
+            Capital Partners (collectively with the Site, the
+            &quot;Service&quot;). By using the Site or Service in any manner,
             including but not limited to visiting or browsing the Site, you
             agree to be bound by this Agreement, the Privacy Policy, and all
             other operating rules, policies and procedures that may be published
@@ -48,12 +49,13 @@ const TermsContent = () => {
             this Agreement and/or TANGL Capital Partners Privacy Policy, you are
             not eligible to participate in TANGL Capital Partners’ Service or
             otherwise use this Site. This Agreement applies to all users of the
-            Site or Service, including entrepreneurs ("Issuers") and certified
-            High Net Worth Individuals or Self-Certified Sophisticated Investors
-            as defined by the Financial Services and Markets Act (Financial
-            Promotion) Order 2005 (SI 2005/1529) (the “FPO”) ("Investors"), who
-            in any way use the Site or Service provided by TANGL Capital
-            Partners (in each case, (a "User")
+            Site or Service, including entrepreneurs (&quot;Issuers&quot;) and
+            certified High Net Worth Individuals or Self-Certified Sophisticated
+            Investors as defined by the Financial Services and Markets Act
+            (Financial Promotion) Order 2005 (SI 2005/1529) (the “FPO”)
+            (&quot;Investors&quot;), who in any way use the Site or Service
+            provided by TANGL Capital Partners (in each case, (a
+            &quot;User&quot;)
           </TermText>
           <TermSubtitle>Information contained on the Site</TermSubtitle>
           <TermText>
@@ -128,18 +130,18 @@ const TermsContent = () => {
           <TermText>
             TANGL Capital Partners or its licensors own and retain all
             proprietary rights in the Site, the Service and all material and
-            information posted thereon ("Content"). The Site contains the
-            copyrighted material, trademarks and other proprietary information
-            of TANGL Capital Partners and its licensors. You may not alter,
-            modify, publish, distribute, publicly display or sell any Content or
-            other such proprietary information, or otherwise copy or transmit
-            any Content or other such proprietary information without the
-            express written permission of TANGL Capital Partners.If you believe
-            that any material on the Site violates this Agreement or your
-            intellectual property rights, please notify TANGL Capital Partners
-            as soon as possible in writing. We reserve the right to remove
-            Content alleged to be infringing or otherwise illegal without prior
-            notice and at our sole discretion
+            information posted thereon (&quot;Content&quot;). The Site contains
+            the copyrighted material, trademarks and other proprietary
+            information of TANGL Capital Partners and its licensors. You may not
+            alter, modify, publish, distribute, publicly display or sell any
+            Content or other such proprietary information, or otherwise copy or
+            transmit any Content or other such proprietary information without
+            the express written permission of TANGL Capital Partners.If you
+            believe that any material on the Site violates this Agreement or
+            your intellectual property rights, please notify TANGL Capital
+            Partners as soon as possible in writing. We reserve the right to
+            remove Content alleged to be infringing or otherwise illegal without
+            prior notice and at our sole discretion
           </TermText>
           <TermSubtitle>Confidentiality</TermSubtitle>
           <TermText>
@@ -190,35 +192,35 @@ const TermsContent = () => {
           <TermText>
             Certain portions of the Site may contain third party content and may
             provide links to webpages and content of third parties (collectively
-            "Third Party Content"). TANGL Capital Partners does not control,
-            endorse, investigate, or adopt any Third Party Content, and makes no
-            representations or warranties of any kind regarding the Third Party
-            Content, including with respect to its accuracy or completeness. You
-            acknowledge and agree that TANGL Capital Partners is not responsible
-            or liable in any manner for any Third Party Content or your reliance
-            upon Third Party Content. Users use such Third Party Content at
-            their own risk. The Site may permit you to link to other websites or
-            resources on the Internet, and other websites or resources may
-            contain links to the Site. These other websites are not under TANGL
-            Capital Partners’ control, and you acknowledge that TANGL Capital
-            Partners is not responsible or liable for the content, functions,
-            accuracy, legality, appropriateness or any other aspect of such
-            websites or resources. The inclusion of any such link does not imply
-            an affiliation, sponsorship, or endorsement by TANGL Capital
-            Partners or any association with its operators
+            &quot;Third Party Content&quot;). TANGL Capital Partners does not
+            control, endorse, investigate, or adopt any Third Party Content, and
+            makes no representations or warranties of any kind regarding the
+            Third Party Content, including with respect to its accuracy or
+            completeness. You acknowledge and agree that TANGL Capital Partners
+            is not responsible or liable in any manner for any Third Party
+            Content or your reliance upon Third Party Content. Users use such
+            Third Party Content at their own risk. The Site may permit you to
+            link to other websites or resources on the Internet, and other
+            websites or resources may contain links to the Site. These other
+            websites are not under TANGL Capital Partners’ control, and you
+            acknowledge that TANGL Capital Partners is not responsible or liable
+            for the content, functions, accuracy, legality, appropriateness or
+            any other aspect of such websites or resources. The inclusion of any
+            such link does not imply an affiliation, sponsorship, or endorsement
+            by TANGL Capital Partners or any association with its operators
           </TermText>
           <TermSubtitle>Warranty Disclaimer</TermSubtitle>
           <TermText>
             The Service, including any content or information contained within
             it or any Service or advice provided in connection with the Service,
-            is provided "as is" with no representations or warranties of any
-            kind, express or implied, including, but not limited to, implied
-            warranties of merchantability, fitness for a particular purpose and
-            non-infringement. You assume total responsibility and risk for your
-            use of this site. You use the Service solely at your own risk and
-            any warranties implied by any course of performance or usage of
-            trade are expressly disclaimed. We cannot and do not act for
-            Investors or Issuers in any way, including but not limited to
+            is provided &quot;as is&quot; with no representations or warranties
+            of any kind, express or implied, including, but not limited to,
+            implied warranties of merchantability, fitness for a particular
+            purpose and non-infringement. You assume total responsibility and
+            risk for your use of this site. You use the Service solely at your
+            own risk and any warranties implied by any course of performance or
+            usage of trade are expressly disclaimed. We cannot and do not act
+            for Investors or Issuers in any way, including but not limited to
             treating you as a client, giving you advice, or accepting
             responsibility to you for providing you with the protections that
             would be afforded to you if you were our client. For the purposes of
@@ -250,8 +252,8 @@ const TermsContent = () => {
             from (a) any such inaccuracy, error, delay or omission, (b)
             non-performance or (c) interruption in any such third party data due
             either to any negligent act or omission by TANGL Capital Partners or
-            "force majeure" or any other cause beyond the control of TANGL
-            Capital Partners.
+            &quot;force majeure&quot; or any other cause beyond the control of
+            TANGL Capital Partners.
           </TermText>
           <TermSubtitle>Indemnification</TermSubtitle>
           <TermText>
@@ -295,8 +297,8 @@ const TermsContent = () => {
           <TermText>
             In consideration of your use of the Site, you agree to (a) provide
             accurate, current and complete information about you as may be
-            prompted by any registration forms on the Site ("Registration
-            Data"); (b) maintain the security of your password and
+            prompted by any registration forms on the Site (&quot;Registration
+            Data&quot;); (b) maintain the security of your password and
             identification; (c) maintain and promptly update the registration
             Data, and any other information that you provide to TANGL Capital
             Partners, to keep it accurate, current and complete. The terms on
