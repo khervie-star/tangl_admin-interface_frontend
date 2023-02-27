@@ -101,10 +101,15 @@ export const BaseText = styled.div`
   display: flex;
   align-items: center;
   > * {
-      &:last-child {
-        margin-right: 0;
-      }
+    &:last-child {
+      margin-right: 0;
     }
+  }
+  @media ${device.mobileL} {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
   p {
     font-family: "Outfit";
     font-style: normal;
@@ -113,22 +118,23 @@ export const BaseText = styled.div`
     line-height: 16px;
     margin-right: 3.56rem;
     color: #a0aaba;
+    cursor: pointer;
     @media ${device.tablet} {
       margin: 2.5rem 3.5rem 0rem 0rem;
     }
     @media ${device.mobileL} {
-      margin: 2.5rem 2.5rem 0rem 0rem;
+      margin: 2.5rem 0rem 0rem 0rem;
     }
     @media ${device.mobileM} {
-      margin: 2.5rem 1.5rem 0rem 0rem;
-  }
+      margin: 2.5rem 0rem 0rem 0rem;
+    }
   }
 `;
 
 export const BaseIcons = styled.div`
   display: inline-grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap:3.75rem;
+  grid-gap: 3.75rem;
 `;
 
 export const IconBox = styled.div`

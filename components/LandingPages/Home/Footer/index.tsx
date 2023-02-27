@@ -1,5 +1,10 @@
 import { CircleIcon } from "../Assets/Icons";
-import { FacebookIcon, InstagramIcon, LinkedInIcon, TwitterIcon } from "../Assets/Icons/SocialIcons";
+import {
+  FacebookIcon,
+  InstagramIcon,
+  LinkedInIcon,
+  TwitterIcon,
+} from "../Assets/Icons/SocialIcons";
 import {
   BaseContainer,
   BaseIcons,
@@ -11,6 +16,7 @@ import {
   TitleWrap,
   Wrapper,
 } from "./styles";
+import Router from "next/router";
 
 const Footer = () => {
   return (
@@ -34,19 +40,19 @@ const Footer = () => {
       </Wrapper>
       <BaseContainer>
         <BaseText>
-          <p>Copyright</p>
-          <p>Terms</p>
-          <p>Privacy</p>
-          <p>Security</p>
+          <p onClick={() => Router.push("/risk")}>Risk Warning</p>
+          <p onClick={() => Router.push("/terms")}>Terms and Conditions</p>
+          <p onClick={() => Router.push("/privacy")}>Privacy Notice</p>
+          <p onClick={() => Router.push("/aml")}>AML and Sanctions Policy</p>
         </BaseText>
         <BaseIcons>
-          <FacebookIcon/>
+          <FacebookIcon />
 
-          <TwitterIcon/>
+          <TwitterIcon />
 
-          <InstagramIcon/>
+          <InstagramIcon />
 
-          <LinkedInIcon/>
+          <LinkedInIcon />
         </BaseIcons>
       </BaseContainer>
     </FooterContainer>
