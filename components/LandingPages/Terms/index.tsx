@@ -54,7 +54,7 @@ const TermsContent = () => {
             Investors as defined by the Financial Services and Markets Act
             (Financial Promotion) Order 2005 (SI 2005/1529) (the “FPO”)
             (&quot;Investors&quot;), who in any way use the Site or Service
-            provided by TANGL Capital Partners (in each case, (a
+            provided by TANGL Capital Partners (in each case, a
             &quot;User&quot;)
           </TermText>
           <TermSubtitle>Information contained on the Site</TermSubtitle>
@@ -100,10 +100,10 @@ const TermsContent = () => {
             individual, at least 18 years old, and that all registration
             information you submit is accurate and truthful. If you are using
             the Site on behalf of any entity, you represent and warrant that you
-            are Authorised to accept this Agreement on such entity's behalf, and
-            that such entity agrees to indemnify TANGL Capital Partners for
-            violations of this Agreement. If you are an Issuer you must
-            expressly designate at least one natural person to act on your
+            are Authorised to accept this Agreement on such entity&apos;s
+            behalf, and that such entity agrees to indemnify TANGL Capital
+            Partners for violations of this Agreement. If you are an Issuer you
+            must expressly designate at least one natural person to act on your
             behalf as your Agent (“Agent”). We will only accept your
             instructions from your Agent. Your Agent must be one of your
             directors, officers or staff. You may have more than one Agent at
@@ -174,8 +174,8 @@ const TermsContent = () => {
             passwords or misuse of any other information, is strictly
             prohibited. You may not use the Site in any manner that could
             damage, disable, overburden, or impair the Site or Service or
-            interfere with any other party's use and enjoyment of the Site or
-            Service. You agree that you will not engage in any activities
+            interfere with any other party&apos;s use and enjoyment of the Site
+            or Service. You agree that you will not engage in any activities
             related to the Site that are contrary to applicable laws or
             regulations. You further agree that you are responsible for any
             unauthorised use of your password that is made before you have
