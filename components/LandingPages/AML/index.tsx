@@ -20,7 +20,7 @@ const AMLContent = () => {
             proceeds of crime are so disguised that it gives the appearance of
             legitimate income. Criminals specifically target financial services
             firms through which they attempt to launder criminal proceeds
-            without the firm's knowledge or suspicions.
+            without the firm&apos;s knowledge or suspicions.
             <br />
             <br /> In response to the scale and effect of money laundering the
             United Kingdom, in common with many other countries, has passed
