@@ -24,7 +24,7 @@ const Home: NextPage = () => {
         <TabThree />
         <TabFour />
         <TabFive />
-        {/* <TabNine/> */}
+        <TabNine />
         <TabSix />
         <TabSeven />
         <TabEight />

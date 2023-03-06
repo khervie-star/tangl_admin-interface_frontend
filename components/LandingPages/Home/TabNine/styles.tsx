@@ -4,34 +4,33 @@ export const TabNineContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 5rem 5rem;
+  padding: 5rem 5rem 25rem 5rem;
   @media ${device.tablet} {
     display: none;
   }
+  position: relative;
 `;
 
-export const LogCard = styled.div`
-  background: #011122;
-  border-radius: 4px;
-  padding: 2.5rem;
+export const TextWrapper = styled.div`
+  max-width: 388px;
 `;
 
-export const LogText = styled.h1`
-  margin: 0;
-  margin-top: 1.5rem;
+export const BlobText = styled.span`
   font-family: "Outfit";
   font-style: normal;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 40px;
-  letter-spacing: -0.4px;
-  color: #ffffff;
-  max-width: 16rem;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.1px;
+  text-transform: uppercase;
+  color: #007afb;
 `;
 
-export const LogBox = styled.div`
-  display: flex;
-  height: 18.5rem;
-  max-width: 16rem;
-  background: #a0aaba;
+export const BackgroundImage = styled.div`
+  position: absolute;
+  top: 10rem;
+  bottom: 5rem;
+  img {
+    width: 100%;
+  }
 `;

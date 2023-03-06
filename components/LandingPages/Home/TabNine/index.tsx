@@ -1,35 +1,27 @@
-import { LogBox, LogCard, LogText, TabNineContainer } from "./styles";
-import { HiOutlineArrowNarrowRight } from "react-icons/hi";
-import { InView } from "react-intersection-observer";
-import { useState } from "react";
+import {
+  BackgroundImage,
+  BlobText,
+  TabNineContainer,
+  TextWrapper,
+} from "./styles";
+import { TextBody, TextTitle } from "../Assets/Common";
+import BackImage from "..//Assets/Images/backImage.svg";
 
 const TabNine = () => {
-  const [view, setView] = useState(false);
   return (
-    <InView triggerOnce={true}  threshold={0} onChange={setView}>
-      {({ ref, inView }) => (
-        <TabNineContainer ref={ref}>
-          {inView && (
-            <>
-              <LogCard>
-                <LogBox />
-                <LogText>Create an account or login</LogText>
-              </LogCard>
-              <HiOutlineArrowNarrowRight />
-              <LogCard>
-                <LogBox />
-                <LogText>Verify your credentials</LogText>
-              </LogCard>
-              <HiOutlineArrowNarrowRight />
-              <LogCard>
-                <LogBox />
-                <LogText>Initiate funding round</LogText>
-              </LogCard>
-            </>
-          )}
-        </TabNineContainer>
-      )}
-    </InView>
+    <TabNineContainer>
+      <TextWrapper>
+        <BlobText>signing up is easy</BlobText>
+        <TextTitle>Do you need funding for your startup?</TextTitle>
+        <TextBody>
+          Our platform provides opportunities to apply for funding so your real
+          estate or tech startup can get the resources it needs.
+        </TextBody>
+      </TextWrapper>
+      <BackgroundImage>
+        <img src={BackImage.src} />
+      </BackgroundImage>
+    </TabNineContainer>
   );
 };
 
