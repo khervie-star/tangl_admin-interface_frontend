@@ -24,6 +24,7 @@ import {
 import ReportImg from "./Images/Group.png";
 import { ArrowRightIcon } from "../../Common/Icons";
 import Router from "next/router";
+import TanglBackground from "./Images/tangl.png";
 
 const SliderComponent = () => {
   const goToNewsPage = () => {
@@ -60,11 +61,9 @@ const SliderComponent = () => {
         // className="mySwiper"
       >
         <SwiperSlide>
-          <SliderImage
-            width={100}
-            height={100}
-            src="https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg"
-          />
+          <SliderReportWrapper>
+            <SliderImage src={TanglBackground.src} />
+          </SliderReportWrapper>
         </SwiperSlide>
         <SwiperSlide>
           <SliderReportWrapper>
@@ -86,11 +85,9 @@ const SliderComponent = () => {
           </SliderReportWrapper>
         </SwiperSlide>
         <SwiperSlide>
-          <SliderImage
-            width={100}
-            height={100}
-            src="https://images.pexels.com/photos/6289030/pexels-photo-6289030.jpeg"
-          />
+          <SliderReportWrapper>
+            <SliderImage src={TanglBackground.src} />
+          </SliderReportWrapper>
         </SwiperSlide>
       </Swiper>
     </SliderContainer>

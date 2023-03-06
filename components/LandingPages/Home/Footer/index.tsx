@@ -70,7 +70,7 @@ const Footer = () => {
           investment opportunities. Investments can only be made by members of
           TANGL Capital Partners on the basis of information provided. TANGL
           Capital Partners takes no responsibility for this information or for
-          any recommendations, opinions or predictions. Please{" "}
+          any recommendations, opinions or predictions. Please
           <a onClick={() => Router.push("/risk")}>click here </a> to read the
           full risk warning.
         </p>
