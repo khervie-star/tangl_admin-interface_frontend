@@ -167,6 +167,9 @@ export const RiskText = styled.div`
     padding: 0;
     margin: 0;
     margin-bottom: 0.75rem;
+    u {
+      margin: 0px 10px 0px 5px;
+    }
     a {
       text-decoration: none;
       color: #007afb;

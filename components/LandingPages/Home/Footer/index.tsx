@@ -77,9 +77,21 @@ const Footer = () => {
         <p>
           TANGL Capital Partners is a trading name of TANGL Capital Partners
           Limited, which is currently unregulated but is seeking approved status
-          from the UK Financial Conduct Authority. TANGL Capital Partners
-          Limited is registered in England and Wales. Registered No. __________
-          Registered Address: _______________.
+          from the UK Financial Conduct Authority.
+          <br />
+          <br />
+          TANGL Capital Partners Limited is registered in England and Wales.
+          <br />
+          <br />
+          Registered No.:
+          <u>13169554</u>
+          <br />
+          <br />
+          Registered Address:
+          <u>
+            YORK ECO BUSINESS CENTRE (OFFICE 12) AMY JOHNSON WAY CLIFTON
+            MOOR,YORK ,ENGLAND, YO30 4AG.
+          </u>
         </p>
       </RiskText>
     </FooterContainer>
