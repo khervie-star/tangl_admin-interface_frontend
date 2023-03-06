@@ -152,3 +152,25 @@ export const IconBox = styled.div`
     width: 34px;
   }
 `;
+
+export const RiskText = styled.div`
+  padding-top: 1rem;
+  p {
+    font-family: "Outfit";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: -0.1px;
+    font-feature-settings: "liga" off;
+    color: #ffffff;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 0.75rem;
+    a {
+      text-decoration: none;
+      color: #007afb;
+      cursor: pointer;
+    }
+  }
+`;
