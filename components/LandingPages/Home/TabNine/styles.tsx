@@ -3,8 +3,10 @@ import { device } from "../../../../Global";
 export const TabNineContainer = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-between;
   padding: 5rem 5rem 25rem 5rem;
+  flex-wrap: wrap;
+  max-width: 1440px;
+  margin: 0px auto;
   @media ${device.tablet} {
     display: none;
   }
