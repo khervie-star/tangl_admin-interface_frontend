@@ -112,8 +112,8 @@ const AMLContent = () => {
             </li>
             <li>
               And the provision of appropriate management information and
-              reporting to senior management of the Group's compliance with the
-              requirements.
+              reporting to senior management of the Group&apos;s compliance with
+              the requirements.
             </li>
           </UnOrderedList>
           <TermSubtitle>
