@@ -41,6 +41,10 @@ export const TermTitle = styled.h2`
   color: #011122;
   margin: 0;
   padding: 0;
+  @media ${device.mobileL} {
+    font-size: 28px;
+    line-height: 26px;
+  }
 `;
 export const TermSubtitle = styled.h3`
   font-family: "Outfit";
@@ -51,6 +55,10 @@ export const TermSubtitle = styled.h3`
   letter-spacing: -0.4px;
   color: #011122;
   margin-bottom: 0.75rem;
+  @media ${device.mobileL} {
+    font-size: 20px;
+    line-height: 28px;
+  }
 `;
 export const TermText = styled.p`
   font-family: "Outfit";
@@ -61,6 +69,10 @@ export const TermText = styled.p`
   letter-spacing: -0.1px;
   font-feature-settings: "liga" off;
   color: #324a64;
+  @media ${device.mobileL} {
+    font-size: 16px;
+    line-height: 24px;
+  }
   a {
     text-decoration: none;
     color: #007afb;

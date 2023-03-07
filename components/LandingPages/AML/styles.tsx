@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { device } from "../../../Global";
 type amlType = {
   style?: string;
 };
@@ -14,6 +15,10 @@ export const UnOrderedList = styled.ul`
     letter-spacing: -0.1px;
     font-feature-settings: "liga" off;
     color: #324a64;
+    @media ${device.mobileL} {
+      font-size: 16px;
+      line-height: 24px;
+    }
     a {
       text-decoration: none;
       color: #007afb;
@@ -33,6 +38,10 @@ export const OrderedList = styled.ol`
     letter-spacing: -0.1px;
     font-feature-settings: "liga" off;
     color: #324a64;
+    @media ${device.mobileL} {
+      font-size: 16px;
+      line-height: 24px;
+    }
     a {
       text-decoration: none;
       color: #007afb;
