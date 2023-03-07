@@ -15,7 +15,7 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  @media ${device.tablet} {
+  @media ${device.tabletM} {
     flex-direction: column;
   }
 `;
@@ -26,6 +26,10 @@ export const HeadWrap = styled.div`
   grid-column-gap: 18rem;
   grid-row-gap: 2.5rem;
   align-items: stretch;
+
+  @media ${device.laptopE} {
+    grid-column-gap: 12rem;
+  }
 
   @media ${device.tablet} {
     grid-column-gap: 15rem;
@@ -109,6 +113,7 @@ export const BaseText = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: auto;
   }
   p {
     font-family: "Outfit";
@@ -135,6 +140,9 @@ export const BaseIcons = styled.div`
   display: inline-grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 3.75rem;
+  @media ${device.tabletM} {
+    margin-bottom: 2rem;
+  }
 `;
 
 export const IconBox = styled.div`

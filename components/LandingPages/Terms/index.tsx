@@ -491,7 +491,11 @@ const TermsContent = () => {
             investment journey.
           </TermText>
         </TermFLex>
-        <TermFLex flexPercentage="30%" padding="0rem 0rem 0rem 2.5rem">
+        <TermFLex
+          mobile={true}
+          flexPercentage="30%"
+          padding="0rem 0rem 0rem 2.5rem"
+        >
           <FooterFlow />
         </TermFLex>
       </TermWrapper>

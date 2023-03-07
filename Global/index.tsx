@@ -4,7 +4,9 @@ const size = {
   mobileS: "320px",
   mobileM: "375px",
   mobileL: "425px",
+  tabletS: "720px",
   tablet: "820px",
+  tabletM: "920px",
   laptop: "1024px",
   laptopE: "1096px",
   laptopM: "1280px",
@@ -16,6 +18,8 @@ export const device = {
   mobileS: `(max-width: ${size.mobileS})`,
   mobileM: `(max-width: ${size.mobileM})`,
   mobileL: `(max-width: ${size.mobileL})`,
+  tabletS: `(max-width: ${size.tabletS})`,
+  tabletM: `(max-width: ${size.tabletM})`,
   tablet: `(max-width: ${size.tablet})`,
   laptop: `(max-width: ${size.laptop})`,
   laptopE: `(max-width: ${size.laptopE})`,
@@ -49,8 +53,8 @@ export const Container = styled.div`
 `;
 
 export const BodyContainer = styled.div`
-margin-top: 5rem;
-`
+  margin-top: 5rem;
+`;
 export const pulse = keyframes`
   0% {
     opacity: 0.5;

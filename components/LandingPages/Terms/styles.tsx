@@ -4,6 +4,7 @@ import { device } from "../../../Global";
 type TermTypes = {
   flexPercentage?: string;
   padding?: string;
+  mobile?: boolean;
 };
 
 export const FooterNavContainer = styled.div`
@@ -26,6 +27,9 @@ export const TermFLex = styled.div`
     flexPercentage ? flexPercentage : "50%"};
   box-sizing: border-box;
   padding: ${({ padding }: TermTypes) => (padding ? padding : "0")};
+  @media ${device.mobileL} {
+    display: ${({ mobile }: TermTypes) => (mobile ? "none" : "block")};
+  }
 `;
 export const TermTitle = styled.h2`
   font-family: "Outfit";
