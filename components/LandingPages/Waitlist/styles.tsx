@@ -73,6 +73,7 @@ export const WaitlistForm = styled.form`
   padding: 2.5rem;
   border-radius: 1.5rem;
   background-color: #fff;
+  margin-bottom: 4rem;
   h1 {
     margin: 0;
     padding: 0;

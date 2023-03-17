@@ -14,6 +14,7 @@ export const FooterFlowContainer = styled.div`
       margin-bottom: 0;
     }
   }
+
   @media ${device.mobileL} {
     display: none;
   }
@@ -36,6 +37,10 @@ export const FooterFlowTextContent = styled.p`
   font-feature-settings: "liga" off;
   margin: 0;
   padding: 0;
+  @media ${device.tabletM} {
+    font-size: 14px;
+    line-height: 20px;
+  }
   cursor: pointer;
   ${({ active }: FooterFlowType) =>
     active
@@ -62,6 +67,10 @@ export const Current = styled.div`
   text-transform: uppercase;
   font-feature-settings: "liga" off;
   color: #5ac179;
+  @media ${device.tabletM} {
+    font-size: 10px;
+    line-height: 14px;
+  }
   ${({ active }: FooterFlowType) =>
     !active
       ? css`
