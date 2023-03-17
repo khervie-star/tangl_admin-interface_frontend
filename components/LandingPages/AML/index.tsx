@@ -73,7 +73,7 @@ const AMLContent = () => {
             complied with by all TANGL Capital Partners Ltd and employees and
             includes:
           </TermText>
-          <UnOrderedList style={"circle"}>
+          <UnOrderedList>
             <li>
               The appointment of a Compliance Officer who has responsibility for
               the oversight of compliance with relevant legislation,
