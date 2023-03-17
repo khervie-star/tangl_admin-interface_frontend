@@ -2,17 +2,21 @@ import styled from "styled-components";
 import { device } from "../../../Global";
 import { FlexWrap } from "../Home/Assets/Common";
 
-export const WaitlistContainer = styled.div`
+export const WaitlistBackground = styled.div`
+  width: 100vw;
   background: #324a64;
+`;
+
+export const WaitlistContainer = styled.div`
   padding: 1em 5rem;
   height: 100vh;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  position: fixed;
-  top: 0;
-  bottom: 0;
   overflow-y: scroll;
+  max-width: 1440px;
+  margin: 0 auto;
+
   @media ${device.tablet} {
     position: relative;
     padding: 1.5rem;

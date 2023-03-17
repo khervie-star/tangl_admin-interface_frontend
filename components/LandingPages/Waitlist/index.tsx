@@ -15,6 +15,7 @@ import {
   WaitlistBar,
   AccountTypeWrapper,
   AccountTypeRadioContainer,
+  WaitlistBackground,
 } from "./styles";
 import { FlexWrap, Image, List } from "../Home/Assets/Common";
 import { DeleteIcon } from "./Icons";
@@ -104,118 +105,120 @@ const WaitlistContent = () => {
 
   return (
     <>
-      <WaitlistContainer>
-        <WaitlistBar>
-          <Terminate onClick={goBack}>
-            <DeleteIcon />
-          </Terminate>
-        </WaitlistBar>
+      <WaitlistBackground>
+        <WaitlistContainer>
+          <WaitlistBar>
+            <Terminate onClick={goBack}>
+              <DeleteIcon />
+            </Terminate>
+          </WaitlistBar>
 
-        <WaitlistFlex>
-          <FlexWrap display="both" flexPercentage="50%">
-            <WaitlistDescription>
-              <WaitlistDescriptionHeader>
-                Join our waiting list
-              </WaitlistDescriptionHeader>
-              <WaitlistDescriptionText>
-                We would love to have you as one of our first users. We&apos;ll
-                keep you up to date regarding the Launch of our private beta.
-              </WaitlistDescriptionText>
-            </WaitlistDescription>
-          </FlexWrap>
-          <FlexWrap
-            display="both"
-            flexPercentage="50%"
-            padding="0rem 0rem 0rem 5rem"
-          >
-            <WaitlistForm onSubmit={handleSubmit}>
-              <h1>Be one of the first to use our product.</h1>
-              <div>
+          <WaitlistFlex>
+            <FlexWrap display="both" flexPercentage="50%">
+              <WaitlistDescription>
+                <WaitlistDescriptionHeader>
+                  Join our waiting list
+                </WaitlistDescriptionHeader>
+                <WaitlistDescriptionText>
+                  We would love to have you as one of our first users.
+                  We&apos;ll keep you up to date regarding the Launch of our
+                  private beta.
+                </WaitlistDescriptionText>
+              </WaitlistDescription>
+            </FlexWrap>
+            <FlexWrap
+              display="both"
+              flexPercentage="50%"
+              padding="0rem 0rem 0rem 5rem">
+              <WaitlistForm onSubmit={handleSubmit}>
+                <h1>Be one of the first to use our product.</h1>
                 <div>
-                  <label>Your Name</label>
+                  <div>
+                    <label>Your Name</label>
+                  </div>
+                  <input
+                    type="text"
+                    placeholder="Type or paste here"
+                    name="fullname"
+                    onChange={handleChange("fullname")}
+                  />
                 </div>
-                <input
-                  type="text"
-                  placeholder="Type or paste here"
-                  name="fullname"
-                  onChange={handleChange("fullname")}
-                />
-              </div>
-              <div>
                 <div>
-                  <label>Your Email</label>
+                  <div>
+                    <label>Your Email</label>
+                  </div>
+                  <input
+                    type="text"
+                    placeholder="Type or paste here"
+                    name="email"
+                    onChange={handleChange("email")}
+                  />
                 </div>
-                <input
-                  type="text"
-                  placeholder="Type or paste here"
-                  name="email"
-                  onChange={handleChange("email")}
-                />
-              </div>
-              <div>
                 <div>
-                  <label>Select Account Type</label>
+                  <div>
+                    <label>Select Account Type</label>
+                  </div>
+                  <AccountTypeWrapper>
+                    <AccountTypeRadioContainer>
+                      <input
+                        type="radio"
+                        name="Account Type"
+                        value="investor"
+                        required
+                        onChange={handleChange("account_type")}
+                      />
+                      <label>Investor Account</label>
+                    </AccountTypeRadioContainer>
+                    <AccountTypeRadioContainer>
+                      <input
+                        type="radio"
+                        name="Account Type"
+                        value="admin"
+                        required
+                        onChange={handleChange("account_type")}
+                      />
+                      <label>Admin Account</label>
+                    </AccountTypeRadioContainer>
+                  </AccountTypeWrapper>
                 </div>
-                <AccountTypeWrapper>
-                  <AccountTypeRadioContainer>
-                    <input
-                      type="radio"
-                      name="Account Type"
-                      value="investor"
-                      required
-                      onChange={handleChange("account_type")}
-                    />
-                    <label>Investor Account</label>
-                  </AccountTypeRadioContainer>
-                  <AccountTypeRadioContainer>
-                    <input
-                      type="radio"
-                      name="Account Type"
-                      value="admin"
-                      required
-                      onChange={handleChange("account_type")}
-                    />
-                    <label>Admin Account</label>
-                  </AccountTypeRadioContainer>
-                </AccountTypeWrapper>
-              </div>
 
-              <div>
                 <div>
-                  <label>Country of Residence</label>
-                </div>
-                <Select onChange={handleChange("country")}>
-                  <option value="none" selected disabled hidden>
-                    Choose
-                  </option>
-                  {countryListAllIsoData.map((country, i) => (
-                    <option value={country.name} key={i}>
-                      {country.name}
+                  <div>
+                    <label>Country of Residence</label>
+                  </div>
+                  <Select onChange={handleChange("country")}>
+                    <option value="none" selected disabled hidden>
+                      Choose
                     </option>
-                  ))}
-                </Select>
-              </div>
-              <RadioContainer>
-                <input
-                  type="radio"
-                  name="Terms and Condition"
-                  value={1}
-                  required
-                  onChange={handleChange("update_status")}
-                />
-                <label>
-                  I hereby agree to receive electronic newsletters, updates,
-                  promotions and related messages regarding Tangl products.
-                </label>
-              </RadioContainer>
-              <JoinWaitlist type="submit">
-                {!sending && "Join Waitlist"}
-                {sending && <DotLoader color="#fff" size={20} />}
-              </JoinWaitlist>
-            </WaitlistForm>
-          </FlexWrap>
-        </WaitlistFlex>
-      </WaitlistContainer>
+                    {countryListAllIsoData.map((country, i) => (
+                      <option value={country.name} key={i}>
+                        {country.name}
+                      </option>
+                    ))}
+                  </Select>
+                </div>
+                <RadioContainer>
+                  <input
+                    type="radio"
+                    name="Terms and Condition"
+                    value={1}
+                    required
+                    onChange={handleChange("update_status")}
+                  />
+                  <label>
+                    I hereby agree to receive electronic newsletters, updates,
+                    promotions and related messages regarding Tangl products.
+                  </label>
+                </RadioContainer>
+                <JoinWaitlist type="submit">
+                  {!sending && "Join Waitlist"}
+                  {sending && <DotLoader color="#fff" size={20} />}
+                </JoinWaitlist>
+              </WaitlistForm>
+            </FlexWrap>
+          </WaitlistFlex>
+        </WaitlistContainer>
+      </WaitlistBackground>
     </>
   );
 };
