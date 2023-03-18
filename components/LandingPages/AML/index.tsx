@@ -127,7 +127,6 @@ const AMLContent = () => {
           <TermText>Documents accepted as proof of ID:</TermText>
           <UnOrderedList>
             <li>Passport</li>
-            <li> Passport</li>
             <li> Driver’s Licenses </li>
           </UnOrderedList>
           <TermText>All ID documents should display:</TermText>
@@ -155,7 +154,6 @@ const AMLContent = () => {
             be used in our assessment and must be submitted include:
           </TermText>
           <UnOrderedList>
-            <li> A copy of the memorandum and articles of association;</li>
             <li> A copy of the memorandum and articles of association;</li>
             <li> Latest copy of the most recent accounts;</li>
             <li>
@@ -211,11 +209,6 @@ const AMLContent = () => {
             <li> Bank account details;</li>
             <li> Employment information;</li>
             <li> Source of Fund details</li>
-            <li> Source of Fund details</li>
-            <li>
-              Cryptocurrency Trading History on recognised Cryptocurrency
-              exchanges
-            </li>
             <li>
               Cryptocurrency Trading History on recognised Cryptocurrency
               exchanges
