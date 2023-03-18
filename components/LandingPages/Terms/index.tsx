@@ -20,9 +20,10 @@ const TermsContent = () => {
             These Terms of Use (&quot;Agreement&quot;) should be read carefully
             before using the services offered by TANGL Capital Partners Ltd a
             company incorporated in the United Kingdom under company number
-            ___________, whose registered office is at __________ . This
-            Agreement sets forth the legally binding terms and conditions for
-            your use of the website at www.tanglcapitalpartners.com (the
+            13169554 whose registered office is at YORK ECO BUSINESS CENTRE
+            (OFFICE 12) AMY JOHNSON WAY CLIFTON MOOR, YORK, ENGLAND, Y030 4AG.
+            This Agreement sets forth the legally binding terms and conditions
+            for your use of the website at www.tanglcapitalpartners.com (the
             &quot;Site&quot;) and the services owned and operated by TANGL
             Capital Partners (collectively with the Site, the
             &quot;Service&quot;). By using the Site or Service in any manner,
@@ -88,9 +89,10 @@ const TermsContent = () => {
             result in the forfeiture and destruction of all information
             associated with your membership. If you wish to terminate your
             account, you may do so by notifying us in writing. You may give
-            written notice to us at: ____________________ . We may give written
-            notice to you by sending an e-mail to you at the last e-mail address
-            you gave us. All provisions of this Agreement shall survive
+            written notice to us at: YORK ECO BUSINESS CENTRE (OFFICE 12) AMY
+            JOHNSON WAY CLIFTON MOOR, YORK, ENGLAND, Y030 4AG. We may give
+            written notice to you by sending an e-mail to you at the last e-mail
+            address you gave us. All provisions of this Agreement shall survive
             termination, including, without limitation, ownership provisions,
             warranty disclaimers, indemnity and limitations of liability.
           </TermText>
@@ -494,8 +496,7 @@ const TermsContent = () => {
         <TermFLex
           mobile={true}
           flexPercentage="30%"
-          padding="0rem 0rem 0rem 2.5rem"
-        >
+          padding="0rem 0rem 0rem 2.5rem">
           <FooterFlow />
         </TermFLex>
       </TermWrapper>

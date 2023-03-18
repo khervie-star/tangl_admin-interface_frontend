@@ -18,7 +18,7 @@ const PrivacyContent = () => {
           <TermTitle>Who we are</TermTitle>
           <TermText>
             We TANGL Capital Partners Limited (“TANGL”) are a company registered
-            in England (Company no. ____________) and are committed to
+            in England (Company no. 13169554) and are committed to
             protecting your privacy and complying with applicable data
             protection and privacy laws. This privacy notice (Notice) is
             designed to help you to understand what kind of personal data we
