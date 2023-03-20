@@ -5,6 +5,7 @@ import { FlexWrap } from "../Home/Assets/Common";
 export const WaitlistBackground = styled.div`
   width: 100vw;
   background: #324a64;
+  position: relative;
 `;
 
 export const WaitlistContainer = styled.div`
@@ -13,13 +14,14 @@ export const WaitlistContainer = styled.div`
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  overflow-y: scroll;
+
   max-width: 1440px;
   margin: 0 auto;
 
   @media ${device.tablet} {
     position: relative;
     padding: 1.5rem;
+    overflow-y: scroll;
     ${FlexWrap} {
       flex: 100%;
     }
@@ -277,11 +279,12 @@ export const WaitlistFlex = styled.div`
 `;
 
 export const WaitlistBar = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
+  // width: 100%;
+  // display: flex;
+  // justify-content: flex-start;
+  padding: 32px;
   @media ${device.tablet} {
-    width: 100%;
+    // width: 100%;
   }
 `;
 

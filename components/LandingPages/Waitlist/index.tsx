@@ -106,13 +106,12 @@ const WaitlistContent = () => {
   return (
     <>
       <WaitlistBackground>
+        <WaitlistBar>
+          <Terminate onClick={goBack}>
+            <DeleteIcon />
+          </Terminate>
+        </WaitlistBar>
         <WaitlistContainer>
-          <WaitlistBar>
-            <Terminate onClick={goBack}>
-              <DeleteIcon />
-            </Terminate>
-          </WaitlistBar>
-
           <WaitlistFlex>
             <FlexWrap display="both" flexPercentage="50%">
               <WaitlistDescription>
