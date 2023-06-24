@@ -8,8 +8,13 @@ import {
   ApplicationReviewWrapper,
   EditButton,
 } from "./styles";
+import { useRouter } from "next/router";
 
 const ReviewOnboardingApplication = ({ page }: PageBarTypes) => {
+  const router = useRouter();
+  const confirmSignup = () => {
+    router.push("Investor/Organization/Pending-Approval");
+  };
   return (
     <div>
       <TextTitle>Review Application</TextTitle>
@@ -35,7 +40,7 @@ const ReviewOnboardingApplication = ({ page }: PageBarTypes) => {
           <EditButton>Edit</EditButton>
         </ApplicationItem>
       </ApplicationReviewWrapper>
-      <DarkContBtn>Confirm</DarkContBtn>
+      <DarkContBtn onClick={confirmSignup}>Confirm</DarkContBtn>
     </div>
   );
 };
