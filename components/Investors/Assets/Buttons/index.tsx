@@ -10,8 +10,7 @@ export const BackButton = ({ onClick, disabled }: BtnProps) => {
         height="12"
         viewBox="0 0 8 12"
         fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+        xmlns="http://www.w3.org/2000/svg">
         <path
           fillRule="evenodd"
           clipRule="evenodd"
@@ -139,5 +138,42 @@ export const ContinueToLogin = ({ children, onClick, disabled }: BtnProps) => {
     <ContToLogin disabled={disabled} onClick={onClick}>
       {children}
     </ContToLogin>
+  );
+};
+
+export const OutlinedBlueButton = styled.button`
+  color: var(--blue-100, #007afb);
+  text-align: center;
+  font-family: Outfit;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: -0.1px;
+  display: flex;
+  width: 200px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+  border: 1px solid var(--blue-100, #007afb);
+  padding: 12px 20px;
+  cursor: pointer;
+  ${({ disabled }: BtnProps) =>
+    disabled
+      ? css`
+          background: #ffffff;
+          color: #a0aaba;
+        `
+      : css`
+          background: #ffffff;
+          color: #007afb;
+        `}
+`;
+
+export const OutlinedBlueBtn = ({ children, onClick, disabled }: BtnProps) => {
+  return (
+    <OutlinedBlueButton disabled={disabled} onClick={onClick}>
+      {children}
+    </OutlinedBlueButton>
   );
 };

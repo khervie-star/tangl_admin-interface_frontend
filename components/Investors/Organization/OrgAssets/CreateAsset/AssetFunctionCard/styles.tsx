@@ -4,6 +4,7 @@ import { device } from "../../../../../../Global";
 export type CardProps = {
   active?: boolean;
   checked?: boolean;
+  completed?: boolean;
 };
 
 export const CardWrap = styled.div`
@@ -25,6 +26,11 @@ export const CardWrap = styled.div`
 
 export const Function = styled.div`
   margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-between;
+  gap: 32px;
 `;
 
 export const Text = styled.p`
@@ -32,7 +38,7 @@ export const Text = styled.p`
   font-family: "Outfit";
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 20px;
   letter-spacing: -0.1px;
   color: #324a64;
@@ -50,6 +56,7 @@ export const Text = styled.p`
 
 export const HeadWrap = styled.div`
   display: flex;
+  direction: row;
   align-items: center;
   justify-content: space-between;
   span {
@@ -65,12 +72,20 @@ export const HeadWrap = styled.div`
     ${({ active }: CardProps) =>
       active
         ? css`
-            color: #007afb;
-            opacity: 0.5;
+            color: #011122;
+            opacity: 1;
           `
         : css`
             color: #324a64;
+            opacity: 0.5;
           `};
+    ${({ completed }: CardProps) =>
+      completed
+        ? css`
+            color: var(--blue-100, #007afb);
+            opacity: 1;
+          `
+        : css``};
   }
 `;
 
@@ -97,4 +112,15 @@ export const Current = styled.div`
       : css`
           display: flex;
         `};
+`;
+
+export const DropList = styled.div`
+  ${({ active }: CardProps) =>
+    active
+      ? css`
+          display: block;
+        `
+      : css`
+          display: none;
+        `}
 `;

@@ -1,5 +1,6 @@
 export type PageBarTypes = {
   page?: number;
+  pages?: any;
 };
 
 export type contentTypes = {
