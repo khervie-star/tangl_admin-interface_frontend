@@ -1,5 +1,9 @@
 import styled, { css } from "styled-components";
 
+type componentProps = {
+  reverse?: boolean;
+};
+
 export const Wrapper = styled.div`
   display: inline-flex;
   flex-direction: column;
@@ -82,7 +86,7 @@ export const InputWithAdornment = styled.div`
   border-radius: 8px;
   display: flex;
   border: 1px solid #e1e8f4;
-  ${({ reverse }: any) =>
+  ${({ reverse }: componentProps) =>
     reverse
       ? css`
           flex-direction: row-reverse;
