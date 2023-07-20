@@ -1509,3 +1509,4 @@ export const countryListAllIsoData = [
   { code: "ZW", code3: "ZWE", name: "Zimbabwe", number: "716" },
   { code: "AX", code3: "ALA", name: "Åland Islands", number: "248" },
 ];
+

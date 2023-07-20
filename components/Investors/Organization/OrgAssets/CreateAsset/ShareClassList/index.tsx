@@ -9,6 +9,8 @@ import {
   TableRow,
   Wrapper,
 } from "./styles";
+import { BackTextButton, GenButton } from "../../assets/buttons";
+import { FlexBetween } from "../../assets/common";
 
 const shareClasses = [
   {
@@ -32,6 +34,9 @@ const shareClasses = [
 ];
 
 const ShareClassList = ({ handleForward, handleBack }: any) => {
+  const handleOnClick = () => {
+    handleForward();
+  };
   return (
     <>
       <Wrapper>
@@ -57,6 +62,10 @@ const ShareClassList = ({ handleForward, handleBack }: any) => {
           </tbody>
         </Table>
         <NewShareClassButton>Create new share class</NewShareClassButton>
+        <FlexBetween>
+          <BackTextButton onClick={handleBack}>Back</BackTextButton>
+          <GenButton onClick={handleOnClick}>Next: Review</GenButton>
+        </FlexBetween>
       </Wrapper>
     </>
   );

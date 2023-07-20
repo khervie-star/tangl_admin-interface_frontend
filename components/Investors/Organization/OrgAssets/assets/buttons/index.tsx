@@ -35,6 +35,26 @@ export const TextButton = styled.button`
   cursor: pointer;
 `;
 
+export const RoundedOutlinedBtn = styled.button`
+  border-radius: 28px;
+  display: flex;
+  padding: 12px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  color: var(--black-70, #43566a);
+  text-align: center;
+  font-family: Outfit;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px; /* 155.556% */
+  letter-spacing: -0.1px;
+  background: transparent;
+  border: 1px solid #43566a;
+  cursor: pointer;
+`;
+
 export const BackTextButton = ({ children, onClick, disabled }: any) => {
   return (
     <TextButton onClick={onClick} disabled={disabled}>
@@ -42,4 +62,8 @@ export const BackTextButton = ({ children, onClick, disabled }: any) => {
       {children}
     </TextButton>
   );
+};
+
+export const RoundedOutlinedButton = ({ children, onClick, disabled }: any) => {
+  return <RoundedOutlinedBtn>{children}</RoundedOutlinedBtn>;
 };

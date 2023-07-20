@@ -327,6 +327,7 @@ export const Label = styled.label`
 `;
 
 export const Row = styled.div`
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -414,6 +415,12 @@ export const RadioContainer = styled.div`
     color: #43566a;
     margin-left: 16px;
   }
+  ${({ width }: any) =>
+    width
+      ? css`
+          width: ${width};
+        `
+      : css``};
 `;
 
 export const CheckboxContainer = styled.div`

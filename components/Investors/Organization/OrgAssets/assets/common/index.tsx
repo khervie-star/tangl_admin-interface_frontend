@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { UploadIcon, ArrowDownIcon } from "../Icons";
 
 export const Col = styled.div`
@@ -122,6 +122,122 @@ export const Select = styled.select`
   :focus {
     outline: none;
   }
+`;
+
+export const TableSection = styled.div`
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid var(--black-20, #e1e8f4);
+  background: #fff;
+`;
+export const TableTitle = styled.div`
+  width: 100%;
+  box-sizing: border-box;
+  border-radius: 10px 10px 0px 0px;
+  background: #fafafa;
+  box-shadow: 2px 2px 4px 0px rgba(160, 170, 186, 0.15);
+  padding: 13px 22px;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+export const TableTitleText = styled.h4`
+  margin: 0;
+  padding: 0;
+  color: var(--black-70, #43566a);
+  font-family: Outfit;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px; /* 133.333% */
+  letter-spacing: -0.2px;
+`;
+
+export const RadioColumn = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 8px;
+  width: 100%;
+`;
+
+export const RadioContainer = styled.div`
+  padding: 1rem 0.75rem;
+  border: 1px solid #e1e8f4;
+  box-sizing: border-box;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  // margin-bottom: 8px;
+  width: 100%;
+  input {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #007afb;
+    box-sizing: border-box;
+  }
+  label {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #43566a;
+    margin-left: 16px;
+  }
+`;
+
+export const SmallText = styled.p`
+  color: #43566a;
+  font-family: Outfit;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  margin: 0;
+  margin-bottom: 8px;
+  padding: 0;
+  span {
+    color: #a0aaba;
+  }
+`;
+
+export const AssetHeaderText = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: flex-start;
+  width: 500px;
+  h6 {
+    margin: 0;
+    padding: 0;
+    color: var(--black-40, #a0aaba);
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Outfit;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 36px; /* 128.571% */
+    letter-spacing: -0.4px;
+  }
+  p {
+    margin: 0;
+    padding: 0;
+    color: var(--black-70, #43566a);
+    font-feature-settings: "clig" off, "liga" off;
+    font-family: Outfit;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px; /* 155.556% */
+    letter-spacing: -0.1px;
+  }
+`;
+
+export const FlexBetween = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 650px;
 `;
 
 export const LabeledInput = ({

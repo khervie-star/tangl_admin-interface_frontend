@@ -36,25 +36,25 @@ const AssetFunctionCard = ({ page }: PageBarTypes) => {
           />
         </HeadWrap>
         <HeadWrap
-          active={page && page >= 4 && page <= 5 ? true : false}
-          completed={page && page > 5 ? true : false}>
+          active={page && page >= 4 && page <= 6 ? true : false}
+          completed={page && page > 6 ? true : false}>
           <span>Share Class</span>
-          <Current active={page && page >= 4 && page <= 5 ? true : false}>
+          <Current active={page && page >= 4 && page <= 6 ? true : false}>
             Current
           </Current>
           <TickIcon
-            active={page && page > 5 ? true : false}
-            display={page && (page < 4 || page > 5) ? true : false}
+            active={page && page > 6 ? true : false}
+            display={page && (page < 4 || page > 6) ? true : false}
           />
         </HeadWrap>
         <HeadWrap
-          active={page && page == 6 ? true : false}
-          completed={page && page > 6 ? true : false}>
+          active={page && page == 7 ? true : false}
+          completed={page && page > 7 ? true : false}>
           <span>Asset Type</span>
-          <Current active={page && page == 6 ? true : false}>Current</Current>
+          <Current active={page && page == 7 ? true : false}>Current</Current>
           <TickIcon
-            active={page && page > 6 ? true : false}
-            display={page && page > 6 ? true : false}
+            active={page && page > 7 ? true : false}
+            display={page && page < 7 ? true : false}
           />
         </HeadWrap>
       </Function>

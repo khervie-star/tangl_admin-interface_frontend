@@ -19,6 +19,9 @@ import {
 import ReviewAssetInformation from "./ReviewAssetInformation";
 import CreateShareClass from "./CreateShareClass";
 import ShareClassList from "./ShareClassList";
+import Router from "next/router";
+import ReviewShareClass from "./ReviewShareClass";
+import ReviewAllAssetData from "./ReviewAssetData";
 
 const CreateAssets = () => {
   const dispatch = useAppDispatch();
@@ -29,15 +32,24 @@ const CreateAssets = () => {
 
   const handleBack = () => {
     dispatch(assetBackwardRoute(assetPage));
+    if (window !== null) {
+      window.scrollTo(0, 0);
+    }
   };
   const handleForward = () => {
     dispatch(assetFowardRoute(assetPage));
+    if (window !== null) {
+      window.scrollTo(0, 0);
+    }
+  };
+  const goToAssetsMainPage = () => {
+    Router.back();
   };
   return (
     <>
       <Display>
         <div>
-          <BackTextButton onClick={handleBack} disabled={false}>
+          <BackTextButton onClick={goToAssetsMainPage} disabled={false}>
             All Assets
           </BackTextButton>
         </div>
@@ -68,8 +80,21 @@ const CreateAssets = () => {
               handleForward={handleForward}
             />
           )}
+
           {assetPage && assetPage === 5 && (
+            <ReviewShareClass
+              handleBack={handleBack}
+              handleForward={handleForward}
+            />
+          )}
+          {assetPage && assetPage === 6 && (
             <ShareClassList
+              handleBack={handleBack}
+              handleForward={handleForward}
+            />
+          )}
+          {assetPage && assetPage === 7 && (
+            <ReviewAllAssetData
               handleBack={handleBack}
               handleForward={handleForward}
             />

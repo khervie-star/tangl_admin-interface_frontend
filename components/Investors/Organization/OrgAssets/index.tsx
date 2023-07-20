@@ -14,6 +14,7 @@ import {
   ViewButton,
 } from "./styles";
 import AssetImg from "./assets.jpeg";
+import Router, { useRouter } from "next/router";
 
 const cards = [
   {
@@ -40,17 +41,23 @@ const cards = [
 ];
 
 const OrgAssets = () => {
+  const handleCreateNewAsset = () => {
+    Router.push("/Investor/Organization/Assets/Create");
+  };
+  const viewAsset = (assetId: any) => {
+    Router.push(`/Investor/Organization/Assets/View-Asset/${assetId}`);
+  };
   return (
     <AssetContainer>
       <AssetHeader>
         <AssetTitle>Assets</AssetTitle>
-        <GenButton>Create New Asset</GenButton>
+        <GenButton onClick={handleCreateNewAsset}>Create New Asset</GenButton>
       </AssetHeader>
       <AssetGrid>
         {cards.map((card) => (
           <AssetCard key={card.symbol}>
             <AssetImage>
-              <img  height="100%"src={card.image} />
+              <img height="100%" src={card.image} />
               <StatusTag status={card.tag}>{card.tag}</StatusTag>
             </AssetImage>
             <AssetName>
@@ -67,7 +74,9 @@ const OrgAssets = () => {
                 <span>${card.price}</span>
               </TableBody>
             </AssetTable>
-            <ViewButton>View Assets</ViewButton>
+            <ViewButton onClick={() => viewAsset(card.symbol)}>
+              View Assets
+            </ViewButton>
           </AssetCard>
         ))}
       </AssetGrid>

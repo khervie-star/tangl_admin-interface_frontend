@@ -8,12 +8,28 @@ import {
   SectionHeader,
   Wrapper,
 } from "./styles";
-import { LabeledInput, Select } from "../../assets/common";
+import {
+  AssetHeaderText,
+  FlexBetween,
+  LabeledInput,
+  Select,
+} from "../../assets/common";
+import { BackTextButton, GenButton } from "../../assets/buttons";
 
 const ReviewShareClass = ({ handleBack, handleForward }: any) => {
+  const handleOnClick = () => {
+    handleForward();
+  };
   return (
     <>
       <Wrapper>
+        <AssetHeaderText>
+          <h6>Create Share Class</h6>
+          <p>
+            Complete the form below to create the first share class for the
+            asset. You wil be able to create additional share classes after.
+          </p>
+        </AssetHeaderText>
         <Section>
           <SectionHeader>General</SectionHeader>
           <SectionCard>
@@ -92,6 +108,10 @@ const ReviewShareClass = ({ handleBack, handleForward }: any) => {
             </SectionCardText>
           </SectionCard>
         </Section>
+        <FlexBetween>
+          <BackTextButton onClick={handleBack}>Back</BackTextButton>
+          <GenButton onClick={handleOnClick}>Create Share Class</GenButton>
+        </FlexBetween>
       </Wrapper>
     </>
   );

@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 export const Wrapper = styled.div`
   display: inline-flex;
@@ -19,8 +19,7 @@ export const Section = styled.div`
   flex-direction: column;
   align-items: flex-start;
   gap: 16px;
-  width: 650px;
-  box-sizing: border-box;
+  width: 550px;
 `;
 
 export const SectionHeader = styled.div`
@@ -31,6 +30,9 @@ export const SectionHeader = styled.div`
   font-weight: 500;
   line-height: 32px;
   letter-spacing: -0.2px;
+  display: flex;
+  gap: 24px;
+  align-items: center;
 `;
 
 export const SectionCard = styled.div`
@@ -43,7 +45,6 @@ export const SectionCard = styled.div`
   border-radius: 8px;
   border: 1px solid var(--black-20, #e1e8f4);
   background: #fff;
-  box-sizing: border-box;
 `;
 
 export const SectionCardText = styled.p`
@@ -58,94 +59,40 @@ export const SectionCardText = styled.p`
   padding: 0;
 `;
 
-export const ShareClassName = styled.div`
+export const CardInfo = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 16px;
+  gap: 8px;
   p {
     margin: 0;
     padding: 0;
-    color: #43566a;
+    color: var(--black-70, #43566a);
     font-family: Outfit;
     font-size: 16px;
     font-style: normal;
     font-weight: 500;
-    line-height: 24px; /* 150% */
+    line-height: 24px;
   }
-`;
-
-export const InputWithAdornment = styled.div`
-  width: 100%;
-  height: 60px;
-  // flex-shrink: 0;
-  border-radius: 8px;
-  display: flex;
-  border: 1px solid #e1e8f4;
-  ${({ reverse }: any) =>
-    reverse
-      ? css`
-          flex-direction: row-reverse;
-        `
-      : css`
-          flex-direction: row;
-        `};
-  label {
-    background: #f4f4f4;
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 16px 32px;
-    box-sizing: border-box;
+  h6 {
+    margin: 0;
+    padding: 0;
     color: var(--black-80, #324a64);
+    font-family: Outfit;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: -0.1px;
+  }
+  .fileName {
+    color: var(--blue-100, #007afb);
+    font-feature-settings: "clig" off, "liga" off;
     font-family: Outfit;
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
     line-height: 28px; /* 155.556% */
     letter-spacing: -0.1px;
-    ${({ reverse }: any) =>
-      reverse
-        ? css`
-            border-radius: 0 8px 8px 0;
-          `
-        : css`
-            border-radius: 8px 0 0 8px;
-          `};
-  }
-  input {
-    width: 50%;
-    border: none;
-    border-radius: 8px;
-    padding: 18px;
-    color: var(--black-80, #324a64);
-    font-family: Outfit;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 28px; /* 155.556% */
-    letter-spacing: -0.1px;
-    :focus {
-      outline: none;
-    }
-    ::placeholder {
-      color: var(--black-40, #a0aaba);
-      font-family: Outfit;
-      font-size: 18px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 28px; /* 155.556% */
-      letter-spacing: -0.1px;
-    }
   }
 `;
-
-export const InputWithSideLabel = ({ children, placeholder, reverse }: any) => {
-  return (
-    <InputWithAdornment reverse={reverse}>
-      <label>{children}</label>
-      <input placeholder={placeholder} />
-    </InputWithAdornment>
-  );
-};

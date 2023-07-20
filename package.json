@@ -25,6 +25,7 @@
     "react-phone-number-input": "^3.2.11",
     "react-redux": "^8.0.2",
     "react-spinners": "^0.13.7",
+    "recharts": "^2.7.2",
     "redux": "^4.1.2",
     "redux-devtools-extension": "^2.13.9",
     "redux-logger": "^3.0.6",
