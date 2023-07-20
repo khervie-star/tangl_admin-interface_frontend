@@ -8,7 +8,6 @@ import {
   Wrapper,
 } from "./styles";
 import fundCoverImage from "../../assets/Images/Fund_Cover_Image.png";
-import Image from "next/image";
 import { BackTextButton, GenButton } from "../../assets/buttons";
 import ModalComponent from "../../assets/common/ConfirmModal";
 import Router from "next/router";
@@ -99,7 +98,7 @@ const ReviewAllAssetData = ({ handleBack, handleForward }: any) => {
           <SectionCard>
             <CardInfo>
               <p>Fund cover image</p>
-              <Image src={fundCoverImage} alt="" />
+              <img height={"100%"} src={fundCoverImage.src} alt="" />
             </CardInfo>
           </SectionCard>
         </Section>
